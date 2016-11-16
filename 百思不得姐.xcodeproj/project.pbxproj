@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1ED3266F83B5B9E29A57E0D4 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06598B4D0F11635B1B9CBD95 /* libPods-百思不得姐.a */; };
+		030AF0A731FD277C5C47118F /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F785E5088467E66CAC9D5B02 /* libPods-百思不得姐.a */; };
+		4491CA078E78331FA951E619 /* libPods-百思不得姐UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78616138F8FE15C90952B37A /* libPods-百思不得姐UITests.a */; };
 		6514EA161DC084A000CE6589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6514EA151DC084A000CE6589 /* Assets.xcassets */; };
 		6514EA241DC084A000CE6589 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6514EA231DC084A000CE6589 /* _____Tests.m */; };
 		6514EA2F1DC084A000CE6589 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6514EA2E1DC084A000CE6589 /* _____UITests.m */; };
@@ -15,7 +16,11 @@
 		6514EA851DC0872400CE6589 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6514EA811DC0872400CE6589 /* main.m */; };
 		6514EA881DC0882A00CE6589 /* BLAllTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6514EA871DC0882A00CE6589 /* BLAllTableVC.m */; };
 		6514EA8B1DC09D9E00CE6589 /* BLJinhuaALLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6514EA8A1DC09D9E00CE6589 /* BLJinhuaALLModel.m */; };
-		6514EA911DC09F3F00CE6589 /* BLWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6514EA901DC09F3F00CE6589 /* BLWordCell.m */; };
+		651D5C921DDAAA03005EC4C1 /* BLEssenceVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D5C901DDAAA03005EC4C1 /* BLEssenceVideoCell.m */; };
+		651D5C931DDAAA03005EC4C1 /* BLEssenceVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651D5C911DDAAA03005EC4C1 /* BLEssenceVideoCell.xib */; };
+		651D5C961DDABA29005EC4C1 /* BLSeqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D5C951DDABA29005EC4C1 /* BLSeqliteTest.m */; };
+		651D5C981DDABFC1005EC4C1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 651D5C971DDABFC1005EC4C1 /* libsqlite3.tbd */; };
+		651D5C9A1DDADBB0005EC4C1 /* BLEssenceWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651D5C991DDADBB0005EC4C1 /* BLEssenceWordCell.xib */; };
 		655AF6801DC18FC70090A1C9 /* BLNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AF67F1DC18FC70090A1C9 /* BLNetworkTool.m */; };
 		655AF6831DC1C2F80090A1C9 /* BLRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AF6821DC1C2F80090A1C9 /* BLRefreshFooter.m */; };
 		655AF6861DC1C38E0090A1C9 /* BLRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AF6851DC1C38E0090A1C9 /* BLRefreshHeader.m */; };
@@ -46,7 +51,16 @@
 		656571131DD0119500805957 /* BLFollowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 656571121DD0119500805957 /* BLFollowVC.m */; };
 		656571161DD011A300805957 /* BLMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 656571151DD011A300805957 /* BLMeVC.m */; };
 		656571191DD011B400805957 /* BLNewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 656571181DD011B400805957 /* BLNewVC.m */; };
+		6565AC0C1DDBF4B200B51920 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565AC0B1DDBF4B200B51920 /* UIButton+Extension.m */; };
+		6565AC0F1DDC468800B51920 /* BLNotificationDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565AC0E1DDC468800B51920 /* BLNotificationDetailVC.m */; };
+		65674AA71DD1E2DB00ACA344 /* BLSentMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65674AA61DD1E2DB00ACA344 /* BLSentMessageVC.m */; };
+		6568425D1DD948D200C25043 /* BLCustomerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6568425C1DD948D200C25043 /* BLCustomerPlayer.m */; };
+		6570B8241DD2C45100AF87AD /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6570B8231DD2C45100AF87AD /* sound.caf */; };
+		657C39381DD5CD7F00085E81 /* BLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C39371DD5CD7F00085E81 /* BLPlayerView.m */; };
+		657C39511DD7097400085E81 /* BLPlayerVC_RB.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C39501DD7097400085E81 /* BLPlayerVC_RB.m */; };
+		65DDA8721DD462BF002D6874 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DDA8711DD462BF002D6874 /* Launch Screen.storyboard */; };
 		65FC793E1DD05F6C00AA2811 /* BLNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC793D1DD05F6C00AA2811 /* BLNotificationVC.m */; };
+		7D123E6947FCF17260A0FF86 /* libPods-百思不得姐Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAEF30BD7C71716DDDB7F27 /* libPods-百思不得姐Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +81,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06598B4D0F11635B1B9CBD95 /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F18E2EE8FFB4D93F6072F23 /* Pods-百思不得姐UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		432DFB746271E21EFC9B65F2 /* Pods-百思不得姐UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests.release.xcconfig"; sourceTree = "<group>"; };
+		5516760DD2E75B263AAF19A9 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
+		61FC17846F307CC9E80623A3 /* Pods-百思不得姐Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6514EA061DC084A000CE6589 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6514EA151DC084A000CE6589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6514EA1A1DC084A000CE6589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,8 +101,13 @@
 		6514EA871DC0882A00CE6589 /* BLAllTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAllTableVC.m; sourceTree = "<group>"; };
 		6514EA891DC09D9E00CE6589 /* BLJinhuaALLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLJinhuaALLModel.h; sourceTree = "<group>"; };
 		6514EA8A1DC09D9E00CE6589 /* BLJinhuaALLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLJinhuaALLModel.m; sourceTree = "<group>"; };
-		6514EA8F1DC09F3F00CE6589 /* BLWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLWordCell.h; sourceTree = "<group>"; };
-		6514EA901DC09F3F00CE6589 /* BLWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLWordCell.m; sourceTree = "<group>"; };
+		651D5C8F1DDAAA03005EC4C1 /* BLEssenceVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEssenceVideoCell.h; sourceTree = "<group>"; };
+		651D5C901DDAAA03005EC4C1 /* BLEssenceVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEssenceVideoCell.m; sourceTree = "<group>"; };
+		651D5C911DDAAA03005EC4C1 /* BLEssenceVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLEssenceVideoCell.xib; sourceTree = "<group>"; };
+		651D5C941DDABA29005EC4C1 /* BLSeqliteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSeqliteTest.h; sourceTree = "<group>"; };
+		651D5C951DDABA29005EC4C1 /* BLSeqliteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSeqliteTest.m; sourceTree = "<group>"; };
+		651D5C971DDABFC1005EC4C1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		651D5C991DDADBB0005EC4C1 /* BLEssenceWordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLEssenceWordCell.xib; sourceTree = "<group>"; };
 		655AF67E1DC18FC70090A1C9 /* BLNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNetworkTool.h; sourceTree = "<group>"; };
 		655AF67F1DC18FC70090A1C9 /* BLNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNetworkTool.m; sourceTree = "<group>"; };
 		655AF6811DC1C2F80090A1C9 /* BLRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLRefreshFooter.h; sourceTree = "<group>"; };
@@ -134,10 +156,27 @@
 		656571151DD011A300805957 /* BLMeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLMeVC.m; sourceTree = "<group>"; };
 		656571171DD011B400805957 /* BLNewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNewVC.h; sourceTree = "<group>"; };
 		656571181DD011B400805957 /* BLNewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNewVC.m; sourceTree = "<group>"; };
+		6565AC0A1DDBF4B200B51920 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		6565AC0B1DDBF4B200B51920 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		6565AC0D1DDC468800B51920 /* BLNotificationDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNotificationDetailVC.h; sourceTree = "<group>"; };
+		6565AC0E1DDC468800B51920 /* BLNotificationDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNotificationDetailVC.m; sourceTree = "<group>"; };
+		65674AA51DD1E2DB00ACA344 /* BLSentMessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSentMessageVC.h; sourceTree = "<group>"; };
+		65674AA61DD1E2DB00ACA344 /* BLSentMessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSentMessageVC.m; sourceTree = "<group>"; };
+		6568425B1DD948D200C25043 /* BLCustomerPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCustomerPlayer.h; sourceTree = "<group>"; };
+		6568425C1DD948D200C25043 /* BLCustomerPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCustomerPlayer.m; sourceTree = "<group>"; };
+		6570B8231DD2C45100AF87AD /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		657C39361DD5CD7F00085E81 /* BLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlayerView.h; sourceTree = "<group>"; };
+		657C39371DD5CD7F00085E81 /* BLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlayerView.m; sourceTree = "<group>"; };
+		657C394F1DD7097400085E81 /* BLPlayerVC_RB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlayerVC_RB.h; sourceTree = "<group>"; };
+		657C39501DD7097400085E81 /* BLPlayerVC_RB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlayerVC_RB.m; sourceTree = "<group>"; };
+		65DDA8711DD462BF002D6874 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		65FC793C1DD05F6C00AA2811 /* BLNotificationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNotificationVC.h; sourceTree = "<group>"; };
 		65FC793D1DD05F6C00AA2811 /* BLNotificationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNotificationVC.m; sourceTree = "<group>"; };
-		8729EB2D790B919F489D67FD /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
-		D134D311777342C8602D63A2 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
+		78616138F8FE15C90952B37A /* libPods-百思不得姐UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80468DC62805DC05CF05CC3A /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
+		A202C05ED319163C0CBAB6AA /* Pods-百思不得姐Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DFAEF30BD7C71716DDDB7F27 /* libPods-百思不得姐Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F785E5088467E66CAC9D5B02 /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651D5C981DDABFC1005EC4C1 /* libsqlite3.tbd in Frameworks */,
 				65640BC41DCDDA5600531EF6 /* libresolv.tbd in Frameworks */,
 				65640BC21DCDDA4300531EF6 /* UserNotifications.framework in Frameworks */,
 				65640BC01DCDDA3800531EF6 /* AdSupport.framework in Frameworks */,
@@ -157,8 +197,8 @@
 				65640BB21DCDD9DC00531EF6 /* CoreTelephony.framework in Frameworks */,
 				65640BB01DCDD9D100531EF6 /* CoreFoundation.framework in Frameworks */,
 				65640BAE1DCDD9C800531EF6 /* CFNetwork.framework in Frameworks */,
-				1ED3266F83B5B9E29A57E0D4 /* libPods-百思不得姐.a in Frameworks */,
 				65640BAC1DCDD94000531EF6 /* jpush-ios-2.2.0.a in Frameworks */,
+				030AF0A731FD277C5C47118F /* libPods-百思不得姐.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D123E6947FCF17260A0FF86 /* libPods-百思不得姐Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,21 +214,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4491CA078E78331FA951E619 /* libPods-百思不得姐UITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4BC2106FB2A58D7E2D143FD6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8729EB2D790B919F489D67FD /* Pods-百思不得姐.debug.xcconfig */,
-				D134D311777342C8602D63A2 /* Pods-百思不得姐.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6514E9FD1DC084A000CE6589 = {
 			isa = PBXGroup;
 			children = (
@@ -195,8 +228,8 @@
 				6514EA221DC084A000CE6589 /* 百思不得姐Tests */,
 				6514EA2D1DC084A000CE6589 /* 百思不得姐UITests */,
 				6514EA071DC084A000CE6589 /* Products */,
-				4BC2106FB2A58D7E2D143FD6 /* Pods */,
 				E2AF54C1A1075438FE7D3667 /* Frameworks */,
+				B91239F745E3CC26905D7F93 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,9 +257,11 @@
 		6514EA091DC084A000CE6589 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6570B8231DD2C45100AF87AD /* sound.caf */,
 				6562FC541DCC8AFA005C4573 /* MainVCSettings.json */,
 				6514EA151DC084A000CE6589 /* Assets.xcassets */,
 				6514EA1A1DC084A000CE6589 /* Info.plist */,
+				65DDA8711DD462BF002D6874 /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -304,8 +339,10 @@
 		6514EA701DC0872400CE6589 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6514EA8F1DC09F3F00CE6589 /* BLWordCell.h */,
-				6514EA901DC09F3F00CE6589 /* BLWordCell.m */,
+				651D5C8F1DDAAA03005EC4C1 /* BLEssenceVideoCell.h */,
+				651D5C901DDAAA03005EC4C1 /* BLEssenceVideoCell.m */,
+				651D5C991DDADBB0005EC4C1 /* BLEssenceWordCell.xib */,
+				651D5C911DDAAA03005EC4C1 /* BLEssenceVideoCell.xib */,
 				65640BA61DCDB12C00531EF6 /* BLCommentCell.h */,
 				65640BA71DCDB12C00531EF6 /* BLCommentCell.m */,
 			);
@@ -417,6 +454,7 @@
 				6514EA801DC0872400CE6589 /* Controller */,
 				6514EA821DC0872400CE6589 /* Model */,
 				6514EA831DC0872400CE6589 /* View */,
+				6565AC091DDBF48D00B51920 /* Category */,
 				6514EA7E1DC0872400CE6589 /* AppDelegate.h */,
 				6514EA7F1DC0872400CE6589 /* AppDelegate.m */,
 				6514EA811DC0872400CE6589 /* main.m */,
@@ -432,6 +470,8 @@
 				656571081DD007F500805957 /* BLNavigationController.h */,
 				656571091DD007F500805957 /* BLNavigationController.m */,
 				65FC793B1DD05F4300AA2811 /* NotificationController */,
+				65674AA51DD1E2DB00ACA344 /* BLSentMessageVC.h */,
+				65674AA61DD1E2DB00ACA344 /* BLSentMessageVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -439,6 +479,8 @@
 		6514EA821DC0872400CE6589 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				651D5C941DDABA29005EC4C1 /* BLSeqliteTest.h */,
+				651D5C951DDABA29005EC4C1 /* BLSeqliteTest.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,6 +494,12 @@
 				655AF6851DC1C38E0090A1C9 /* BLRefreshHeader.m */,
 				6565710B1DD0081600805957 /* BLTabBar.h */,
 				6565710C1DD0081600805957 /* BLTabBar.m */,
+				657C39361DD5CD7F00085E81 /* BLPlayerView.h */,
+				657C39371DD5CD7F00085E81 /* BLPlayerView.m */,
+				657C394F1DD7097400085E81 /* BLPlayerVC_RB.h */,
+				657C39501DD7097400085E81 /* BLPlayerVC_RB.m */,
+				6568425B1DD948D200C25043 /* BLCustomerPlayer.h */,
+				6568425C1DD948D200C25043 /* BLCustomerPlayer.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -484,18 +532,43 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		6565AC091DDBF48D00B51920 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6565AC0A1DDBF4B200B51920 /* UIButton+Extension.h */,
+				6565AC0B1DDBF4B200B51920 /* UIButton+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		65FC793B1DD05F4300AA2811 /* NotificationController */ = {
 			isa = PBXGroup;
 			children = (
 				65FC793C1DD05F6C00AA2811 /* BLNotificationVC.h */,
 				65FC793D1DD05F6C00AA2811 /* BLNotificationVC.m */,
+				6565AC0D1DDC468800B51920 /* BLNotificationDetailVC.h */,
+				6565AC0E1DDC468800B51920 /* BLNotificationDetailVC.m */,
 			);
 			path = NotificationController;
+			sourceTree = "<group>";
+		};
+		B91239F745E3CC26905D7F93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5516760DD2E75B263AAF19A9 /* Pods-百思不得姐.debug.xcconfig */,
+				80468DC62805DC05CF05CC3A /* Pods-百思不得姐.release.xcconfig */,
+				61FC17846F307CC9E80623A3 /* Pods-百思不得姐Tests.debug.xcconfig */,
+				A202C05ED319163C0CBAB6AA /* Pods-百思不得姐Tests.release.xcconfig */,
+				0F18E2EE8FFB4D93F6072F23 /* Pods-百思不得姐UITests.debug.xcconfig */,
+				432DFB746271E21EFC9B65F2 /* Pods-百思不得姐UITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E2AF54C1A1075438FE7D3667 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				651D5C971DDABFC1005EC4C1 /* libsqlite3.tbd */,
 				65640BC31DCDDA5600531EF6 /* libresolv.tbd */,
 				65640BC11DCDDA4300531EF6 /* UserNotifications.framework */,
 				65640BBF1DCDDA3800531EF6 /* AdSupport.framework */,
@@ -508,7 +581,9 @@
 				65640BB11DCDD9DC00531EF6 /* CoreTelephony.framework */,
 				65640BAF1DCDD9D100531EF6 /* CoreFoundation.framework */,
 				65640BAD1DCDD9C800531EF6 /* CFNetwork.framework */,
-				06598B4D0F11635B1B9CBD95 /* libPods-百思不得姐.a */,
+				F785E5088467E66CAC9D5B02 /* libPods-百思不得姐.a */,
+				DFAEF30BD7C71716DDDB7F27 /* libPods-百思不得姐Tests.a */,
+				78616138F8FE15C90952B37A /* libPods-百思不得姐UITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -520,12 +595,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6514EA331DC084A000CE6589 /* Build configuration list for PBXNativeTarget "百思不得姐" */;
 			buildPhases = (
-				F36FB8564FCE7D01D751DB4B /* Check Pods Manifest.lock */,
+				55DD38B5FCCCA8828211EF43 /* [CP] Check Pods Manifest.lock */,
 				6514EA021DC084A000CE6589 /* Sources */,
 				6514EA031DC084A000CE6589 /* Frameworks */,
 				6514EA041DC084A000CE6589 /* Resources */,
-				2837C9689754745B296A5FD3 /* Embed Pods Frameworks */,
-				A94A630B5BC2E71311BAA7F3 /* Copy Pods Resources */,
+				10EB12B8BC517333D4EB7C05 /* [CP] Embed Pods Frameworks */,
+				6C663C922B9986286F3750A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -540,9 +615,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6514EA361DC084A000CE6589 /* Build configuration list for PBXNativeTarget "百思不得姐Tests" */;
 			buildPhases = (
+				A441FB5B26542BEA1A67B290 /* [CP] Check Pods Manifest.lock */,
 				6514EA1B1DC084A000CE6589 /* Sources */,
 				6514EA1C1DC084A000CE6589 /* Frameworks */,
 				6514EA1D1DC084A000CE6589 /* Resources */,
+				3F6851BDA998250FA44B2279 /* [CP] Embed Pods Frameworks */,
+				51E72F3F3A290291B549CE61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -558,9 +636,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6514EA391DC084A000CE6589 /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */;
 			buildPhases = (
+				0086148AE85562920050D8A4 /* [CP] Check Pods Manifest.lock */,
 				6514EA261DC084A000CE6589 /* Sources */,
 				6514EA271DC084A000CE6589 /* Frameworks */,
 				6514EA281DC084A000CE6589 /* Resources */,
+				83AB3E7AA95E0CD677359AF1 /* [CP] Embed Pods Frameworks */,
+				69C0344933C18585BF1585DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -584,7 +665,8 @@
 				TargetAttributes = {
 					6514EA051DC084A000CE6589 = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = X9W37S8HC3;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -633,7 +715,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651D5C9A1DDADBB0005EC4C1 /* BLEssenceWordCell.xib in Resources */,
+				651D5C931DDAAA03005EC4C1 /* BLEssenceVideoCell.xib in Resources */,
 				6562FC551DCC8AFA005C4573 /* MainVCSettings.json in Resources */,
+				6570B8241DD2C45100AF87AD /* sound.caf in Resources */,
+				65DDA8721DD462BF002D6874 /* Launch Screen.storyboard in Resources */,
 				6514EA161DC084A000CE6589 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,14 +741,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2837C9689754745B296A5FD3 /* Embed Pods Frameworks */ = {
+		0086148AE85562920050D8A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		10EB12B8BC517333D4EB7C05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,14 +771,74 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A94A630B5BC2E71311BAA7F3 /* Copy Pods Resources */ = {
+		3F6851BDA998250FA44B2279 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51E72F3F3A290291B549CE61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55DD38B5FCCCA8828211EF43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69C0344933C18585BF1585DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C663C922B9986286F3750A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,19 +846,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F36FB8564FCE7D01D751DB4B /* Check Pods Manifest.lock */ = {
+		83AB3E7AA95E0CD677359AF1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A441FB5B26542BEA1A67B290 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -709,26 +885,33 @@
 			files = (
 				656571131DD0119500805957 /* BLFollowVC.m in Sources */,
 				6514EA8B1DC09D9E00CE6589 /* BLJinhuaALLModel.m in Sources */,
-				6514EA911DC09F3F00CE6589 /* BLWordCell.m in Sources */,
 				65FC793E1DD05F6C00AA2811 /* BLNotificationVC.m in Sources */,
 				655AF6861DC1C38E0090A1C9 /* BLRefreshHeader.m in Sources */,
 				656571191DD011B400805957 /* BLNewVC.m in Sources */,
+				65674AA71DD1E2DB00ACA344 /* BLSentMessageVC.m in Sources */,
 				65640BA21DCDAC0200531EF6 /* user.m in Sources */,
+				657C39511DD7097400085E81 /* BLPlayerVC_RB.m in Sources */,
 				655E68671DCAFBDE0017A398 /* NSObject+YZProperty.m in Sources */,
+				6565AC0C1DDBF4B200B51920 /* UIButton+Extension.m in Sources */,
 				6565710A1DD007F500805957 /* BLNavigationController.m in Sources */,
 				655AF6831DC1C2F80090A1C9 /* BLRefreshFooter.m in Sources */,
+				651D5C921DDAAA03005EC4C1 /* BLEssenceVideoCell.m in Sources */,
 				656571161DD011A300805957 /* BLMeVC.m in Sources */,
 				656571101DD0117500805957 /* BLEssenceVC.m in Sources */,
 				6565710D1DD0081600805957 /* BLTabBar.m in Sources */,
 				65640B9C1DCDA04B00531EF6 /* BLCommentVC.m in Sources */,
 				655AF6801DC18FC70090A1C9 /* BLNetworkTool.m in Sources */,
+				657C39381DD5CD7F00085E81 /* BLPlayerView.m in Sources */,
 				65640B9F1DCDA63000531EF6 /* BLCommentModel.m in Sources */,
 				6514EA851DC0872400CE6589 /* main.m in Sources */,
+				6568425D1DD948D200C25043 /* BLCustomerPlayer.m in Sources */,
 				65640BA51DCDAD2600531EF6 /* cmt.m in Sources */,
 				6514EA841DC0872400CE6589 /* AppDelegate.m in Sources */,
 				656571071DD007C900805957 /* BLTabBarController.m in Sources */,
 				6514EA881DC0882A00CE6589 /* BLAllTableVC.m in Sources */,
 				65640BA81DCDB12C00531EF6 /* BLCommentCell.m in Sources */,
+				6565AC0F1DDC468800B51920 /* BLNotificationDetailVC.m in Sources */,
+				651D5C961DDABA29005EC4C1 /* BLSeqliteTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,16 +1037,15 @@
 		};
 		6514EA341DC084A000CE6589 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8729EB2D790B919F489D67FD /* Pods-百思不得姐.debug.xcconfig */;
+			baseConfigurationReference = 5516760DD2E75B263AAF19A9 /* Pods-百思不得姐.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_ENTITLEMENTS = "百思不得姐/百思不得姐.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: XuePeng Dong (PNKVFWV5HL)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X9W37S8HC3;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -878,16 +1060,15 @@
 		};
 		6514EA351DC084A000CE6589 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D134D311777342C8602D63A2 /* Pods-百思不得姐.release.xcconfig */;
+			baseConfigurationReference = 80468DC62805DC05CF05CC3A /* Pods-百思不得姐.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_ENTITLEMENTS = "百思不得姐/百思不得姐.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: XuePeng Dong (PNKVFWV5HL)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X9W37S8HC3;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -902,6 +1083,7 @@
 		};
 		6514EA371DC084A000CE6589 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61FC17846F307CC9E80623A3 /* Pods-百思不得姐Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 784CA86VY9;
@@ -915,6 +1097,7 @@
 		};
 		6514EA381DC084A000CE6589 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A202C05ED319163C0CBAB6AA /* Pods-百思不得姐Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 784CA86VY9;
@@ -928,6 +1111,7 @@
 		};
 		6514EA3A1DC084A000CE6589 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F18E2EE8FFB4D93F6072F23 /* Pods-百思不得姐UITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 784CA86VY9;
 				INFOPLIST_FILE = "百思不得姐UITests/Info.plist";
@@ -940,6 +1124,7 @@
 		};
 		6514EA3B1DC084A000CE6589 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432DFB746271E21EFC9B65F2 /* Pods-百思不得姐UITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 784CA86VY9;
 				INFOPLIST_FILE = "百思不得姐UITests/Info.plist";

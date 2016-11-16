@@ -10,7 +10,10 @@
 #import "BLAllTableVC.h"
 #import "BLTabBarController.h"
 #import "JPUSHService.h" // 极光推送
-#import "BLNotificationVC.h"
+#import "BLNotificationDetailVC.h"
+#import <SVProgressHUD.h>
+
+#import <JPFPSStatus.h>
 
 // iOS 10注册APNS所需文件
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
@@ -31,6 +34,7 @@
     
     //1. 初始化window
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
 //    BLAllTableVC *AllVC = [[BLAllTableVC alloc] init];
     //2. 添加根控制器
 //    self.window.rootViewController =[[UINavigationController alloc] initWithRootViewController: AllVC]; 
@@ -39,7 +43,20 @@
     [self.window makeKeyAndVisible];
     [self setupJPushWithOptions:launchOptions];
     
+    [self debugFPS];
+    
     return YES;
+}
+
+
+/**
+ 测试FPS
+ */
+- (void)debugFPS
+{
+#if defined(DEBUG)||defined(_DEBUG)
+    [[JPFPSStatus sharedInstance] open];
+#endif
 }
 
 /**
@@ -68,7 +85,27 @@
     // 如需要使用IDFA请添加代码并在初始化方法的advertisingIdentifier参数中填写对应值
 //    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     
-    [JPUSHService setupWithOption:launchOptions appKey:@"c72e0ecd62070788ee2d2c45" channel:@"App Store" apsForProduction:YES];
+    
+    
+    [JPUSHService setupWithOption:launchOptions 
+                           appKey:@"c72e0ecd62070788ee2d2c45"
+                          channel:@"App Store" 
+                 apsForProduction:YES];
+    
+    //TODO: 1.开始处理app退出后收到的通知消息（双击home键退出app/手机关闭后收到通知）
+    if (launchOptions) {
+        NSDictionary *remoteNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        NSLog(@"remoteNotification=%@",remoteNotification);
+        if (remoteNotification) {
+//            NSLog(@"启动程序开始处理推送消息");
+            /// iOS 10之前在后台收到通知（启动应用）
+                [self pushNotificationViewController:remoteNotification];
+            // 角标设置 推送消息+1
+            [JPUSHService setBadge:[remoteNotification[@"aps"][@"badge"] integerValue]];
+            // 开始跳转资讯页
+        }
+    }
+    
 }
 
 // 回调方法
@@ -87,33 +124,52 @@
 
 //*******************  JPUSH  ******************* 
 #pragma mark - <JPUSHRegisterDelegate> 添加APNs通知回调方法
+/// 前台收到的通知（在使用应用过程中收到通知）
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler
 {
     // Required
     NSDictionary *userInfo = notification.request.content.userInfo;
     if ([notification.request.trigger isKindOfClass:[UNNotificationTrigger class]]) {
+        
         [JPUSHService handleRemoteNotification:userInfo];
+//        [SVProgressHUD showSuccessWithStatus:@"程序在运行过程中收到通知"];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [SVProgressHUD dismiss];
+//        });
+        UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"新闻推送" message:userInfo[@"aps"][@"alert"] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* updateAction = [UIAlertAction actionWithTitle:@"查看" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [self pushNotificationViewController:userInfo];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alertvc addAction:cancelAction];
+        [alertvc addAction:updateAction];
+        [self.window.rootViewController presentViewController:alertvc animated:YES completion:nil];
     }
     
-    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
+    completionHandler(UNNotificationPresentationOptionSound); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
 }
 
-// iOS 10Support
+// iOS 10Support(app在后台或者未启动app）
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler
 {
     // required
     NSDictionary *userInfo = response.notification.request.content.userInfo;
     if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         [JPUSHService handleRemoteNotification:userInfo];
+        
+        [self pushNotificationViewController:userInfo];
     }
     completionHandler(); // 系统要求执行这个方法
 }
 
-// iOS 10之前调用这个方法
+// iOS 10之前调用这个方法（程序未启动）
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
     // Required, iOS 7 Support
     [JPUSHService handleRemoteNotification:userInfo];
+ 
+    [self pushNotificationViewController:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
@@ -121,6 +177,19 @@
 {
     // 支持iOS6以下
     [JPUSHService handleRemoteNotification:userInfo];
+}
+
+- (void)pushNotificationViewController:(NSDictionary *)info 
+{
+    // 找到当前选中的导航控制器
+    UITabBarController *tabBarVC = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *nav = tabBarVC.selectedViewController;
+    
+    NSString *url = [info valueForKey:@"url"];
+    [nav pushViewController:[[BLNotificationDetailVC alloc] initWKWebViewWith:url] animated:YES];
+    
+    
+    NSLog(@"info=%@",info);
 }
 //*******************  JPUSH  ******************* 
 

@@ -1,23 +1,32 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
-# Uncomment this line if you're using Swift
-# use_frameworks!
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
 target '百思不得姐' do
-	pod "AFNetworking"
-	pod "SDWebImage"
-	pod "MJExtension"
-	pod "SVProgressHUD"
-	pod "MJRefresh"
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for 百思不得姐
+    pod "AFNetworking"
+    pod "SDWebImage"
+    pod "MJExtension"
+    pod "SVProgressHUD"
+    pod "MJRefresh"
     pod 'UITableView+FDTemplateLayoutCell'
     pod 'Masonry'
+    pod 'FDFullscreenPopGesture', '~> 1.1'
+    pod 'ZFPlayer'
+    pod 'RBPlayer'
+    pod 'JPFPSStatus'
+    pod 'RRFPSBar'
+    pod 'FMDB'
+  target '百思不得姐Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target '百思不得姐UITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
 end
-
-target '百思不得姐Tests' do
-
-end
-
-target '百思不得姐UITests' do
-
-end
-

@@ -57,6 +57,11 @@
     [self popViewControllerAnimated:YES];
 }
 
+//- (UIViewController *)popViewControllerAnimated:(BOOL)animated
+//{
+//    NSLog(@"%s",__func__);
+//    return  [super popViewControllerAnimated:animated];
+//}
 
 /**
  控制器手势代理方法

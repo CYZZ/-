@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "User.h"
-#import "NSObject+YZProperty.h"
+#import <FMDB.h>
+
 
 @interface _____Tests : XCTestCase
 
@@ -31,9 +31,14 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
-- (void)testYZProperty {
-    NSArray *arrray =[User YZproperties];
-    NSLog(@"test完成数组=%@",arrray);
+- (void)testSqliteFMDB {
+    NSString *path = @"";
+    FMDatabase *db = [FMDatabase databaseWithPath:path];
+    if ([db open]) {
+        NSLog(@"打开数据库成功");
+    }else{
+        NSLog(@"打开数据库失败");
+    }
 }
 
 - (void)testPerformanceExample {

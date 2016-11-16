@@ -58,9 +58,19 @@
  */
 - (void)setupChildViewControllers
 {
-    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLAllTableVC alloc] init]] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLNewVC alloc] init]] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    BLAllTableVC *jinhuaTable = [[BLAllTableVC alloc] init];
+    jinhuaTable.typeID = @"29";
+    BLNavigationController *jinhuaNav = [[BLNavigationController alloc] initWithRootViewController:jinhuaTable];
+    [self setupOneChildViewController:jinhuaNav title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    
+    
+    BLAllTableVC *xintieTable = [[BLAllTableVC alloc] init];
+    xintieTable.typeID = @"41";
+    BLNavigationController *xintieNav = [[BLNavigationController alloc] initWithRootViewController:xintieTable];
+    [self setupOneChildViewController:xintieNav title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    
     [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLFollowVC alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    
     [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLMeVC alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
 }

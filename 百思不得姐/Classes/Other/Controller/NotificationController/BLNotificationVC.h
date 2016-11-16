@@ -11,4 +11,12 @@
 /**  通知跳转的控制器 */
 @interface BLNotificationVC : UIViewController
 
+
+/**
+ 初始化创建一个wkwebView
+
+ @param URL webView的url
+ */
+- (instancetype)initWithWkwebView:(NSString *)URL;
+
 @end

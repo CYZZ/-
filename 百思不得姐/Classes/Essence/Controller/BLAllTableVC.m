@@ -8,13 +8,21 @@
 
 #import "BLAllTableVC.h"
 #import "BLJinhuaALLModel.h"
-#import "BLWordCell.h"
+
+#import "BLEssenceVideoCell.h"
+
 #import "BLRefreshHeader.h"
 #import "BLRefreshFooter.h"
 #import <UITableView+FDTemplateLayoutCell.h>
-#import "NSObject+YZProperty.h"
+
+
+#import "BLSentMessageVC.h"
+#import "BLPlayerVC_RB.h"
+#import "BLCustomerPlayer.h"
+#import "BLNotificationDetailVC.h" // 通知详情页
 
 #import "BLCommentVC.h"
+
 
 @interface BLAllTableVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -36,7 +44,8 @@
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//        _tableView.estimatedRowHeight = 100.0f;
+        _tableView.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1];
+//        _tableView.estimatedRowHeight = 300.0f;
 //        _tableView.rowHeight = UITableViewAutomaticDimension;
     }
     return _tableView;
@@ -49,21 +58,14 @@
     [self.view addSubview:self.tableView];
 //    [self refreshData];
     // 注册cell
-    [self.tableView registerClass:[BLWordCell class] forCellReuseIdentifier:NSStringFromClass([BLWordCell class])];
+//    [self.tableView registerClass:[BLBaseEssenceCell class] forCellReuseIdentifier:NSStringFromClass([BLBaseEssenceCell class])];
+    
+    // 通过xib注册一个cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"BLEssenceVideoCell" bundle:nil] forCellReuseIdentifier:@"BLEssenceVideoCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"BLEssenceWordCell" bundle:nil] forCellReuseIdentifier:@"BLEssenceWordCell"];
     
     [self setupRefreshView];
     
-}
-- (void)testJSON {
-    //    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MainVCSettings.json" ofType:nil];
-    //    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    //    NSLog(@"data====%@",data);
-    //    NSError *error = nil;
-    //    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    //    NSLog(@"json数组=%@",array[1]);
-    //    
-    //    BLtestModel *model = [BLtestModel YZmodelWithDic:array[1]];
-    //    NSLog(@"model.vcName = %@",model.vcName);
 }
 
 /**
@@ -87,9 +89,13 @@
 /// 加载最新数据
 - (void)refreshData 
 {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    
+    dic[@"maxtime"] = self.maxTime;
+    dic[@"type"] = self.typeID;
     __weak typeof(self) weakSelf = self;
     
-    [BLJinhuaALLModel getEssenceModelWith:@{@"type" : @"29"} complection:^(BLJinhuaALLModel *ALLModel) {
+    [BLJinhuaALLModel getEssenceModelWith:dic complection:^(BLJinhuaALLModel *ALLModel) {
         
         NSLog(@"加载数据完成ID=%@",ALLModel.list[0].ID);
         
@@ -109,8 +115,8 @@
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     
     dic[@"maxtime"] = self.maxTime;
-    dic[@"type"] = @"29";
-    NSLog(@"dic=%@",dic);
+    dic[@"type"] = self.typeID;
+//    NSLog(@"dic=%@",dic);
     __weak typeof(self) weakSelf = self;
     
     [BLJinhuaALLModel getEssenceModelWith:dic complection:^(BLJinhuaALLModel *ALLModel) {
@@ -134,13 +140,40 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BLWordCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BLWordCell class])];
     list *model = self.dataList[indexPath.row];
+    
+    BLEssenceVideoCell *cell = [tableView dequeueReusableCellWithIdentifier:[BLEssenceVideoCell cellReuseIDWith:model] forIndexPath:indexPath];
     cell.model = model;
-    cell.buttonBlock = ^{
-        NSLog(@"在cell中调用了block");
-        model.expanded = !model.expanded;
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    
+    
+//    BLBaseEssenceCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BLBaseEssenceCell class])];
+    
+    
+    __weak typeof(self) weakSelf = self;
+//    cell.playerBtnClick = ^{
+//        NSLog(@"在cell中调用了播放按钮的block");
+//    };
+//    
+//    cell.buttonBlock = ^{
+//        NSLog(@"在cell中调用了block");
+//        BLPlayerVC_RB *jpPlayer = [[BLPlayerVC_RB alloc] init];
+//        jpPlayer.videoURL = model.videouri;
+//        
+//        [weakSelf.navigationController pushViewController:jpPlayer animated:YES];
+////        model.expanded = !model.expanded;
+////        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    };
+    
+    cell.playBLock = ^{
+                BLPlayerVC_RB *RBPlayerVC = [[BLPlayerVC_RB alloc] init];
+                RBPlayerVC.videoURL = model.videouri;
+                
+                [weakSelf.navigationController pushViewController:RBPlayerVC animated:YES];
+    };
+    
+    cell.commentBlock = ^{
+        
+        [weakSelf.navigationController pushViewController:[[BLNotificationDetailVC alloc] initWKWebViewWith:@"http://www.jianshu.com/p/88c2f3e207c4"] animated:YES];
     };
     
     return cell;
@@ -148,28 +181,29 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     list *model = self.dataList[indexPath.row];
-    return  [tableView fd_heightForCellWithIdentifier:NSStringFromClass([BLWordCell class]) cacheByIndexPath:indexPath configuration:^(BLWordCell *cell) {
+    
+    return [tableView fd_heightForCellWithIdentifier:[BLEssenceVideoCell cellReuseIDWith:model] cacheByIndexPath:indexPath configuration:^(BLEssenceVideoCell *cell) {
         cell.model = model;
     }];
-//    return  UITableViewAutomaticDimension;
-//    return 200;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [self refreshData];
-//    NSLog(@"高度为%f",UITableViewAutomaticDimension);
-//    BLWordCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BLWordCell class])];
-//    NSLog(@"cell.imageView = %@",NSStringFromCGSize( cell.profileImageView.image.size));
-//    NSLog(@"cell.height = %f",tableView.rowHeight);
-    list *model = self.dataList[indexPath.row];
+
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.navigationController pushViewController:[[BLCommentVC alloc] initWithCommentID:self.dataList[indexPath.row].ID] animated:YES];
     
-    [self.navigationController pushViewController:[[BLCommentVC alloc] initWithCommentID:model.ID] animated:YES];
+    BLEssenceVideoCell *cell = [tableView dequeueReusableCellWithIdentifier:[BLEssenceVideoCell cellReuseIDWith:self.dataList[indexPath.row]] forIndexPath:indexPath];
     
-//    model.expanded = !model.expanded;
-//    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    [cell layoutIfNeeded];
+    NSLog(@"cell.frame = %@",NSStringFromCGRect(cell.frame));
+
+//    BLCustomerPlayer *customPlayer = [[BLCustomerPlayer alloc] init];
+//    customPlayer.videoURL = self.dataList[indexPath.row].videouri;
+//    [self.navigationController pushViewController:customPlayer animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

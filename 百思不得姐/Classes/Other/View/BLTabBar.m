@@ -7,6 +7,8 @@
 //
 
 #import "BLTabBar.h"
+#import "BLNavigationController.h"
+#import "BLSentMessageVC.h"
 
 @interface BLTabBar ()
 
@@ -89,6 +91,11 @@
 -  (void)publishClick
 {
     NSLog(@"%s",__func__);
+    [self.window.rootViewController presentViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLSentMessageVC alloc] init]] animated:YES completion:^{
+        
+    }];
 }
+
+
 
 @end

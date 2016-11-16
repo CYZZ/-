@@ -10,6 +10,7 @@
 #import "BLCommentModel.h"
 #import "BLCommentCell.h"
 #import <UITableView+FDTemplateLayoutCell.h>
+#import "BLNotificationVC.h"
 
 @interface BLCommentVC ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic ,strong) UITableView *tableView;
@@ -111,6 +112,25 @@
         return @"最新评论";
     }
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    [BLNotificationVC alloc] initWithWkwebView:<#(NSString *)#>
+    [self.navigationController pushViewController:[[BLNotificationVC alloc] initWithWkwebView:@"http://blog.csdn.net/yangxuanlun/article/details/39582857"] animated:YES];
+}
+
+// 是否支持屏幕旋转
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+// 支持屏幕方向
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
 - (void)dealloc
 {
 //    NSLog(@"%@ delloc",self);
