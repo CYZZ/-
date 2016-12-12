@@ -33,10 +33,10 @@
 @property (nonatomic, copy) NSString * favourite;
 //@property (nonatomic, copy) NSString * gifFistFrame;
 //@property (nonatomic, copy) NSString * hate;
-//@property (nonatomic, copy) NSString * height;
+@property (nonatomic, copy) NSString * height;
 @property (nonatomic, copy) NSString * ID;
-//@property (nonatomic, copy) NSString * image0;
-//@property (nonatomic, copy) NSString * image1;
+@property (nonatomic, copy) NSString * image0;
+@property (nonatomic, copy) NSString * image1;
 //@property (nonatomic, copy) NSString * image2;
 @property (nonatomic, copy) NSString * image_small;
 //@property (nonatomic, copy) NSString * is_gif;
@@ -69,7 +69,7 @@
 //@property (nonatomic, copy) NSString * voicetime;
 //@property (nonatomic, copy) NSString * voiceuri;
 //@property (nonatomic, copy) NSString * weixin_url;
-//@property (nonatomic, copy) NSString * width;
+@property (nonatomic, copy) NSString * width;
 
 /// 添加的参数用于判断是否已显示最热评论
 @property (nonatomic, assign) BOOL expanded;

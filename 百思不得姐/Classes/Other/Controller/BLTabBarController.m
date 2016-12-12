@@ -14,6 +14,9 @@
 #import "BLMeVC.h"
 #import "BLNavigationController.h"
 #import "BLAllTableVC.h"
+#import "WYNewsTableVC.h"
+
+#import "BLNotificationDetailVC.h"
 
 @interface BLTabBarController ()
 
@@ -58,10 +61,12 @@
  */
 - (void)setupChildViewControllers
 {
-    BLAllTableVC *jinhuaTable = [[BLAllTableVC alloc] init];
-    jinhuaTable.typeID = @"29";
-    BLNavigationController *jinhuaNav = [[BLNavigationController alloc] initWithRootViewController:jinhuaTable];
-    [self setupOneChildViewController:jinhuaNav title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+//    BLAllTableVC *jinhuaTable = [[BLAllTableVC alloc] init];
+//    jinhuaTable.typeID = @"1";
+//    BLNavigationController *jinhuaNav = [[BLNavigationController alloc] initWithRootViewController:jinhuaTable];
+//    [self setupOneChildViewController:jinhuaNav title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    WYNewsTableVC *wyVC = [[WYNewsTableVC alloc] init];
+    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:wyVC] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
     
     BLAllTableVC *xintieTable = [[BLAllTableVC alloc] init];
@@ -71,7 +76,13 @@
     
     [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLFollowVC alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLMeVC alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    BLNotificationDetailVC *notifactionVC = [[BLNotificationDetailVC alloc] initWKWebViewWith:@"http://m.bailitop.com/japan/language_school/20161202/164533.html"];
+    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:notifactionVC] title:@"wkwebView" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    
+//    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLMeVC alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    
+    
+    
     
 }
 
@@ -92,7 +103,6 @@
         vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     }
     [self addChildViewController:vc];
-    NSLog(@"添加了Controller");
 }
 
 /**

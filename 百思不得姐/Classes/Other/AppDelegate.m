@@ -99,6 +99,7 @@
         if (remoteNotification) {
 //            NSLog(@"启动程序开始处理推送消息");
             /// iOS 10之前在后台收到通知（启动应用）
+            NSLog(@"4 jpushNotificationCenter弹框了");
                 [self pushNotificationViewController:remoteNotification];
             // 角标设置 推送消息+1
             [JPUSHService setBadge:[remoteNotification[@"aps"][@"badge"] integerValue]];
@@ -132,10 +133,8 @@
     if ([notification.request.trigger isKindOfClass:[UNNotificationTrigger class]]) {
         
         [JPUSHService handleRemoteNotification:userInfo];
-//        [SVProgressHUD showSuccessWithStatus:@"程序在运行过程中收到通知"];
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            [SVProgressHUD dismiss];
-//        });
+
+        NSLog(@"1 jpushNotificationCenter弹框了");
         UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"新闻推送" message:userInfo[@"aps"][@"alert"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* updateAction = [UIAlertAction actionWithTitle:@"查看" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
@@ -150,7 +149,7 @@
     completionHandler(UNNotificationPresentationOptionSound); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
 }
 
-// iOS 10Support(app在后台或者未启动app）
+/// iOS 10Support(app在后台或者未启动app）
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler
 {
     // required
@@ -158,20 +157,25 @@
     if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         [JPUSHService handleRemoteNotification:userInfo];
         
+        // 跳转
         [self pushNotificationViewController:userInfo];
+        NSLog(@" 2 jpushNotificationCenter跳转");
     }
     completionHandler(); // 系统要求执行这个方法
 }
 
-// iOS 10之前调用这个方法（程序未启动）
+/// iOS 10之前调用这个方法（app在后台或者未启动app）
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
     // Required, iOS 7 Support
     [JPUSHService handleRemoteNotification:userInfo];
- 
+#warning bug通过后台发送的通在iOS 10会跳转到这个方法
+    // 跳转
     [self pushNotificationViewController:userInfo];
+    NSLog(@"3 jpushNotificationCenter跳转");
     completionHandler(UIBackgroundFetchResultNewData);
 }
+
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {

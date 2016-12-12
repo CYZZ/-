@@ -91,7 +91,7 @@
 -  (void)publishClick
 {
     NSLog(@"%s",__func__);
-    [self.window.rootViewController presentViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLSentMessageVC alloc] init]] animated:YES completion:^{
+    [self.window.rootViewController presentViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLSentMessageVC alloc] initWithHtmlString:@"123"]] animated:YES completion:^{
         
     }];
 }

@@ -14,4 +14,12 @@
  视频了链接
  */
 @property (nonatomic, copy) NSString *videourl;
+
+
+/**
+ 加载html字符串
+
+ @param htmlString 字符串
+ */
+- (instancetype)initWithHtmlString:(NSString *)htmlString;
 @end

@@ -62,8 +62,14 @@
     
 }
 - (IBAction)dingBtnClick:(UIButton *)sender {
+    if (self.favoriteBLock) {
+        self.favoriteBLock();
+    }
 }
 - (IBAction)caiBtnClick:(UIButton *)sender {
+    if (self.caiBlock) {
+        self.caiBlock();
+    }
 }
 - (IBAction)shareBtnClick:(UIButton *)sender {
 }
@@ -75,10 +81,13 @@
 
 + (NSString *)cellReuseIDWith:(list *)model
 {
-    if ([model.type isEqualToString:@"29"]) {
-        return @"BLEssenceWordCell";
-    }else{
+    if ([model.type isEqualToString:@"41"]) {
+        
         return @"BLEssenceVideoCell";
+    }else if ([model.type isEqualToString:@"10"]){
+        return @"BLEssencePictureCell";
+    }else{
+        return @"BLEssenceWordCell";
     }
 }
 

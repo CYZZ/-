@@ -24,6 +24,10 @@
 @property (nonatomic, copy) void (^commentBlock)();
 
 
+@property (nonatomic, copy) void (^favoriteBLock)();
+
+@property (nonatomic, copy) void (^caiBlock)();
+
 /**
  设置可重用标识符
 

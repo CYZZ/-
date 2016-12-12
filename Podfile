@@ -19,6 +19,8 @@ target '百思不得姐' do
     pod 'JPFPSStatus'
     pod 'RRFPSBar'
     pod 'FMDB'
+    pod 'ReactiveCocoa','2.5'
+#    pod 'DLSlideView'
   target '百思不得姐Tests' do
     inherit! :search_paths
     # Pods for testing

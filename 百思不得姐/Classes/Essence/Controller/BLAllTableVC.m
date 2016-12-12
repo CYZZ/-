@@ -22,6 +22,8 @@
 #import "BLNotificationDetailVC.h" // 通知详情页
 
 #import "BLCommentVC.h"
+#import "BLTestColletionVC.h"
+#import "BLwebViewChangeUser-agentVC.h"
 
 
 @interface BLAllTableVC ()<UITableViewDelegate, UITableViewDataSource>
@@ -63,9 +65,10 @@
     // 通过xib注册一个cell
     [self.tableView registerNib:[UINib nibWithNibName:@"BLEssenceVideoCell" bundle:nil] forCellReuseIdentifier:@"BLEssenceVideoCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"BLEssenceWordCell" bundle:nil] forCellReuseIdentifier:@"BLEssenceWordCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"BLEssencePictureCell" bundle:nil] forCellReuseIdentifier:@"BLEssencePictureCell"];
     
     [self setupRefreshView];
-    
+    NSLog(@"%s",__func__);
 }
 
 /**
@@ -74,7 +77,6 @@
 - (void)setupRefreshView
 {
     BLRefreshHeader *header = [BLRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
-    
     self.tableView.mj_header = header;
     [self.tableView.mj_header beginRefreshing];
     
@@ -163,6 +165,10 @@
 ////        model.expanded = !model.expanded;
 ////        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 //    };
+    cell.caiBlock = ^{
+        BLwebViewChangeUser_agentVC *webagentVC = [[BLwebViewChangeUser_agentVC alloc] initWithUrlString:@"http://www.sucaibar.com/icon/anniu.html"];
+        [weakSelf.navigationController pushViewController:webagentVC animated:YES];
+    };
     
     cell.playBLock = ^{
                 BLPlayerVC_RB *RBPlayerVC = [[BLPlayerVC_RB alloc] init];
@@ -173,7 +179,11 @@
     
     cell.commentBlock = ^{
         
-        [weakSelf.navigationController pushViewController:[[BLNotificationDetailVC alloc] initWKWebViewWith:@"http://www.jianshu.com/p/88c2f3e207c4"] animated:YES];
+        [weakSelf.navigationController pushViewController:[[BLNotificationDetailVC alloc] initWKWebViewWith:@"http://m.bailitop.com/japan/language_school/20161202/164533.html"] animated:YES];
+    };
+    // 点击点赞 跳转到collectionView
+    cell.favoriteBLock = ^{
+        [weakSelf.navigationController pushViewController:[[BLTestColletionVC alloc] init] animated:YES];
     };
     
     return cell;
@@ -196,10 +206,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.navigationController pushViewController:[[BLCommentVC alloc] initWithCommentID:self.dataList[indexPath.row].ID] animated:YES];
     
-    BLEssenceVideoCell *cell = [tableView dequeueReusableCellWithIdentifier:[BLEssenceVideoCell cellReuseIDWith:self.dataList[indexPath.row]] forIndexPath:indexPath];
-    
-//    [cell layoutIfNeeded];
-    NSLog(@"cell.frame = %@",NSStringFromCGRect(cell.frame));
+//    BLEssenceVideoCell *cell = [tableView dequeueReusableCellWithIdentifier:[BLEssenceVideoCell cellReuseIDWith:self.dataList[indexPath.row]] forIndexPath:indexPath];
+//    
+////    [cell layoutIfNeeded];
+//    NSLog(@"cell.frame = %@",NSStringFromCGRect(cell.frame));
 
 //    BLCustomerPlayer *customPlayer = [[BLCustomerPlayer alloc] init];
 //    customPlayer.videoURL = self.dataList[indexPath.row].videouri;

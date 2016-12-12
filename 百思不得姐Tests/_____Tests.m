@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <FMDB.h>
+#import <ReactiveCocoa.h>
 
 
 @interface _____Tests : XCTestCase
@@ -30,6 +31,7 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
+
 
 - (void)testSqliteFMDB {
     NSString *path = @"";

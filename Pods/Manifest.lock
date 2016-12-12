@@ -23,6 +23,13 @@ PODS:
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - RBPlayer (0.1.5)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - RRFPSBar (0.0.1)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -41,6 +48,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - RBPlayer
+  - ReactiveCocoa (= 2.5)
   - RRFPSBar
   - SDWebImage
   - SVProgressHUD
@@ -56,12 +64,13 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   RBPlayer: cab6dd69b972631a0e29f7b3ee63d2a83885e5dc
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RRFPSBar: 32fd2b11fb3d6ea90dc9a1424f964ea3851cd091
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   ZFPlayer: ff74ca27faa41e8f6df42ea038c951353246f97f
 
-PODFILE CHECKSUM: 53a234ef675b71bbfd5516b382df7dde71e7fde8
+PODFILE CHECKSUM: a1ee5cc6f3ff48f8527931c29b0f727bfe551504
 
 COCOAPODS: 1.2.0.beta.1

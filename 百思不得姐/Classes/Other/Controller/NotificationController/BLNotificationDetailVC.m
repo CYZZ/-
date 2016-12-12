@@ -12,6 +12,9 @@
 
 @interface BLNotificationDetailVC ()<WKNavigationDelegate, UIScrollViewDelegate>
 @property (nonatomic, weak) WKWebView *wkwebView;
+@property (nonatomic, copy) void (^themeChangeBlock)();
+
+@property (nonatomic, assign) BOOL isNight;
 
 /**
  网络加载进度条
@@ -25,8 +28,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupNavItem];
     
 }
+
+
+/**
+ 初始化Item
+ */
+- (void)setupNavItem
+{
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Item1" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick)];
+    self.navigationItem.rightBarButtonItem = item;
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Item2" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick)];
+    
+}
+/// 右边按钮
+- (void)rightItemClick
+{
+    NSLog(@"点击了右边按钮");
+    if (self.themeChangeBlock) {
+        self.themeChangeBlock();
+    }
+}
+/// 左边按钮
+- (void)leftItemClick
+{
+    NSLog(@"点击了左边按钮");
+}
+
 
 - (instancetype)initWKWebViewWith:(NSString *)weburl
 {
@@ -114,6 +145,22 @@
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
     NSLog(@"网络加载完成");
+    // 设置背景颜色
+    __weak typeof(self) weakSelf= self;
+    self.themeChangeBlock = ^{
+         NSLog(@"调用了block代码");
+        if (!weakSelf.isNight) {
+            [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.background='#2E2E2E'" completionHandler:nil];
+            [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '130%'" completionHandler:nil];
+            weakSelf.isNight = YES;
+        }else{
+            weakSelf.isNight = NO;
+            [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.background='#ffffff'" completionHandler:nil];
+            [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '90%'" completionHandler:nil];
+        }
+        
+    };
+//    [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.background='#2E2E2E'" completionHandler:nil];
 }
 
 
