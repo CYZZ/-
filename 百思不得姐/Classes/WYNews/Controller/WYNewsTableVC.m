@@ -15,6 +15,11 @@
 #import "WYDetailNewsVC.h"
 
 #import "BLTestRACViewController.h"
+#import "BLNetworkTool.h"
+
+// 获取设备的IP地址
+#import <ifaddrs.h>
+#import <arpa/inet.h>
 
 #import <Masonry.h>
 #import <ReactiveCocoa.h>
@@ -74,12 +79,54 @@
 
 - (void)leftItemClick
 {
-    self.navigationItem.rightBarButtonItem.title = @"789456";
+//    self.navigationItem.rightBarButtonItem.title = @"789456";
+//	NSString *url = @"https://news-at.zhihu.com/api/4/stories/before/20161213";
+	
+	NSString *url = @"https://api.bailitop.com/appsite/v4/companies";
+	
+	NSLog(@"开始请求%@数据",url);
+	[BLNetworkTool BL_GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+		NSLog(@"成功responeObject = %@",responseObject);
+	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+		NSLog(@"请求https失败error=%@",error);
+	}];
+	NSLog(@"返回的IP地址=%@",[self getIpAddresses]);
+
+
+}
+- (NSString *)getIpAddresses{
+	NSString *address = @"error";
+	struct ifaddrs *interfaces = NULL;
+	struct ifaddrs *temp_addr = NULL;
+	int success = 0;
+	// 如果成功就收到0
+	success = getifaddrs(&interfaces);
+	if (success == 0) {
+		// Loop through linked list of interfaces
+		temp_addr = interfaces;
+		while (temp_addr != NULL) {
+			if (temp_addr->ifa_addr->sa_family == AF_INET) {
+				//check if interface is en0 which is th wifi connection on the iPhone
+				if ([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+					// Get NSString from C String
+					address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+				}
+			}
+			temp_addr = temp_addr->ifa_next;
+		}
+	}
+	// Free memory
+	freeifaddrs(interfaces);
+	
+	
+	return address;
+//		return [address UTF8String];
 }
 
 - (void)rightItemClick
 {
-    self.navigationItem.leftBarButtonItem.title = @"12345";
+	[self.navigationController pushViewController:[[BLTestRACViewController alloc] init] animated:YES];
+//    self.navigationItem.leftBarButtonItem.title = @"12345";
 }
 
 /**
@@ -173,6 +220,16 @@
     WYDetailNewsVC *detailVC = [[WYDetailNewsVC alloc] init];
     detailVC.listModel = self.newsArray[indexPath.row];
     [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+	return UIInterfaceOrientationMaskAll; // 支持屏幕旋转的方向
+}
+
+- (BOOL)shouldAutorotate
+{
+	return YES;
 }
 
 

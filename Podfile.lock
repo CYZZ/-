@@ -36,6 +36,9 @@ PODS:
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.0.3)
   - UITableView+FDTemplateLayoutCell (1.4)
+  - VTMagic (1.2.4):
+    - VTMagic/Core (= 1.2.4)
+  - VTMagic/Core (1.2.4)
   - ZFPlayer (2.0.3):
     - Masonry
 
@@ -53,6 +56,7 @@ DEPENDENCIES:
   - SDWebImage
   - SVProgressHUD
   - UITableView+FDTemplateLayoutCell
+  - VTMagic
   - ZFPlayer
 
 SPEC CHECKSUMS:
@@ -69,8 +73,9 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
   ZFPlayer: ff74ca27faa41e8f6df42ea038c951353246f97f
 
-PODFILE CHECKSUM: a1ee5cc6f3ff48f8527931c29b0f727bfe551504
+PODFILE CHECKSUM: 244b59967329e920988af9e842c2dd64466b24bf
 
 COCOAPODS: 1.2.0.beta.1

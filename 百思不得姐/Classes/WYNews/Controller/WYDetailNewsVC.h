@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "listModel.h"
+#import <ReactiveCocoa.h>
 
 @interface WYDetailNewsVC : UIViewController
 
@@ -15,5 +16,11 @@
  列表数据
  */
 @property (nonatomic, strong) listModel *listModel;
+
+
+/**
+ 下一个控制器的subject
+ */
+@property (nonatomic, strong) RACSubject *delegateSinal;
 
 @end

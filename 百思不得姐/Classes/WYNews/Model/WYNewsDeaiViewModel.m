@@ -75,7 +75,7 @@
     [html appendString:@"if(theme == \"night\") { classVal = classVal.replace(\"day\", \"night\");}else{classVal = classVal.replace(\"night\", \"day\");}"];
     [html appendString:@"document.getElementsByTagName('body')[0].setAttribute(\"class\",classVal );"];
     [html appendString:@"}"];
-    
+	
     [html appendString:@"function myScrollfunc()"];
     [html appendString:@"{"];
     [html appendString:@"var vtop = document.body.scrollTop;"];

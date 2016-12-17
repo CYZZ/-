@@ -20,6 +20,7 @@ target '百思不得姐' do
     pod 'RRFPSBar'
     pod 'FMDB'
     pod 'ReactiveCocoa','2.5'
+	pod 'VTMagic'
 #    pod 'DLSlideView'
   target '百思不得姐Tests' do
     inherit! :search_paths

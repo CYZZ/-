@@ -40,7 +40,10 @@
 		655AF6801DC18FC70090A1C9 /* BLNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AF67F1DC18FC70090A1C9 /* BLNetworkTool.m */; };
 		655AF6831DC1C2F80090A1C9 /* BLRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AF6821DC1C2F80090A1C9 /* BLRefreshFooter.m */; };
 		655AF6861DC1C38E0090A1C9 /* BLRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AF6851DC1C38E0090A1C9 /* BLRefreshHeader.m */; };
+		655B4F181E00CE40003FFEB3 /* YDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B4F161E00CE40003FFEB3 /* YDCell.m */; };
+		655B4F191E00CE40003FFEB3 /* YDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655B4F171E00CE40003FFEB3 /* YDCell.xib */; };
 		655E68671DCAFBDE0017A398 /* NSObject+YZProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E68661DCAFBDE0017A398 /* NSObject+YZProperty.m */; };
+		655FC43E1DFF83F400D6589F /* BLVTGPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655FC43D1DFF83F400D6589F /* BLVTGPageController.m */; };
 		655FCD6F1DDD4E69001CCC9A /* BLFollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 655FCD6D1DDD4E69001CCC9A /* BLFollowCell.m */; };
 		655FCD701DDD4E69001CCC9A /* BLFollowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655FCD6E1DDD4E69001CCC9A /* BLFollowCell.xib */; };
 		6562FC551DCC8AFA005C4573 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 6562FC541DCC8AFA005C4573 /* MainVCSettings.json */; };
@@ -86,8 +89,28 @@
 		6570427E1DDE93DC00221FE4 /* BLFollowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6570427D1DDE93DC00221FE4 /* BLFollowVC.xib */; };
 		657042821DDEE38000221FE4 /* BLMeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657042811DDEE38000221FE4 /* BLMeVC.storyboard */; };
 		6570B8241DD2C45100AF87AD /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6570B8231DD2C45100AF87AD /* sound.caf */; };
+		657742751E04CC95001ECAC6 /* YDThreeImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657742731E04CC95001ECAC6 /* YDThreeImageCell.xib */; };
+		657742781E052B1A001ECAC6 /* WYNewsDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657742771E052B1A001ECAC6 /* WYNewsDetailBottomView.m */; };
+		6577427A1E052B2C001ECAC6 /* WYNewsDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657742791E052B2C001ECAC6 /* WYNewsDetailBottomView.xib */; };
 		657C39381DD5CD7F00085E81 /* BLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C39371DD5CD7F00085E81 /* BLPlayerView.m */; };
 		657C39511DD7097400085E81 /* BLPlayerVC_RB.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C39501DD7097400085E81 /* BLPlayerVC_RB.m */; };
+		6582911D1E0371CB00EB698F /* BLLoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6582911C1E0371CB00EB698F /* BLLoginPage.m */; };
+		658291231E03720100EB698F /* BLAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 658291221E03720100EB698F /* BLAccount.m */; };
+		658291261E03721200EB698F /* BLLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 658291251E03721200EB698F /* BLLoginViewModel.m */; };
+		6582912A1E0377F800EB698F /* BLLoginPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658291291E0377F800EB698F /* BLLoginPage.xib */; };
+		6582912E1E03964400EB698F /* BLDoubanSearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6582912C1E03964400EB698F /* BLDoubanSearchPage.m */; };
+		6582912F1E03964400EB698F /* BLDoubanSearchPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6582912D1E03964400EB698F /* BLDoubanSearchPage.xib */; };
+		658291321E03968500EB698F /* BLDoubanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 658291311E03968500EB698F /* BLDoubanViewModel.m */; };
+		658291351E0398EA00EB698F /* BLBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 658291341E0398EA00EB698F /* BLBook.m */; };
+		658291371E03D0EC00EB698F /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 658291361E03D0EC00EB698F /* placeholder.png */; };
+		6582913B1E03E4E500EB698F /* BLDoubanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 658291391E03E4E500EB698F /* BLDoubanCell.m */; };
+		6582913C1E03E4E500EB698F /* BLDoubanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6582913A1E03E4E500EB698F /* BLDoubanCell.xib */; };
+		658FCF7A1DFFE54D009ABE2A /* bailihttps.cer in Resources */ = {isa = PBXBuildFile; fileRef = 658FCF791DFFE54D009ABE2A /* bailihttps.cer */; };
+		658FCF7C1DFFE5BE009ABE2A /* api.bailitop.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 658FCF7B1DFFE5BE009ABE2A /* api.bailitop.com.cer */; };
+		658FCF841E0019E8009ABE2A /* YDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658FCF821E0019E8009ABE2A /* YDController.m */; };
+		658FCF851E0019E8009ABE2A /* YDController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658FCF831E0019E8009ABE2A /* YDController.xib */; };
+		658FCF8A1E001A3A009ABE2A /* YDresult.m in Sources */ = {isa = PBXBuildFile; fileRef = 658FCF861E001A3A009ABE2A /* YDresult.m */; };
+		658FCF8B1E001A3A009ABE2A /* YiDianNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 658FCF891E001A3A009ABE2A /* YiDianNewsModel.m */; };
 		659927B81DEC27A5006A0D9D /* WYNight.css in Resources */ = {isa = PBXBuildFile; fileRef = 659927B71DEC27A5006A0D9D /* WYNight.css */; };
 		65DDA8721DD462BF002D6874 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DDA8711DD462BF002D6874 /* Launch Screen.storyboard */; };
 		65FC793E1DD05F6C00AA2811 /* BLNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC793D1DD05F6C00AA2811 /* BLNotificationVC.m */; };
@@ -173,8 +196,13 @@
 		655AF6821DC1C2F80090A1C9 /* BLRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLRefreshFooter.m; sourceTree = "<group>"; };
 		655AF6841DC1C38E0090A1C9 /* BLRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLRefreshHeader.h; sourceTree = "<group>"; };
 		655AF6851DC1C38E0090A1C9 /* BLRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLRefreshHeader.m; sourceTree = "<group>"; };
+		655B4F151E00CE40003FFEB3 /* YDCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDCell.h; sourceTree = "<group>"; };
+		655B4F161E00CE40003FFEB3 /* YDCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDCell.m; sourceTree = "<group>"; };
+		655B4F171E00CE40003FFEB3 /* YDCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDCell.xib; sourceTree = "<group>"; };
 		655E68651DCAFBDE0017A398 /* NSObject+YZProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YZProperty.h"; sourceTree = "<group>"; };
 		655E68661DCAFBDE0017A398 /* NSObject+YZProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YZProperty.m"; sourceTree = "<group>"; };
+		655FC43C1DFF83F400D6589F /* BLVTGPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLVTGPageController.h; sourceTree = "<group>"; };
+		655FC43D1DFF83F400D6589F /* BLVTGPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLVTGPageController.m; sourceTree = "<group>"; };
 		655FCD6C1DDD4E69001CCC9A /* BLFollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFollowCell.h; sourceTree = "<group>"; };
 		655FCD6D1DDD4E69001CCC9A /* BLFollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLFollowCell.m; sourceTree = "<group>"; };
 		655FCD6E1DDD4E69001CCC9A /* BLFollowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLFollowCell.xib; sourceTree = "<group>"; };
@@ -246,10 +274,41 @@
 		6570427D1DDE93DC00221FE4 /* BLFollowVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLFollowVC.xib; sourceTree = "<group>"; };
 		657042811DDEE38000221FE4 /* BLMeVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BLMeVC.storyboard; sourceTree = "<group>"; };
 		6570B8231DD2C45100AF87AD /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		657742731E04CC95001ECAC6 /* YDThreeImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDThreeImageCell.xib; sourceTree = "<group>"; };
+		657742761E052B1A001ECAC6 /* WYNewsDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsDetailBottomView.h; sourceTree = "<group>"; };
+		657742771E052B1A001ECAC6 /* WYNewsDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsDetailBottomView.m; sourceTree = "<group>"; };
+		657742791E052B2C001ECAC6 /* WYNewsDetailBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsDetailBottomView.xib; sourceTree = "<group>"; };
 		657C39361DD5CD7F00085E81 /* BLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlayerView.h; sourceTree = "<group>"; };
 		657C39371DD5CD7F00085E81 /* BLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlayerView.m; sourceTree = "<group>"; };
 		657C394F1DD7097400085E81 /* BLPlayerVC_RB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlayerVC_RB.h; sourceTree = "<group>"; };
 		657C39501DD7097400085E81 /* BLPlayerVC_RB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlayerVC_RB.m; sourceTree = "<group>"; };
+		6582911B1E0371CB00EB698F /* BLLoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLLoginPage.h; sourceTree = "<group>"; };
+		6582911C1E0371CB00EB698F /* BLLoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLLoginPage.m; sourceTree = "<group>"; };
+		658291211E03720100EB698F /* BLAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAccount.h; sourceTree = "<group>"; };
+		658291221E03720100EB698F /* BLAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAccount.m; sourceTree = "<group>"; };
+		658291241E03721200EB698F /* BLLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLLoginViewModel.h; sourceTree = "<group>"; };
+		658291251E03721200EB698F /* BLLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLLoginViewModel.m; sourceTree = "<group>"; };
+		658291291E0377F800EB698F /* BLLoginPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLLoginPage.xib; sourceTree = "<group>"; };
+		6582912B1E03964400EB698F /* BLDoubanSearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDoubanSearchPage.h; sourceTree = "<group>"; };
+		6582912C1E03964400EB698F /* BLDoubanSearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDoubanSearchPage.m; sourceTree = "<group>"; };
+		6582912D1E03964400EB698F /* BLDoubanSearchPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLDoubanSearchPage.xib; sourceTree = "<group>"; };
+		658291301E03968500EB698F /* BLDoubanViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDoubanViewModel.h; sourceTree = "<group>"; };
+		658291311E03968500EB698F /* BLDoubanViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDoubanViewModel.m; sourceTree = "<group>"; };
+		658291331E0398EA00EB698F /* BLBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLBook.h; sourceTree = "<group>"; };
+		658291341E0398EA00EB698F /* BLBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLBook.m; sourceTree = "<group>"; };
+		658291361E03D0EC00EB698F /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		658291381E03E4E500EB698F /* BLDoubanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDoubanCell.h; sourceTree = "<group>"; };
+		658291391E03E4E500EB698F /* BLDoubanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDoubanCell.m; sourceTree = "<group>"; };
+		6582913A1E03E4E500EB698F /* BLDoubanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLDoubanCell.xib; sourceTree = "<group>"; };
+		658FCF791DFFE54D009ABE2A /* bailihttps.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = bailihttps.cer; sourceTree = "<group>"; };
+		658FCF7B1DFFE5BE009ABE2A /* api.bailitop.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = api.bailitop.com.cer; sourceTree = "<group>"; };
+		658FCF811E0019E8009ABE2A /* YDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDController.h; sourceTree = "<group>"; };
+		658FCF821E0019E8009ABE2A /* YDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDController.m; sourceTree = "<group>"; };
+		658FCF831E0019E8009ABE2A /* YDController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDController.xib; sourceTree = "<group>"; };
+		658FCF861E001A3A009ABE2A /* YDresult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDresult.m; sourceTree = "<group>"; };
+		658FCF871E001A3A009ABE2A /* YDresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDresult.h; sourceTree = "<group>"; };
+		658FCF881E001A3A009ABE2A /* YiDianNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiDianNewsModel.h; sourceTree = "<group>"; };
+		658FCF891E001A3A009ABE2A /* YiDianNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiDianNewsModel.m; sourceTree = "<group>"; };
 		659927B71DEC27A5006A0D9D /* WYNight.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = WYNight.css; sourceTree = "<group>"; };
 		65DDA8711DD462BF002D6874 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		65FC793C1DD05F6C00AA2811 /* BLNotificationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNotificationVC.h; sourceTree = "<group>"; };
@@ -339,6 +398,8 @@
 		6514EA091DC084A000CE6589 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				658FCF791DFFE54D009ABE2A /* bailihttps.cer */,
+				658FCF7B1DFFE5BE009ABE2A /* api.bailitop.com.cer */,
 				6570B8231DD2C45100AF87AD /* sound.caf */,
 				6562FC541DCC8AFA005C4573 /* MainVCSettings.json */,
 				6514EA151DC084A000CE6589 /* Assets.xcassets */,
@@ -375,6 +436,8 @@
 				6514EA751DC0872400CE6589 /* Me */,
 				6514EA791DC0872400CE6589 /* New */,
 				655A154A1DDFE31E00A6D6FC /* WYNews */,
+				658FCF7D1E0019C0009ABE2A /* YiDianZiXun */,
+				658291141E03717400EB698F /* MVVMTest */,
 				6514EA7D1DC0872400CE6589 /* Other */,
 				655E68631DCAFB720017A398 /* YZExtension */,
 			);
@@ -458,6 +521,8 @@
 				657042781DDE8EFF00221FE4 /* BLTestVC3.h */,
 				657042791DDE8EFF00221FE4 /* BLTestVC3.m */,
 				6570427A1DDE8EFF00221FE4 /* BLTestVC3.xib */,
+				655FC43C1DFF83F400D6589F /* BLVTGPageController.h */,
+				655FC43D1DFF83F400D6589F /* BLVTGPageController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -558,6 +623,7 @@
 				6514EA811DC0872400CE6589 /* main.m */,
 				655A156F1DE02A3500A6D6FC /* WYDetails.css */,
 				659927B71DEC27A5006A0D9D /* WYNight.css */,
+				658291361E03D0EC00EB698F /* placeholder.png */,
 				6564BADC1DE2B56B00C54AF2 /* Budejie.pch */,
 			);
 			path = Other;
@@ -665,6 +731,9 @@
 				655A15541DDFE80D00A6D6FC /* WYNewsCell.h */,
 				655A15551DDFE80D00A6D6FC /* WYNewsCell.m */,
 				655A15561DDFE80D00A6D6FC /* WYNewsCell.xib */,
+				657742761E052B1A001ECAC6 /* WYNewsDetailBottomView.h */,
+				657742771E052B1A001ECAC6 /* WYNewsDetailBottomView.m */,
+				657742791E052B2C001ECAC6 /* WYNewsDetailBottomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -704,6 +773,96 @@
 				6565AC0B1DDBF4B200B51920 /* UIButton+Extension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		658291141E03717400EB698F /* MVVMTest */ = {
+			isa = PBXGroup;
+			children = (
+				658291151E03717400EB698F /* Model */,
+				658291161E03717400EB698F /* Page */,
+				658291171E03717400EB698F /* ViewModel */,
+			);
+			path = MVVMTest;
+			sourceTree = "<group>";
+		};
+		658291151E03717400EB698F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				658291211E03720100EB698F /* BLAccount.h */,
+				658291221E03720100EB698F /* BLAccount.m */,
+				658291331E0398EA00EB698F /* BLBook.h */,
+				658291341E0398EA00EB698F /* BLBook.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		658291161E03717400EB698F /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				6582911B1E0371CB00EB698F /* BLLoginPage.h */,
+				6582911C1E0371CB00EB698F /* BLLoginPage.m */,
+				658291291E0377F800EB698F /* BLLoginPage.xib */,
+				6582912B1E03964400EB698F /* BLDoubanSearchPage.h */,
+				6582912C1E03964400EB698F /* BLDoubanSearchPage.m */,
+				6582912D1E03964400EB698F /* BLDoubanSearchPage.xib */,
+				658291381E03E4E500EB698F /* BLDoubanCell.h */,
+				658291391E03E4E500EB698F /* BLDoubanCell.m */,
+				6582913A1E03E4E500EB698F /* BLDoubanCell.xib */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		658291171E03717400EB698F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				658291241E03721200EB698F /* BLLoginViewModel.h */,
+				658291251E03721200EB698F /* BLLoginViewModel.m */,
+				658291301E03968500EB698F /* BLDoubanViewModel.h */,
+				658291311E03968500EB698F /* BLDoubanViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		658FCF7D1E0019C0009ABE2A /* YiDianZiXun */ = {
+			isa = PBXGroup;
+			children = (
+				658FCF7E1E0019C0009ABE2A /* Controller */,
+				658FCF7F1E0019C0009ABE2A /* Model */,
+				658FCF801E0019C0009ABE2A /* View */,
+			);
+			path = YiDianZiXun;
+			sourceTree = "<group>";
+		};
+		658FCF7E1E0019C0009ABE2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				658FCF811E0019E8009ABE2A /* YDController.h */,
+				658FCF821E0019E8009ABE2A /* YDController.m */,
+				658FCF831E0019E8009ABE2A /* YDController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		658FCF7F1E0019C0009ABE2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				658FCF871E001A3A009ABE2A /* YDresult.h */,
+				658FCF861E001A3A009ABE2A /* YDresult.m */,
+				658FCF881E001A3A009ABE2A /* YiDianNewsModel.h */,
+				658FCF891E001A3A009ABE2A /* YiDianNewsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		658FCF801E0019C0009ABE2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				655B4F151E00CE40003FFEB3 /* YDCell.h */,
+				655B4F161E00CE40003FFEB3 /* YDCell.m */,
+				655B4F171E00CE40003FFEB3 /* YDCell.xib */,
+				657742731E04CC95001ECAC6 /* YDThreeImageCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		65FC793B1DD05F4300AA2811 /* NotificationController */ = {
@@ -884,20 +1043,30 @@
 				651D5C9A1DDADBB0005EC4C1 /* BLEssenceWordCell.xib in Resources */,
 				655FCD701DDD4E69001CCC9A /* BLFollowCell.xib in Resources */,
 				655A15701DE02A3500A6D6FC /* WYDetails.css in Resources */,
+				655B4F191E00CE40003FFEB3 /* YDCell.xib in Resources */,
 				651D5C931DDAAA03005EC4C1 /* BLEssenceVideoCell.xib in Resources */,
 				655A15491DDFDF5A00A6D6FC /* Netest.html in Resources */,
 				6570427C1DDE8EFF00221FE4 /* BLTestVC3.xib in Resources */,
 				6565AC181DDC628E00B51920 /* BLEssencePictureCell.xib in Resources */,
 				6562FC551DCC8AFA005C4573 /* MainVCSettings.json in Resources */,
+				6582912A1E0377F800EB698F /* BLLoginPage.xib in Resources */,
 				6570B8241DD2C45100AF87AD /* sound.caf in Resources */,
+				658FCF7A1DFFE54D009ABE2A /* bailihttps.cer in Resources */,
 				657042771DDE8EEE00221FE4 /* BLTestVC2.xib in Resources */,
 				65DDA8721DD462BF002D6874 /* Launch Screen.storyboard in Resources */,
+				658FCF7C1DFFE5BE009ABE2A /* api.bailitop.com.cer in Resources */,
+				658FCF851E0019E8009ABE2A /* YDController.xib in Resources */,
+				6582912F1E03964400EB698F /* BLDoubanSearchPage.xib in Resources */,
+				658291371E03D0EC00EB698F /* placeholder.png in Resources */,
 				657042821DDEE38000221FE4 /* BLMeVC.storyboard in Resources */,
 				6570427E1DDE93DC00221FE4 /* BLFollowVC.xib in Resources */,
 				659927B81DEC27A5006A0D9D /* WYNight.css in Resources */,
+				657742751E04CC95001ECAC6 /* YDThreeImageCell.xib in Resources */,
+				6582913C1E03E4E500EB698F /* BLDoubanCell.xib in Resources */,
 				655A15581DDFE80D00A6D6FC /* WYNewsCell.xib in Resources */,
 				657042721DDE8EDD00221FE4 /* BLTest1VC.xib in Resources */,
 				6514EA161DC084A000CE6589 /* Assets.xcassets in Resources */,
+				6577427A1E052B2C001ECAC6 /* WYNewsDetailBottomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1060,6 +1229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6582913B1E03E4E500EB698F /* BLDoubanCell.m in Sources */,
 				656571131DD0119500805957 /* BLFollowVC.m in Sources */,
 				6514EA8B1DC09D9E00CE6589 /* BLJinhuaALLModel.m in Sources */,
 				6570427B1DDE8EFF00221FE4 /* BLTestVC3.m in Sources */,
@@ -1068,25 +1238,34 @@
 				65FC793E1DD05F6C00AA2811 /* BLNotificationVC.m in Sources */,
 				654EE96E1DE9753B00A5A855 /* BLCollectionFlowLayout.m in Sources */,
 				65528EF11DFE922400DCD6DC /* BLTestRACViewController.m in Sources */,
+				658291261E03721200EB698F /* BLLoginViewModel.m in Sources */,
+				6582911D1E0371CB00EB698F /* BLLoginPage.m in Sources */,
 				655AF6861DC1C38E0090A1C9 /* BLRefreshHeader.m in Sources */,
 				656571191DD011B400805957 /* BLNewVC.m in Sources */,
 				65674AA71DD1E2DB00ACA344 /* BLSentMessageVC.m in Sources */,
 				65640BA21DCDAC0200531EF6 /* user.m in Sources */,
 				657C39511DD7097400085E81 /* BLPlayerVC_RB.m in Sources */,
 				6564BADA1DE2A2E400C54AF2 /* WYNewsDeaiViewModel.m in Sources */,
+				655FC43E1DFF83F400D6589F /* BLVTGPageController.m in Sources */,
+				655B4F181E00CE40003FFEB3 /* YDCell.m in Sources */,
 				6564D18A1DED9AE5009575E2 /* YZCollectionCell.m in Sources */,
 				654EE9711DE985A800A5A855 /* BLTestColletionVC.m in Sources */,
+				658291351E0398EA00EB698F /* BLBook.m in Sources */,
 				655E68671DCAFBDE0017A398 /* NSObject+YZProperty.m in Sources */,
 				6565AC0C1DDBF4B200B51920 /* UIButton+Extension.m in Sources */,
 				6565710A1DD007F500805957 /* BLNavigationController.m in Sources */,
+				658FCF8B1E001A3A009ABE2A /* YiDianNewsModel.m in Sources */,
 				655AF6831DC1C2F80090A1C9 /* BLRefreshFooter.m in Sources */,
 				655FCD6F1DDD4E69001CCC9A /* BLFollowCell.m in Sources */,
 				651D5C921DDAAA03005EC4C1 /* BLEssenceVideoCell.m in Sources */,
 				656571161DD011A300805957 /* BLMeVC.m in Sources */,
 				656571101DD0117500805957 /* BLEssenceVC.m in Sources */,
+				658FCF8A1E001A3A009ABE2A /* YDresult.m in Sources */,
 				6565710D1DD0081600805957 /* BLTabBar.m in Sources */,
+				6582912E1E03964400EB698F /* BLDoubanSearchPage.m in Sources */,
 				65640B9C1DCDA04B00531EF6 /* BLCommentVC.m in Sources */,
 				655AF6801DC18FC70090A1C9 /* BLNetworkTool.m in Sources */,
+				657742781E052B1A001ECAC6 /* WYNewsDetailBottomView.m in Sources */,
 				657C39381DD5CD7F00085E81 /* BLPlayerView.m in Sources */,
 				657042711DDE8EDD00221FE4 /* BLTest1VC.m in Sources */,
 				6564D1871DED7512009575E2 /* YZWaterFlowLayout.m in Sources */,
@@ -1095,11 +1274,14 @@
 				6514EA851DC0872400CE6589 /* main.m in Sources */,
 				6568425D1DD948D200C25043 /* BLCustomerPlayer.m in Sources */,
 				65640BA51DCDAD2600531EF6 /* cmt.m in Sources */,
+				658FCF841E0019E8009ABE2A /* YDController.m in Sources */,
+				658291231E03720100EB698F /* BLAccount.m in Sources */,
 				6559F33F1DEFF68900E4462C /* BLSeeBigImageVC.m in Sources */,
 				655A156B1DDFF76500A6D6FC /* WYDetailNewsVC.m in Sources */,
 				6514EA841DC0872400CE6589 /* AppDelegate.m in Sources */,
 				656571071DD007C900805957 /* BLTabBarController.m in Sources */,
 				6514EA881DC0882A00CE6589 /* BLAllTableVC.m in Sources */,
+				658291321E03968500EB698F /* BLDoubanViewModel.m in Sources */,
 				655A15671DDFEF1100A6D6FC /* WYNewsTableVC.m in Sources */,
 				65640BA81DCDB12C00531EF6 /* BLCommentCell.m in Sources */,
 				6565AC0F1DDC468800B51920 /* BLNotificationDetailVC.m in Sources */,

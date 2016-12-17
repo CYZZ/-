@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MenuInfo;
 
 @interface BLAllTableVC : UIViewController
 /// 加载数据类型（29为段子，41为视频)
 @property (nonatomic, copy) NSString *typeID;
+
+@property (nonatomic, strong) MenuInfo *menuInfo;
 @end

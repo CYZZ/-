@@ -16,7 +16,10 @@
 #import "BLAllTableVC.h"
 #import "WYNewsTableVC.h"
 
+#import "BLVTGPageController.h"
+
 #import "BLNotificationDetailVC.h"
+#import "YDController.h" // 一点资讯数据
 
 @interface BLTabBarController ()
 
@@ -74,10 +77,14 @@
     BLNavigationController *xintieNav = [[BLNavigationController alloc] initWithRootViewController:xintieTable];
     [self setupOneChildViewController:xintieNav title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLFollowVC alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+//    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLFollowVC alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+	[self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLVTGPageController alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    BLNotificationDetailVC *notifactionVC = [[BLNotificationDetailVC alloc] initWKWebViewWith:@"http://m.bailitop.com/japan/language_school/20161202/164533.html"];
-    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:notifactionVC] title:@"wkwebView" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+//    BLNotificationDetailVC *notifactionVC = [[BLNotificationDetailVC alloc] initWKWebViewWith:@"http://m.bailitop.com/japan/language_school/20161202/164533.html"];
+//    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:notifactionVC] title:@"wkwebView" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+	
+	YDController *yidianzixun = [[YDController alloc] init];
+	[self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:yidianzixun] title:@"一点资讯" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
 //    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLMeVC alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     

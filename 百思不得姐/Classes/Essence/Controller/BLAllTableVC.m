@@ -91,6 +91,7 @@
 /// 加载最新数据
 - (void)refreshData 
 {
+	NSLog(@"即将加载的类型ID=%@",self.typeID);
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     
     dic[@"maxtime"] = self.maxTime;
@@ -99,7 +100,7 @@
     
     [BLJinhuaALLModel getEssenceModelWith:dic complection:^(BLJinhuaALLModel *ALLModel) {
         
-        NSLog(@"加载数据完成ID=%@",ALLModel.list[0].ID);
+//        NSLog(@"加载数据完成ID=%@",ALLModel.list[0].ID);
         
         weakSelf.maxTime = ALLModel.info.maxtime; // 最后刷新时间
         weakSelf.dataList = ALLModel.list.mutableCopy;
