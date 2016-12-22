@@ -77,7 +77,7 @@
 
 @property (nonatomic, copy) void(^exchangeItemsBlock)(NSInteger index1, NSInteger index2);
 /**
- 交换两个索引位置
+ 并不是交换两个索引位置，其实是先删除后插入
 
  @param change 被交换的block
  */

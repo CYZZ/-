@@ -47,7 +47,7 @@
 	tagView.tagColor = [UIColor cyanColor];
 	
 	/// *********** 一定要设置好属性之后添加标签
-
+//	NSLog(@"传进来的标题数量=%ld",self.titleArray.count);
 	[tagView addTags:self.titleArray];
 	
 	// 点击按钮
@@ -59,14 +59,19 @@
 		}
 		[weakSelf.navigationController popViewControllerAnimated:YES];
 		
-		NSLog(@"排序结果b%@",weakTagView.tagArrays);
+//		NSLog(@"点击频道返回的数量%ld",weakSelf.channeslArr.count);
 	};
 	
 	/// 在这里对频道的数据源进行排序
 	[tagView exchangeItemsBetween:^(NSInteger index1, NSInteger index2) {
-		[weakSelf.channeslArr exchangeObjectAtIndex:index1 withObjectAtIndex:index2];
+#warning change 其实不是交换元素是先删除后插入
+//		[weakSelf.channeslArr exchangeObjectAtIndex:index1 withObjectAtIndex:index2];
+		channels *changeObject = weakSelf.channeslArr[index1];
+		[weakSelf.channeslArr removeObjectAtIndex:index1];
+		[weakSelf.channeslArr insertObject:changeObject atIndex:index2];
+		[weakSelf sortChannelCompletion];
 //		NSLog(@"begin=%ld,endIndex=%ld",index1,index2);
-		NSLog(@"subchannelArr = %@",weakSelf.channeslArr);
+//		NSLog(@"松开手频道数=%ld",weakSelf.channeslArr.count);
 	}];
 	
 //	tagView.clickTagBlock = self.selectChannel;
@@ -82,6 +87,7 @@
 {
 	/// 把排序结果返回
 	if (self.channelBackBlock) {
+		NSLog(@"完成排序%ld",self.channeslArr.count);
 		self.channelBackBlock(self.channeslArr);
 	}
 }

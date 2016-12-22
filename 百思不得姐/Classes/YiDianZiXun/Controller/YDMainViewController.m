@@ -82,7 +82,11 @@
 	__weak typeof(self) weakSelf = self;
 	channel.channelBackBlock =^(NSMutableArray<channels*> *channelsArr){
 		weakSelf.channelsArr = channelsArr;
+		if (channelsArr.count > 0) {
+			[weakSelf.titleArray removeAllObjects];
+		}
 		[weakSelf.channelsArr enumerateObjectsUsingBlock:^(channels * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//			NSLog(@"返回的标题=%@",obj.name);
 			[weakSelf.titleArray addObject:obj.name];
 		}];
 		[weakSelf.magicView reloadData];
@@ -107,24 +111,25 @@
 - (void)loadChannelData
 {
 	[SVProgressHUD show];
+	__weak typeof(self) weakSelf = self;
 	[YiDianChannelModel requestYDChannels:^(YiDianChannelModel *model) {
-		self.titleArray = @[].mutableCopy;
-		self.channelsArr = model.user_channels[0].channels.mutableCopy;
+		weakSelf.titleArray = @[].mutableCopy;
+		weakSelf.channelsArr = model.user_channels[0].channels.mutableCopy;
 		
 		channels *best = [[channels alloc] init];
 		best.name = @"推荐";
 		channels *hot = [[channels alloc] init];
 		hot.name = @"要闻";
 		
-		[self.channelsArr insertObject:best atIndex:0];
-		[self.channelsArr insertObject:hot atIndex:1];
+		[weakSelf.channelsArr insertObject:best atIndex:0];
+		[weakSelf.channelsArr insertObject:hot atIndex:1];
 		
-		__weak typeof(self) weakSelf = self;
+//		__weak typeof(self) weakSelf = self;
 		[self.channelsArr enumerateObjectsUsingBlock:^(channels * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 			[weakSelf.titleArray addObject:obj.name];
 		}];
 		
-		[self.magicView reloadData];
+		[weakSelf.magicView reloadData];
 		[SVProgressHUD dismiss];
 	} failture:^(NSError *error) {
 		[SVProgressHUD dismiss];

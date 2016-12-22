@@ -34,7 +34,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - SVProgressHUD (2.0.3)
+  - SVProgressHUD (2.0.4)
   - UITableView+FDTemplateLayoutCell (1.4)
   - VTMagic (1.2.4):
     - VTMagic/Core (= 1.2.4)
@@ -71,11 +71,11 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RRFPSBar: 32fd2b11fb3d6ea90dc9a1424f964ea3851cd091
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
   ZFPlayer: ff74ca27faa41e8f6df42ea038c951353246f97f
 
 PODFILE CHECKSUM: 244b59967329e920988af9e842c2dd64466b24bf
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.1.1
