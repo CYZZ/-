@@ -16,10 +16,15 @@
 
 #import "BLTestRACViewController.h"
 #import "BLNetworkTool.h"
+#import "UIImage+extension.h"
+
+#import "BLPerson.h"
+#import "NSObject+YZProperty.h"
 
 // 获取设备的IP地址
 #import <ifaddrs.h>
 #import <arpa/inet.h>
+#import <objc/runtime.h>
 
 #import <Masonry.h>
 #import <ReactiveCocoa.h>
@@ -40,9 +45,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-//    [self.tableView registerClass:[WYNewsCell class] forCellReuseIdentifier:NSStringFromClass([WYNewsCell class])];
+
     [self.tableView registerNib:[UINib nibWithNibName:@"WYNewsCell" bundle:nil] forCellReuseIdentifier:@"WYNewsCell"];
     [self setupRefreshView];
     self.tableView.rowHeight = 80;
@@ -79,20 +82,25 @@
 
 - (void)leftItemClick
 {
-//    self.navigationItem.rightBarButtonItem.title = @"789456";
-//	NSString *url = @"https://news-at.zhihu.com/api/4/stories/before/20161213";
-	
-	NSString *url = @"https://api.bailitop.com/appsite/v4/companies";
-	
-	NSLog(@"开始请求%@数据",url);
-	[BLNetworkTool BL_GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-		NSLog(@"成功responeObject = %@",responseObject);
-	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-		NSLog(@"请求https失败error=%@",error);
-	}];
-	NSLog(@"返回的IP地址=%@",[self getIpAddresses]);
-
-
+	// 把一个字典自动转成模型
+	NSDictionary *dict = @{
+						   @"频道":@[@"首页",
+								   @"热门",
+								   @"留学",
+								   @"专业",
+								   @"选校",
+								   @"旅游",
+								   @"加拿大",
+								   @"日本",
+								   @"英国"
+								   ],
+						   @"status":@{
+								   @"code":@"200",
+								   },
+						   @"name":@"jack",
+						   @"num":@123
+						   };
+	[NSObject resolveDict:dict];
 }
 - (NSString *)getIpAddresses{
 	NSString *address = @"error";

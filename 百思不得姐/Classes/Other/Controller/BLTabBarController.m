@@ -19,7 +19,8 @@
 #import "BLVTGPageController.h"
 
 #import "BLNotificationDetailVC.h"
-#import "YDController.h" // 一点资讯数据
+//#import "YDController.h" // 一点资讯数据
+#import "YDMainViewController.h"
 
 @interface BLTabBarController ()
 
@@ -83,7 +84,7 @@
 //    BLNotificationDetailVC *notifactionVC = [[BLNotificationDetailVC alloc] initWKWebViewWith:@"http://m.bailitop.com/japan/language_school/20161202/164533.html"];
 //    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:notifactionVC] title:@"wkwebView" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
 	
-	YDController *yidianzixun = [[YDController alloc] init];
+	YDMainViewController *yidianzixun = [[YDMainViewController alloc] init];
 	[self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:yidianzixun] title:@"一点资讯" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
 //    [self setupOneChildViewController:[[BLNavigationController alloc] initWithRootViewController:[[BLMeVC alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];

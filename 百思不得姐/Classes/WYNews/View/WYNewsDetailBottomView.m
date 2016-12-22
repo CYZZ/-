@@ -28,6 +28,7 @@
 	self.closeImageView.image = [UIImage imageNamed:isCloseing ? @"newscontent_drag_return" : @"newscontent_drag_arrow"];
 	self.titleLabel.text = isCloseing ? @"松手关闭当前页" : @"上拉关闭当前页" ;
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

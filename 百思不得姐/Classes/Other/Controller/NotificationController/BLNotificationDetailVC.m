@@ -7,6 +7,9 @@
 //
 
 #import "BLNotificationDetailVC.h"
+#import "WYNewsDetailBottomView.h"
+
+#import <ReactiveCocoa.h>
 #import <WebKit/WebKit.h>
 #import <Masonry.h>
 
@@ -15,6 +18,8 @@
 @property (nonatomic, copy) void (^themeChangeBlock)();
 
 @property (nonatomic, assign) BOOL isNight;
+/// 底部视图
+@property (nonatomic, weak) WYNewsDetailBottomView *bottomView;
 
 /**
  网络加载进度条
@@ -31,7 +36,6 @@
     [self setupNavItem];
     
 }
-
 
 /**
  初始化Item
@@ -161,6 +165,62 @@
         
     };
 //    [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.background='#2E2E2E'" completionHandler:nil];
+	[self addCloseView:webView.scrollView];
+}
+
+- (void)addCloseView:(UIScrollView *)scrollView
+{
+	WYNewsDetailBottomView *bottomView = [WYNewsDetailBottomView theBootomCloseView];
+	self.bottomView = bottomView;
+	bottomView.layer.borderWidth = 1.0;
+	bottomView.layer.borderColor = [UIColor grayColor].CGColor;
+	
+	bottomView.frame = CGRectMake(3, scrollView.contentSize.height+5, scrollView.frame.size.width - 6, 44);
+	[scrollView addSubview:bottomView];
+}
+
+
+// 正在滚动过程中
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+	if (self.bottomView) {
+		self.bottomView.isCloseing = scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.size.height) > 50;
+	}
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+	NSLog(@"停止滑动了");
+}
+
+/// 松手的时候
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+	if (self.bottomView.isCloseing) {
+		UIImageView *imgV = [[UIImageView alloc] initWithFrame:scrollView.frame];
+		imgV.image = [self getImageOn:scrollView];
+		UIWindow *window = [UIApplication sharedApplication].keyWindow;
+		[window addSubview:imgV];
+		[self.navigationController popViewControllerAnimated:NO];
+		imgV.alpha = 1.0;
+		[UIView animateWithDuration:0.3 animations:^{
+			imgV.frame = CGRectMake(0, scrollView.frame.size.height/2, scrollView.frame.size.width, 0);
+			imgV.alpha = 0;
+		} completion:^(BOOL finished) {
+			[imgV removeFromSuperview];
+		}];
+		NSLog(@"松手了");
+	}
+}
+
+/// 截图
+- (UIImage *)getImageOn:(UIScrollView *)scrollView
+{
+	UIGraphicsBeginImageContextWithOptions(scrollView.frame.size, NO, 1.0);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return image;
 }
 
 
@@ -169,7 +229,6 @@
     NSLog(@"%s",__func__);
     // 移除观察者
     [self.wkwebView removeObserver:self forKeyPath:@"estimatedProgress"];
-    
 }
 
 - (void)didReceiveMemoryWarning {

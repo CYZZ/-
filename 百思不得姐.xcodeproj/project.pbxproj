@@ -25,6 +25,13 @@
 		654EE96E1DE9753B00A5A855 /* BLCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 654EE96D1DE9753B00A5A855 /* BLCollectionFlowLayout.m */; };
 		654EE9711DE985A800A5A855 /* BLTestColletionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 654EE9701DE985A800A5A855 /* BLTestColletionVC.m */; };
 		65528EF11DFE922400DCD6DC /* BLTestRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65528EF01DFE922400DCD6DC /* BLTestRACViewController.m */; };
+		655751411E08C0A200862911 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 655751401E08C0A200862911 /* UIImage+extension.m */; };
+		655751441E08CAC700862911 /* BLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 655751431E08CAC700862911 /* BLPerson.m */; };
+		6557514D1E090B3B00862911 /* channels.m in Sources */ = {isa = PBXBuildFile; fileRef = 655751461E090B3B00862911 /* channels.m */; };
+		6557514E1E090B3B00862911 /* subchannels.m in Sources */ = {isa = PBXBuildFile; fileRef = 655751481E090B3B00862911 /* subchannels.m */; };
+		6557514F1E090B3B00862911 /* user_channels.m in Sources */ = {isa = PBXBuildFile; fileRef = 6557514A1E090B3B00862911 /* user_channels.m */; };
+		655751501E090B3B00862911 /* YiDianChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6557514C1E090B3B00862911 /* YiDianChannelModel.m */; };
+		655751561E090D8000862911 /* YDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655751551E090D8000862911 /* YDMainViewController.m */; };
 		6559F33F1DEFF68900E4462C /* BLSeeBigImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6559F33E1DEFF68900E4462C /* BLSeeBigImageVC.m */; };
 		655A15491DDFDF5A00A6D6FC /* Netest.html in Resources */ = {isa = PBXBuildFile; fileRef = 655A15481DDFDF5A00A6D6FC /* Netest.html */; };
 		655A15571DDFE80D00A6D6FC /* WYNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A15551DDFE80D00A6D6FC /* WYNewsCell.m */; };
@@ -92,6 +99,9 @@
 		657742751E04CC95001ECAC6 /* YDThreeImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657742731E04CC95001ECAC6 /* YDThreeImageCell.xib */; };
 		657742781E052B1A001ECAC6 /* WYNewsDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657742771E052B1A001ECAC6 /* WYNewsDetailBottomView.m */; };
 		6577427A1E052B2C001ECAC6 /* WYNewsDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657742791E052B2C001ECAC6 /* WYNewsDetailBottomView.xib */; };
+		657BD60A1E0A2DDE00F63582 /* YDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 657BD6091E0A2DDE00F63582 /* YDItem.m */; };
+		657BD60D1E0A2E0200F63582 /* YDTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657BD60C1E0A2E0200F63582 /* YDTagView.m */; };
+		657BD6161E0A842B00F63582 /* YDChannelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 657BD6151E0A842B00F63582 /* YDChannelVC.m */; };
 		657C39381DD5CD7F00085E81 /* BLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C39371DD5CD7F00085E81 /* BLPlayerView.m */; };
 		657C39511DD7097400085E81 /* BLPlayerVC_RB.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C39501DD7097400085E81 /* BLPlayerVC_RB.m */; };
 		6582911D1E0371CB00EB698F /* BLLoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6582911C1E0371CB00EB698F /* BLLoginPage.m */; };
@@ -170,6 +180,20 @@
 		654EE9701DE985A800A5A855 /* BLTestColletionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTestColletionVC.m; sourceTree = "<group>"; };
 		65528EEF1DFE922400DCD6DC /* BLTestRACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTestRACViewController.h; sourceTree = "<group>"; };
 		65528EF01DFE922400DCD6DC /* BLTestRACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTestRACViewController.m; sourceTree = "<group>"; };
+		6557513F1E08C0A200862911 /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
+		655751401E08C0A200862911 /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
+		655751421E08CAC700862911 /* BLPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPerson.h; sourceTree = "<group>"; };
+		655751431E08CAC700862911 /* BLPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPerson.m; sourceTree = "<group>"; };
+		655751451E090B3B00862911 /* channels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = channels.h; sourceTree = "<group>"; };
+		655751461E090B3B00862911 /* channels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = channels.m; sourceTree = "<group>"; };
+		655751471E090B3B00862911 /* subchannels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subchannels.h; sourceTree = "<group>"; };
+		655751481E090B3B00862911 /* subchannels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subchannels.m; sourceTree = "<group>"; };
+		655751491E090B3B00862911 /* user_channels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = user_channels.h; sourceTree = "<group>"; };
+		6557514A1E090B3B00862911 /* user_channels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = user_channels.m; sourceTree = "<group>"; };
+		6557514B1E090B3B00862911 /* YiDianChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiDianChannelModel.h; sourceTree = "<group>"; };
+		6557514C1E090B3B00862911 /* YiDianChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiDianChannelModel.m; sourceTree = "<group>"; };
+		655751541E090D8000862911 /* YDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDMainViewController.h; sourceTree = "<group>"; };
+		655751551E090D8000862911 /* YDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDMainViewController.m; sourceTree = "<group>"; };
 		6559F33D1DEFF68900E4462C /* BLSeeBigImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSeeBigImageVC.h; sourceTree = "<group>"; };
 		6559F33E1DEFF68900E4462C /* BLSeeBigImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSeeBigImageVC.m; sourceTree = "<group>"; };
 		655A15481DDFDF5A00A6D6FC /* Netest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Netest.html; sourceTree = "<group>"; };
@@ -278,6 +302,12 @@
 		657742761E052B1A001ECAC6 /* WYNewsDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsDetailBottomView.h; sourceTree = "<group>"; };
 		657742771E052B1A001ECAC6 /* WYNewsDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsDetailBottomView.m; sourceTree = "<group>"; };
 		657742791E052B2C001ECAC6 /* WYNewsDetailBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsDetailBottomView.xib; sourceTree = "<group>"; };
+		657BD6081E0A2DDE00F63582 /* YDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDItem.h; sourceTree = "<group>"; };
+		657BD6091E0A2DDE00F63582 /* YDItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDItem.m; sourceTree = "<group>"; };
+		657BD60B1E0A2E0200F63582 /* YDTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTagView.h; sourceTree = "<group>"; };
+		657BD60C1E0A2E0200F63582 /* YDTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTagView.m; sourceTree = "<group>"; };
+		657BD6141E0A842B00F63582 /* YDChannelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDChannelVC.h; sourceTree = "<group>"; };
+		657BD6151E0A842B00F63582 /* YDChannelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDChannelVC.m; sourceTree = "<group>"; };
 		657C39361DD5CD7F00085E81 /* BLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlayerView.h; sourceTree = "<group>"; };
 		657C39371DD5CD7F00085E81 /* BLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlayerView.m; sourceTree = "<group>"; };
 		657C394F1DD7097400085E81 /* BLPlayerVC_RB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlayerVC_RB.h; sourceTree = "<group>"; };
@@ -625,6 +655,7 @@
 				659927B71DEC27A5006A0D9D /* WYNight.css */,
 				658291361E03D0EC00EB698F /* placeholder.png */,
 				6564BADC1DE2B56B00C54AF2 /* Budejie.pch */,
+				6557513E1E08C03500862911 /* RuntimeTest(测试runtime） */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -682,6 +713,17 @@
 				6564D1891DED9AE5009575E2 /* YZCollectionCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6557513E1E08C03500862911 /* RuntimeTest(测试runtime） */ = {
+			isa = PBXGroup;
+			children = (
+				6557513F1E08C0A200862911 /* UIImage+extension.h */,
+				655751401E08C0A200862911 /* UIImage+extension.m */,
+				655751421E08CAC700862911 /* BLPerson.h */,
+				655751431E08CAC700862911 /* BLPerson.m */,
+			);
+			path = "RuntimeTest(测试runtime）";
 			sourceTree = "<group>";
 		};
 		655A154A1DDFE31E00A6D6FC /* WYNews */ = {
@@ -775,6 +817,19 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		657BD6071E0A2D3100F63582 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				657BD6081E0A2DDE00F63582 /* YDItem.h */,
+				657BD6091E0A2DDE00F63582 /* YDItem.m */,
+				657BD60B1E0A2E0200F63582 /* YDTagView.h */,
+				657BD60C1E0A2E0200F63582 /* YDTagView.m */,
+				657BD6141E0A842B00F63582 /* YDChannelVC.h */,
+				657BD6151E0A842B00F63582 /* YDChannelVC.m */,
+			);
+			path = Channel;
+			sourceTree = "<group>";
+		};
 		658291141E03717400EB698F /* MVVMTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -829,6 +884,7 @@
 				658FCF7E1E0019C0009ABE2A /* Controller */,
 				658FCF7F1E0019C0009ABE2A /* Model */,
 				658FCF801E0019C0009ABE2A /* View */,
+				657BD6071E0A2D3100F63582 /* Channel */,
 			);
 			path = YiDianZiXun;
 			sourceTree = "<group>";
@@ -839,6 +895,8 @@
 				658FCF811E0019E8009ABE2A /* YDController.h */,
 				658FCF821E0019E8009ABE2A /* YDController.m */,
 				658FCF831E0019E8009ABE2A /* YDController.xib */,
+				655751541E090D8000862911 /* YDMainViewController.h */,
+				655751551E090D8000862911 /* YDMainViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -846,6 +904,14 @@
 		658FCF7F1E0019C0009ABE2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				655751471E090B3B00862911 /* subchannels.h */,
+				655751481E090B3B00862911 /* subchannels.m */,
+				655751451E090B3B00862911 /* channels.h */,
+				655751461E090B3B00862911 /* channels.m */,
+				655751491E090B3B00862911 /* user_channels.h */,
+				6557514A1E090B3B00862911 /* user_channels.m */,
+				6557514B1E090B3B00862911 /* YiDianChannelModel.h */,
+				6557514C1E090B3B00862911 /* YiDianChannelModel.m */,
 				658FCF871E001A3A009ABE2A /* YDresult.h */,
 				658FCF861E001A3A009ABE2A /* YDresult.m */,
 				658FCF881E001A3A009ABE2A /* YiDianNewsModel.h */,
@@ -1236,6 +1302,7 @@
 				655A15571DDFE80D00A6D6FC /* WYNewsCell.m in Sources */,
 				6511F5121DF1736800C9E9AF /* BLwebViewChangeUser-agentVC.m in Sources */,
 				65FC793E1DD05F6C00AA2811 /* BLNotificationVC.m in Sources */,
+				655751441E08CAC700862911 /* BLPerson.m in Sources */,
 				654EE96E1DE9753B00A5A855 /* BLCollectionFlowLayout.m in Sources */,
 				65528EF11DFE922400DCD6DC /* BLTestRACViewController.m in Sources */,
 				658291261E03721200EB698F /* BLLoginViewModel.m in Sources */,
@@ -1256,6 +1323,7 @@
 				6565710A1DD007F500805957 /* BLNavigationController.m in Sources */,
 				658FCF8B1E001A3A009ABE2A /* YiDianNewsModel.m in Sources */,
 				655AF6831DC1C2F80090A1C9 /* BLRefreshFooter.m in Sources */,
+				657BD60D1E0A2E0200F63582 /* YDTagView.m in Sources */,
 				655FCD6F1DDD4E69001CCC9A /* BLFollowCell.m in Sources */,
 				651D5C921DDAAA03005EC4C1 /* BLEssenceVideoCell.m in Sources */,
 				656571161DD011A300805957 /* BLMeVC.m in Sources */,
@@ -1269,20 +1337,25 @@
 				657C39381DD5CD7F00085E81 /* BLPlayerView.m in Sources */,
 				657042711DDE8EDD00221FE4 /* BLTest1VC.m in Sources */,
 				6564D1871DED7512009575E2 /* YZWaterFlowLayout.m in Sources */,
+				655751501E090B3B00862911 /* YiDianChannelModel.m in Sources */,
+				657BD60A1E0A2DDE00F63582 /* YDItem.m in Sources */,
 				65640B9F1DCDA63000531EF6 /* BLCommentModel.m in Sources */,
 				655A155E1DDFE9A200A6D6FC /* WYNewsModel.m in Sources */,
 				6514EA851DC0872400CE6589 /* main.m in Sources */,
+				6557514F1E090B3B00862911 /* user_channels.m in Sources */,
 				6568425D1DD948D200C25043 /* BLCustomerPlayer.m in Sources */,
 				65640BA51DCDAD2600531EF6 /* cmt.m in Sources */,
 				658FCF841E0019E8009ABE2A /* YDController.m in Sources */,
 				658291231E03720100EB698F /* BLAccount.m in Sources */,
 				6559F33F1DEFF68900E4462C /* BLSeeBigImageVC.m in Sources */,
+				6557514D1E090B3B00862911 /* channels.m in Sources */,
 				655A156B1DDFF76500A6D6FC /* WYDetailNewsVC.m in Sources */,
 				6514EA841DC0872400CE6589 /* AppDelegate.m in Sources */,
 				656571071DD007C900805957 /* BLTabBarController.m in Sources */,
 				6514EA881DC0882A00CE6589 /* BLAllTableVC.m in Sources */,
 				658291321E03968500EB698F /* BLDoubanViewModel.m in Sources */,
 				655A15671DDFEF1100A6D6FC /* WYNewsTableVC.m in Sources */,
+				655751561E090D8000862911 /* YDMainViewController.m in Sources */,
 				65640BA81DCDB12C00531EF6 /* BLCommentCell.m in Sources */,
 				6565AC0F1DDC468800B51920 /* BLNotificationDetailVC.m in Sources */,
 				651D5C961DDABA29005EC4C1 /* BLSeqliteTest.m in Sources */,
@@ -1290,6 +1363,9 @@
 				655A15731DE045AC00A6D6FC /* BLNightMode.m in Sources */,
 				655A155D1DDFE9A200A6D6FC /* listModel.m in Sources */,
 				655A156E1DE014D000A6D6FC /* WYNewsDetailEntity.m in Sources */,
+				655751411E08C0A200862911 /* UIImage+extension.m in Sources */,
+				6557514E1E090B3B00862911 /* subchannels.m in Sources */,
+				657BD6161E0A842B00F63582 /* YDChannelVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1349,7 +1425,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1397,7 +1473,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

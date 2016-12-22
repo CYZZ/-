@@ -7,10 +7,13 @@
 //
 
 #import <Availability.h>
+#import <Foundation/Foundation.h>
 
 #ifndef Budejie_pch
 #define Budejie_pch
 
+/// 用户token
+#define YDToken @"YDTOKEN"
 
 #define kBLColor [UIColor redColor]
 #define BLweakSelf __weak typeof(self) weakSelf = self;

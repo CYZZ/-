@@ -17,4 +17,6 @@
  @return 属性列表
  */
 + (NSArray *)YZproperties;
+/// 根据字典自动转换成模型类型
++ (void)resolveDict:(NSDictionary *)dict;
 @end

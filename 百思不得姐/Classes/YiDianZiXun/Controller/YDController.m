@@ -37,6 +37,9 @@
 	
 	self.tableView.rowHeight = 80;
 	[self setupRefreshView];
+//	NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSetWithIndex:0];
+//	[indexSet addIndex:1]; 
+//	[_ydArrayM insertObjects:<#(nonnull NSArray<YDresult *> *)#> atIndexes:<#(nonnull NSIndexSet *)#>]
 }
 
 /// 初始化刷新控件
@@ -71,7 +74,7 @@
 - (void)loadDataForType:(int)type
 {
 	MJWeakSelf
-	[YiDianNewsModel requestYDNewsWith:weakSelf.cstart forNews:^(YiDianNewsModel *model) {
+	[YiDianNewsModel requestYDNewsWith:weakSelf.cstart position:weakSelf.position channelID:weakSelf.channel_id forNews:^(YiDianNewsModel *model) {
 		
 		if (type == 1) {
 			// 下拉刷新
@@ -79,6 +82,7 @@
 			weakSelf.ydArrayM = model.result.mutableCopy;
 			[weakSelf.tableView reloadData];
 			[weakSelf.tableView.mj_header endRefreshing];
+//			NSLog(@"positon=%ld,)
 		}else if (type == 2){
 			// 上拉刷新
 			[weakSelf.ydArrayM addObjectsFromArray: model.result];

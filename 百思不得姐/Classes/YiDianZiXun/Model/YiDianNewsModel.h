@@ -18,13 +18,15 @@
 @property (nonatomic, copy) NSString * search_hint;
 @property (nonatomic, copy) NSString * status;
 
-
 /**
- 请求一点资讯的数据
+  请求一点资讯数据
 
- @param cstart 上次请求资讯的位置
- @param completion 回调数据
+ @param cstart 上次加载位置
+ @param position 频道所属位置
+ @param channelID 频道ID
+ @param completion 完成回调
+ @param failture 失败回调
  */
-+ (void)requestYDNewsWith:(NSInteger)cstart forNews:(void(^)(YiDianNewsModel *model))completion failture:(void (^)(NSError *error))failture;
++ (void)requestYDNewsWith:(NSInteger)cstart position:(NSInteger)position channelID:(NSString *)channelID forNews:(void (^)(YiDianNewsModel *model))completion failture:(void (^)(NSError *error))failture;
 
 @end
