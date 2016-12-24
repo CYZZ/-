@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)sharedTool;
 
+/// 返回的数据类型是JSON
++ (instancetype)sharedToolWithJSON;
+
 
 /**
  Get请求

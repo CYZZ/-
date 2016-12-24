@@ -10,6 +10,8 @@
 #import "channels.h"
 
 @interface YDChannelVC : UIViewController
+/// 用户的分组id
+@property (nonatomic, copy) NSString *groupID;
 @property (nonatomic, strong) NSMutableArray *titleArray;
 @property (nonatomic, strong) NSMutableArray<channels *> *channeslArr;
 /// 频道组回调

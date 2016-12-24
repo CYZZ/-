@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class user_channels;
+@class channels;
 
 @interface YiDianChannelModel : NSObject
 
@@ -26,4 +27,7 @@
 
 /// 请求一点资讯的频道数据
 + (void)requestYDChannels:(void (^)(YiDianChannelModel *model))completion failture:(void (^)(NSError *error))failture;
+
+/// 发送排序结果
++ (void)sortChannelbyGroupID:(NSString *)groupID order:(NSArray<channels *> *)order completion:(void (^)(YiDianChannelModel *model))completion failture:(void (^)(NSError *error))failture;
 @end

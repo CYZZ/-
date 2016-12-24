@@ -12,6 +12,7 @@
 #import "YiDianNewsModel.h"
 #import "BLRefreshFooter.h"
 #import "BLRefreshHeader.h"
+#import "BLPlayerVC_RB.h"
 
 #import "BLNotificationDetailVC.h"
 #import <UITableView+FDTemplateLayoutCell.h>
@@ -34,6 +35,7 @@
 	
 	[self.tableView registerNib:[UINib nibWithNibName:@"YDCell" bundle:nil] forCellReuseIdentifier:@"YDCell"];
 	[self.tableView registerNib:[UINib nibWithNibName:@"YDThreeImageCell" bundle:nil] forCellReuseIdentifier:@"YDThreeImageCell"];
+	[self.tableView registerNib:[UINib nibWithNibName:@"YDVideoCell" bundle:nil] forCellReuseIdentifier:@"YDVideoCell"];
 	
 	self.tableView.rowHeight = 80;
 	[self setupRefreshView];
@@ -114,6 +116,16 @@
 	YDCell *cell = nil;
 	if (model.image_urls.count >= 3) {
 		cell = [tableView dequeueReusableCellWithIdentifier:@"YDThreeImageCell"];
+	}else if ([model.ctype isEqualToString:@"video_live"]){
+		cell = [tableView dequeueReusableCellWithIdentifier:@"YDVideoCell"];
+		__weak typeof(self) weakSelf = self;
+		[cell playVideoWithBlock:^{
+			BLPlayerVC_RB *RBPlayerVC = [[BLPlayerVC_RB alloc] init];
+			RBPlayerVC.videoURL = model.video_url;
+			RBPlayerVC.videoTitle = model.title;
+			[weakSelf.navigationController pushViewController:RBPlayerVC animated:YES];
+		}];
+		
 	}else{
 		cell = [tableView dequeueReusableCellWithIdentifier:@"YDCell"];
 	}
@@ -129,8 +141,10 @@
 		return  [tableView fd_heightForCellWithIdentifier:@"YDThreeImageCell" cacheByIndexPath:indexPath configuration:^(YDCell *cell) {
 			cell.model = model;
 		}];
-//		return 120;
-		
+	}else if ([model.ctype isEqualToString:@"video_live"]){
+		return  [tableView fd_heightForCellWithIdentifier:@"YDVideoCell" cacheByIndexPath:indexPath configuration:^(YDCell *cell) {
+			cell.model = model;
+		}];
 	}else{
 		return 80;
 	}

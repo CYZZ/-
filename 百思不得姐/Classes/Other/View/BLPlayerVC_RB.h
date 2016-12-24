@@ -10,4 +10,5 @@
 
 @interface BLPlayerVC_RB : UIViewController
 @property (nonatomic, copy) NSString *videoURL;
+@property (nonatomic, copy) NSString *videoTitle;
 @end

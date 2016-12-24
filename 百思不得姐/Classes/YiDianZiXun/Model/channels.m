@@ -15,4 +15,9 @@
 	return @{@"subchannels":[subchannels class]};
 }
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+	return @{@"id":@"ID"};
+}
+
 @end

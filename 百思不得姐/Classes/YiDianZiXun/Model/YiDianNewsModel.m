@@ -19,9 +19,9 @@
 
 + (void)requestYDNewsWith:(NSInteger)cstart position:(NSInteger)position channelID:(NSString *)channelID forNews:(void (^)(YiDianNewsModel *model))completion failture:(void (^)(NSError *error))failture
 {
-	BLNetworkTool *manager = [BLNetworkTool sharedTool];
+	BLNetworkTool *manager = [BLNetworkTool sharedToolWithJSON];
 	
-	NSString *Cookie = @"JSESSIONID=IGkQZAu3-tAUEYyryNeZNA";
+	NSString *Cookie = @"JSESSIONID=a2Kxk5sCtOy6I4nzvipDrw";
 	NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:YDToken];
 	// 如果用户输入的话就替换
 	if (token.length > 1) {
@@ -44,8 +44,7 @@
 	
 	
 	[manager POST:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-		// 默认返回的数据是Data需要进行序列化
-		responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+		
 		YiDianNewsModel *model = [YiDianNewsModel mj_objectWithKeyValues:responseObject];
 		completion(model);
 	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

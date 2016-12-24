@@ -34,7 +34,8 @@
 /// 标签的边框颜色
 @property (nonatomic, strong) UIColor *tagBorderColor;
 /// 所有标签
-@property (nonatomic, strong, readonly) NSMutableArray *tagArrays;
+//@property (nonatomic, strong, readonly) NSMutableArray *tagArrays;
+@property (nonatomic, strong) NSMutableArray *tagArrays;
 /// 是否需要自定义View的高度，默认是YES
 @property (nonatomic, assign) BOOL isFitTagViewH;
 /// 是否需要排序功能
@@ -64,6 +65,14 @@
  */
 - (void)addTags:(NSArray<NSString *> *)tagStrs;
 
+
+/**
+ 插入标签到指定位置
+
+ @param tagStr 标签名
+ @param index 索引位置
+ */
+- (void)insetTag:(NSString *)tagStr At:(NSInteger)index;
 
 /**
  删除标签

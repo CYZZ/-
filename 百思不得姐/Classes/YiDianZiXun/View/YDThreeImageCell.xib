@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="175"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="175"/>
+                <rect key="frame" x="0.0" y="0.0" width="400" height="174"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fob-Z5-exd">
@@ -32,11 +32,11 @@
                             <constraint firstAttribute="width" secondItem="FIA-y5-e5T" secondAttribute="height" multiplier="4:3" id="rko-JT-O1n"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kgm-wH-HFi">
-                        <rect key="frame" x="138.5" y="69.5" width="123" height="92"/>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e3K-ey-EG6">
                         <rect key="frame" x="264.5" y="69.5" width="122.5" height="92"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kgm-wH-HFi">
+                        <rect key="frame" x="138.5" y="69.5" width="123" height="92"/>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -63,7 +63,7 @@
                 <outlet property="threeImageView" destination="e3K-ey-EG6" id="Ekt-G0-sof"/>
                 <outlet property="twoImageView" destination="kgm-wH-HFi" id="GW9-x0-pFQ"/>
             </connections>
-            <point key="canvasLocation" x="-411" y="86.5"/>
+            <point key="canvasLocation" x="-308" y="6"/>
         </tableViewCell>
     </objects>
 </document>

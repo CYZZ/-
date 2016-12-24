@@ -11,4 +11,9 @@
 
 @interface YDCell : UITableViewCell
 @property (nonatomic, strong) YDresult *model;
+
+/// 播放视频调用的block
+@property (nonatomic, copy) void(^playVideoBlock)();
+
+- (void)playVideoWithBlock:(void(^)())block;
 @end

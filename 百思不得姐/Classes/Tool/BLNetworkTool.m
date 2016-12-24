@@ -44,6 +44,27 @@
     return instance;
 }
 
+/// 单例创建实例对象
++ (instancetype)sharedToolWithJSON
+{
+	static BLNetworkTool *instance;
+	static dispatch_once_t onceToken;
+	_dispatch_once(&onceToken, ^{
+		NSURL *url = [NSURL URLWithString:@""];
+		NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+		instance = [[self alloc] initWithBaseURL:url sessionConfiguration:config];
+		
+		// 返回的数据类型是JSON
+		instance.responseSerializer = [AFJSONResponseSerializer serializer];
+		// 请求发送的参数类型是Json
+		instance.requestSerializer = [AFJSONRequestSerializer serializer];
+		[instance.requestSerializer setTimeoutInterval:10.0]; // 设置超时限制
+		// 加入 text/html 解析
+		instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
+	});
+	return instance;
+}
+
 + (NSURLSessionDataTask *)BL_GET:(NSString *)URLString parameters:(id)parameters progress:(void (^)(NSProgress * _Nonnull))downloadProgress success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
     return  [[self sharedTool] GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull Progress) {

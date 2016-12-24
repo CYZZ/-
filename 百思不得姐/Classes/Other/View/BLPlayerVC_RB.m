@@ -51,7 +51,7 @@
     
     // 设置标题
     RBPlayerItem *item = [[RBPlayerItem alloc] init];
-    item.title = @"这都是什么电影";
+	item.title = self.videoTitle? self.videoTitle: @"这都是什么电影";
     item.assetTitle = @"清晰";
     
     RBPlayerItemAsset *itemAsset1 = [[RBPlayerItemAsset alloc] initWithType:@"清晰" URL:[NSURL URLWithString:url]];

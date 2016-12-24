@@ -102,6 +102,22 @@ CGFloat const imageViewWH = 20;
 	_scaleTagInSort = scaleTagInSort;
 }
 
+#warning change 修改了
+#pragma mark - 重置所有的标签
+- (void)setTagArrays:(NSMutableArray *)tagArrays
+{
+	// 注意，key的值是唯一的如果频道有相同的key就只会删除其中一个
+	NSArray *titles = _tagArray.copy;
+	for (NSString *str in titles) {
+		NSLog(@"删除的title=%@",str);
+		[self deleteTag:str];
+	}
+//	for (NSString *str in self.tags.allKeys) {
+//		[self deleteTag:str];
+//	}
+	[self addTags:tagArrays];
+}
+
 #pragma mark - Public 公共方法
 // 添加标签数组
 - (void)addTags:(NSArray<NSString *> *)tagStrs
@@ -115,35 +131,38 @@ CGFloat const imageViewWH = 20;
 		[self addTag:tagStr];
 	}
 }
-// 添加一个标签
+// 添加一个标签到最后
 - (void)addTag:(NSString *)tagStr
 {
+//	[self insetTag:tagStr At:self.tagButtons.count];
 	// 如果自定义就使用自定义的控件
-	YDItem *tagButton = _item? _item : [YDItem buttonWithType:UIButtonTypeCustom];
-	if (_item == nil) {
-		tagButton.margin = _tagMargin;
-	}
+//	YDItem *tagButton = _item? _item : [YDItem buttonWithType:UIButtonTypeCustom];
+//	if (_item == nil) {
+//		tagButton.margin = _tagMargin;
+//	}
+//	
+//	tagButton.layer.cornerRadius = _tagCornerRadius;
+//	tagButton.layer.borderWidth = _tagBorderWidth;
+//	tagButton.layer.borderColor = _tagBorderColor.CGColor;
+//	//	tagButton.clipsToBounds = YES; // 会裁剪超出的部分
+//	tagButton.tag = self.tagButtons.count;
+//	[tagButton setImage:_tagDeleteImage forState:UIControlStateNormal];
+//	[tagButton setTitle:tagStr forState:UIControlStateNormal];
+//	[tagButton setTitleColor:_tagColor forState:UIControlStateNormal];
+//	[tagButton setBackgroundColor:_tagBackgroundColor];
+//	[tagButton setBackgroundImage:_tagBackgroundImage forState:UIControlStateNormal];
+//	tagButton.titleLabel.font = _tagFont;
+//	[tagButton addTarget:self action:@selector(clickTag:) forControlEvents:UIControlEventTouchUpInside];
+//	// 如果允许排序就添加手势
+//	if (_isSort) {
+//		// 添加拖拽手势
+//		UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+//		[tagButton addGestureRecognizer:pan];
+//	}
+//	
+//	[self addSubview:tagButton];
 	
-	tagButton.layer.cornerRadius = _tagCornerRadius;
-	tagButton.layer.borderWidth = _tagBorderWidth;
-	tagButton.layer.borderColor = _tagBorderColor.CGColor;
-//	tagButton.clipsToBounds = YES; // 会裁剪超出的部分
-	tagButton.tag = self.tagButtons.count;
-	[tagButton setImage:_tagDeleteImage forState:UIControlStateNormal];
-	[tagButton setTitle:tagStr forState:UIControlStateNormal];
-	[tagButton setTitleColor:_tagColor forState:UIControlStateNormal];
-	[tagButton setBackgroundColor:_tagBackgroundColor];
-	[tagButton setBackgroundImage:_tagBackgroundImage forState:UIControlStateNormal];
-	tagButton.titleLabel.font = _tagFont;
-	[tagButton addTarget:self action:@selector(clickTag:) forControlEvents:UIControlEventTouchUpInside];
-	// 如果允许排序就添加手势
-	if (_isSort) {
-		// 添加拖拽手势
-		UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-		[tagButton addGestureRecognizer:pan];
-	}
-	
-	[self addSubview:tagButton];
+	YDItem *tagButton = [self creatTag:tagStr];
 	// 保存到数组
 	[self.tagButtons addObject:tagButton];
 	
@@ -164,8 +183,81 @@ CGFloat const imageViewWH = 20;
 	}
 }
 
+// 插入到指定位置
+- (void)insetTag:(NSString *)tagStr At:(NSInteger)index
+{
+	YDItem *tagButton = [self creatTag:tagStr];
+	
+	[self.tagButtons insertObject:tagButton atIndex:index];
+	
+	[self.tagArrays insertObject:tagButton.currentTitle atIndex:index];
+	
+	// 设置按钮的位置
+	[self setTagButtonFrame:tagButton.tag extreMargin:YES];
+	
+	// 更新tag值
+	[self updateAllTag];
+	
+	// 更新之后标签frame
+	[self setTagButtonFrame:index extreMargin:NO];
+	[UIView animateWithDuration:0.25 animations:^{
+		[self updateLaterButtonFrom:index + 1];
+	} completion:^(BOOL finished) {
+		
+//		CGRect frame = self.frame;
+//		frame.size.height = self.contentHeight;
+//		self.frame = frame;
+	}];
+	
+	// 更新自己的高度
+	if (_isFitTagViewH) {
+		CGRect frame = self.frame;
+		frame.size.height = self.contentHeight;
+		[UIView animateWithDuration:0.25 animations:^{
+			self.frame = frame;
+		}];
+	}
+}
+
+/// 创建tag按钮
+- (YDItem *)creatTag:(NSString *)tagStr
+{
+	// 如果自定义就使用自定义的控件
+	YDItem *tagButton = _item? _item : [YDItem buttonWithType:UIButtonTypeCustom];
+	if (_item == nil) {
+		tagButton.margin = _tagMargin;
+	}
+	
+	tagButton.layer.cornerRadius = _tagCornerRadius;
+	tagButton.layer.borderWidth = _tagBorderWidth;
+	tagButton.layer.borderColor = _tagBorderColor.CGColor;
+	//	tagButton.clipsToBounds = YES; // 会裁剪超出的部分
+	tagButton.tag = self.tagButtons.count;
+	[tagButton setImage:_tagDeleteImage forState:UIControlStateNormal];
+	[tagButton setTitle:tagStr forState:UIControlStateNormal];
+	[tagButton setTitleColor:_tagColor forState:UIControlStateNormal];
+	[tagButton setBackgroundColor:_tagBackgroundColor];
+	[tagButton setBackgroundImage:_tagBackgroundImage forState:UIControlStateNormal];
+	tagButton.titleLabel.font = _tagFont;
+	[tagButton addTarget:self action:@selector(clickTag:) forControlEvents:UIControlEventTouchUpInside];
+	// 如果允许排序就添加手势
+	if (_isSort) {
+		// 添加拖拽手势
+		UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+		[tagButton addGestureRecognizer:pan];
+	}
+	
+	[self addSubview:tagButton];
+	
+	// 保存到字典
+	[self.tags setObject:tagButton forKey:tagStr];
+	
+	return tagButton;
+}
+
+
 /// 点击标签
-- (void)clickTag:(UIButton *)button
+- (void)clickTag:(YDItem *)button
 {
 	if (self.clickTagBlock) {
 		self.clickTagBlock(button.currentTitle);
@@ -316,7 +408,7 @@ CGFloat const imageViewWH = 20;
  */
 - (void)setTagButtonFrame:(NSInteger)index extreMargin:(BOOL)extreMargin
 {
-	// 获取上衣按钮的tag
+	// 获取上一个按钮的tag
 	NSInteger preIndex = index - 1;
 	// 定义一个按钮
 	YDItem *preButton;

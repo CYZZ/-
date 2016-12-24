@@ -24,6 +24,9 @@
 @property (nonatomic, strong) NSMutableArray<channels *> *channelsArr;
 
 @property (nonatomic, weak) UITextField *textFile;
+
+/// 用户的分组id
+@property (nonatomic, copy) NSString *groupID;
 @end
 
 @implementation YDMainViewController
@@ -79,6 +82,8 @@
 	YDChannelVC *channel = [[YDChannelVC alloc] init];
 	channel.titleArray = self.titleArray;
 	channel.channeslArr = self.channelsArr;
+	channel.groupID = self.groupID;
+	
 	__weak typeof(self) weakSelf = self;
 	channel.channelBackBlock =^(NSMutableArray<channels*> *channelsArr){
 		weakSelf.channelsArr = channelsArr;
@@ -113,6 +118,9 @@
 	[SVProgressHUD show];
 	__weak typeof(self) weakSelf = self;
 	[YiDianChannelModel requestYDChannels:^(YiDianChannelModel *model) {
+		
+		weakSelf.groupID = model.user_channels[0].group_id; // 存储group_id用于频道排序
+		
 		weakSelf.titleArray = @[].mutableCopy;
 		weakSelf.channelsArr = model.user_channels[0].channels.mutableCopy;
 		

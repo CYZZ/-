@@ -22,6 +22,8 @@
 		651D5C961DDABA29005EC4C1 /* BLSeqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D5C951DDABA29005EC4C1 /* BLSeqliteTest.m */; };
 		651D5C981DDABFC1005EC4C1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 651D5C971DDABFC1005EC4C1 /* libsqlite3.tbd */; };
 		651D5C9A1DDADBB0005EC4C1 /* BLEssenceWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651D5C991DDADBB0005EC4C1 /* BLEssenceWordCell.xib */; };
+		65458E381E0CE470000B157A /* YDVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65458E371E0CE470000B157A /* YDVideoCell.xib */; };
+		65458E3B1E0D1D51000B157A /* YDRecommendChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65458E3A1E0D1D51000B157A /* YDRecommendChannel.m */; };
 		654EE96E1DE9753B00A5A855 /* BLCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 654EE96D1DE9753B00A5A855 /* BLCollectionFlowLayout.m */; };
 		654EE9711DE985A800A5A855 /* BLTestColletionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 654EE9701DE985A800A5A855 /* BLTestColletionVC.m */; };
 		65528EF11DFE922400DCD6DC /* BLTestRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65528EF01DFE922400DCD6DC /* BLTestRACViewController.m */; };
@@ -174,6 +176,9 @@
 		651D5C951DDABA29005EC4C1 /* BLSeqliteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSeqliteTest.m; sourceTree = "<group>"; };
 		651D5C971DDABFC1005EC4C1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		651D5C991DDADBB0005EC4C1 /* BLEssenceWordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLEssenceWordCell.xib; sourceTree = "<group>"; };
+		65458E371E0CE470000B157A /* YDVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDVideoCell.xib; sourceTree = "<group>"; };
+		65458E391E0D1D51000B157A /* YDRecommendChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDRecommendChannel.h; sourceTree = "<group>"; };
+		65458E3A1E0D1D51000B157A /* YDRecommendChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDRecommendChannel.m; sourceTree = "<group>"; };
 		654EE96C1DE9753B00A5A855 /* BLCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCollectionFlowLayout.h; sourceTree = "<group>"; };
 		654EE96D1DE9753B00A5A855 /* BLCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCollectionFlowLayout.m; sourceTree = "<group>"; };
 		654EE96F1DE985A800A5A855 /* BLTestColletionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTestColletionVC.h; sourceTree = "<group>"; };
@@ -912,6 +917,8 @@
 				6557514A1E090B3B00862911 /* user_channels.m */,
 				6557514B1E090B3B00862911 /* YiDianChannelModel.h */,
 				6557514C1E090B3B00862911 /* YiDianChannelModel.m */,
+				65458E391E0D1D51000B157A /* YDRecommendChannel.h */,
+				65458E3A1E0D1D51000B157A /* YDRecommendChannel.m */,
 				658FCF871E001A3A009ABE2A /* YDresult.h */,
 				658FCF861E001A3A009ABE2A /* YDresult.m */,
 				658FCF881E001A3A009ABE2A /* YiDianNewsModel.h */,
@@ -927,6 +934,7 @@
 				655B4F161E00CE40003FFEB3 /* YDCell.m */,
 				655B4F171E00CE40003FFEB3 /* YDCell.xib */,
 				657742731E04CC95001ECAC6 /* YDThreeImageCell.xib */,
+				65458E371E0CE470000B157A /* YDVideoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1112,6 +1120,7 @@
 				655B4F191E00CE40003FFEB3 /* YDCell.xib in Resources */,
 				651D5C931DDAAA03005EC4C1 /* BLEssenceVideoCell.xib in Resources */,
 				655A15491DDFDF5A00A6D6FC /* Netest.html in Resources */,
+				65458E381E0CE470000B157A /* YDVideoCell.xib in Resources */,
 				6570427C1DDE8EFF00221FE4 /* BLTestVC3.xib in Resources */,
 				6565AC181DDC628E00B51920 /* BLEssencePictureCell.xib in Resources */,
 				6562FC551DCC8AFA005C4573 /* MainVCSettings.json in Resources */,
@@ -1358,6 +1367,7 @@
 				655751561E090D8000862911 /* YDMainViewController.m in Sources */,
 				65640BA81DCDB12C00531EF6 /* BLCommentCell.m in Sources */,
 				6565AC0F1DDC468800B51920 /* BLNotificationDetailVC.m in Sources */,
+				65458E3B1E0D1D51000B157A /* YDRecommendChannel.m in Sources */,
 				651D5C961DDABA29005EC4C1 /* BLSeqliteTest.m in Sources */,
 				657042761DDE8EEE00221FE4 /* BLTestVC2.m in Sources */,
 				655A15731DE045AC00A6D6FC /* BLNightMode.m in Sources */,
