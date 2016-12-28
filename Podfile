@@ -11,6 +11,7 @@ target '百思不得姐' do
     pod "MJExtension"
     pod "SVProgressHUD"
     pod "MJRefresh"
+	pod "YYModel"
     pod 'UITableView+FDTemplateLayoutCell'
     pod 'Masonry'
     pod 'FDFullscreenPopGesture', '~> 1.1'
@@ -23,12 +24,12 @@ target '百思不得姐' do
 	pod 'VTMagic'
 #    pod 'DLSlideView'
   target '百思不得姐Tests' do
-    inherit! :search_paths
+#    inherit! :search_paths
     # Pods for testing
   end
 
   target '百思不得姐UITests' do
-    inherit! :search_paths
+#    inherit! :search_paths
     # Pods for testing
   end
 

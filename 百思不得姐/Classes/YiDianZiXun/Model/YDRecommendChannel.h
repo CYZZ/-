@@ -15,7 +15,11 @@ typedef NS_ENUM(NSUInteger, ChannelChangeType) {
 	ChannelChangeTypeDeleted, // 删除
 };
 
+/**
+ 推荐频道
+ */
 @interface YDRecommendChannel : NSObject
+
 /// 状态码
 @property (nonatomic, assign) NSInteger code;
 /// 成功失败信息

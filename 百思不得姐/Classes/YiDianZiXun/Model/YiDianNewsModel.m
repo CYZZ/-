@@ -9,6 +9,7 @@
 #import "YiDianNewsModel.h"
 #import "YDresult.h"
 #import <MJExtension.h>
+#import <YYModel.h>
 #import "BLNetworkTool.h"
 
 @implementation YiDianNewsModel
@@ -19,6 +20,7 @@
 
 + (void)requestYDNewsWith:(NSInteger)cstart position:(NSInteger)position channelID:(NSString *)channelID forNews:(void (^)(YiDianNewsModel *model))completion failture:(void (^)(NSError *error))failture
 {
+//	NSArray yy_modelArrayWithClass:<#(nonnull Class)#> json:<#(nonnull id)#>
 	BLNetworkTool *manager = [BLNetworkTool sharedToolWithJSON];
 	
 	NSString *Cookie = @"JSESSIONID=a2Kxk5sCtOy6I4nzvipDrw";

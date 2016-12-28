@@ -13,4 +13,6 @@
 @property (nonatomic, copy) NSString *channel_id;
 /// 频道所属位置
 @property (nonatomic, assign) NSInteger position;
+
+
 @end

@@ -16,24 +16,54 @@
 @property (weak, nonatomic) IBOutlet UIImageView *twoImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *threeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *videoDurationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UIButton *dislikeButton;
 
 @end
 
 @implementation YDCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)awakeFromNib
+{
+	[super awakeFromNib];
+	self.playerImageView.tag = 101; // 建议设置在100以上
+}
+
++ (void)registerCellWithTypes:(NSArray<NSString *>*)types onTableView:(UITableView *)tableView
+{
+	for (NSString *type in types) {
+		[tableView registerNib:[UINib nibWithNibName:type bundle:nil] forCellReuseIdentifier:type];
+	}
+	
+//	switch (type) {
+//		case YDCellTypeOneImage:
+//			[tableView registerNib:[UINib nibWithNibName:@"YDCell" bundle:nil] forCellReuseIdentifier:@"YDCell"];
+//			break;
+//		case YDCellTypeThreeImage:
+//			[tableView registerNib:[UINib nibWithNibName:@"YDThreeImageCell" bundle:nil] forCellReuseIdentifier:@"YDThreeImageCell"];
+//			break;
+//		case YDCellTypeVideo:
+//			[tableView registerNib:[UINib nibWithNibName:@"YDVideoCell" bundle:nil] forCellReuseIdentifier:@"YDVideoCell"];
+//			break;
+//  default:
+//			break;
+//	}
 }
 
 - (void)setModel:(YDresult *)model
 {
+	self.playerImageView.tag = 101; 
 	_model = model;
 	_mainTitleLabel.text = model.title;
+	_sourceLabel.text = model.source;
+	_commentLabel.text = [NSString stringWithFormat:@"%ld 评", model.comment_count];
+	
 	if ([model.ctype isEqualToString:@"video_live"]) {
 		NSInteger minute = model.duration / 60;
 		NSInteger seconds = model.duration %60;
 		_videoDurationLabel.text =[NSString stringWithFormat:@"%02ld:%02ld",minute,seconds];
+		self.playerImageView = _oneImageView;
 	}
 	// pushguidetop
 	if (model.image_urls.count > 0 && model.image_urls.count < 3) {
@@ -55,6 +85,9 @@
 	if (self.playVideoBlock) {
 		self.playVideoBlock();
 	}
+}
+- (IBAction)dislikeBtnClick:(UIButton *)sender {
+	
 }
 
 /// 通过外部调用公共方法播放视频

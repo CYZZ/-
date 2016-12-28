@@ -27,6 +27,8 @@
 		654EE96E1DE9753B00A5A855 /* BLCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 654EE96D1DE9753B00A5A855 /* BLCollectionFlowLayout.m */; };
 		654EE9711DE985A800A5A855 /* BLTestColletionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 654EE9701DE985A800A5A855 /* BLTestColletionVC.m */; };
 		65528EF11DFE922400DCD6DC /* BLTestRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65528EF01DFE922400DCD6DC /* BLTestRACViewController.m */; };
+		6552F5981E13594200CC590F /* YDGroupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552F5971E13594200CC590F /* YDGroupViewModel.m */; };
+		6552F59B1E135B5100CC590F /* YDGroupchannelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552F59A1E135B5100CC590F /* YDGroupchannelVC.m */; };
 		655751411E08C0A200862911 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 655751401E08C0A200862911 /* UIImage+extension.m */; };
 		655751441E08CAC700862911 /* BLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 655751431E08CAC700862911 /* BLPerson.m */; };
 		6557514D1E090B3B00862911 /* channels.m in Sources */ = {isa = PBXBuildFile; fileRef = 655751461E090B3B00862911 /* channels.m */; };
@@ -104,7 +106,6 @@
 		657BD60A1E0A2DDE00F63582 /* YDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 657BD6091E0A2DDE00F63582 /* YDItem.m */; };
 		657BD60D1E0A2E0200F63582 /* YDTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657BD60C1E0A2E0200F63582 /* YDTagView.m */; };
 		657BD6161E0A842B00F63582 /* YDChannelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 657BD6151E0A842B00F63582 /* YDChannelVC.m */; };
-		657C39381DD5CD7F00085E81 /* BLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C39371DD5CD7F00085E81 /* BLPlayerView.m */; };
 		657C39511DD7097400085E81 /* BLPlayerVC_RB.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C39501DD7097400085E81 /* BLPlayerVC_RB.m */; };
 		6582911D1E0371CB00EB698F /* BLLoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6582911C1E0371CB00EB698F /* BLLoginPage.m */; };
 		658291231E03720100EB698F /* BLAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 658291221E03720100EB698F /* BLAccount.m */; };
@@ -123,6 +124,7 @@
 		658FCF851E0019E8009ABE2A /* YDController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658FCF831E0019E8009ABE2A /* YDController.xib */; };
 		658FCF8A1E001A3A009ABE2A /* YDresult.m in Sources */ = {isa = PBXBuildFile; fileRef = 658FCF861E001A3A009ABE2A /* YDresult.m */; };
 		658FCF8B1E001A3A009ABE2A /* YiDianNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 658FCF891E001A3A009ABE2A /* YiDianNewsModel.m */; };
+		659607181E13A0CF00EECCD8 /* YDSubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659607171E13A0CF00EECCD8 /* YDSubscribeCell.m */; };
 		659927B81DEC27A5006A0D9D /* WYNight.css in Resources */ = {isa = PBXBuildFile; fileRef = 659927B71DEC27A5006A0D9D /* WYNight.css */; };
 		65DDA8721DD462BF002D6874 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DDA8711DD462BF002D6874 /* Launch Screen.storyboard */; };
 		65FC793E1DD05F6C00AA2811 /* BLNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC793D1DD05F6C00AA2811 /* BLNotificationVC.m */; };
@@ -185,6 +187,10 @@
 		654EE9701DE985A800A5A855 /* BLTestColletionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTestColletionVC.m; sourceTree = "<group>"; };
 		65528EEF1DFE922400DCD6DC /* BLTestRACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTestRACViewController.h; sourceTree = "<group>"; };
 		65528EF01DFE922400DCD6DC /* BLTestRACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTestRACViewController.m; sourceTree = "<group>"; };
+		6552F5961E13594200CC590F /* YDGroupViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGroupViewModel.h; sourceTree = "<group>"; };
+		6552F5971E13594200CC590F /* YDGroupViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDGroupViewModel.m; sourceTree = "<group>"; };
+		6552F5991E135B5100CC590F /* YDGroupchannelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGroupchannelVC.h; sourceTree = "<group>"; };
+		6552F59A1E135B5100CC590F /* YDGroupchannelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDGroupchannelVC.m; sourceTree = "<group>"; };
 		6557513F1E08C0A200862911 /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
 		655751401E08C0A200862911 /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
 		655751421E08CAC700862911 /* BLPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPerson.h; sourceTree = "<group>"; };
@@ -313,8 +319,6 @@
 		657BD60C1E0A2E0200F63582 /* YDTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTagView.m; sourceTree = "<group>"; };
 		657BD6141E0A842B00F63582 /* YDChannelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDChannelVC.h; sourceTree = "<group>"; };
 		657BD6151E0A842B00F63582 /* YDChannelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDChannelVC.m; sourceTree = "<group>"; };
-		657C39361DD5CD7F00085E81 /* BLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlayerView.h; sourceTree = "<group>"; };
-		657C39371DD5CD7F00085E81 /* BLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlayerView.m; sourceTree = "<group>"; };
 		657C394F1DD7097400085E81 /* BLPlayerVC_RB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlayerVC_RB.h; sourceTree = "<group>"; };
 		657C39501DD7097400085E81 /* BLPlayerVC_RB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlayerVC_RB.m; sourceTree = "<group>"; };
 		6582911B1E0371CB00EB698F /* BLLoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLLoginPage.h; sourceTree = "<group>"; };
@@ -344,6 +348,8 @@
 		658FCF871E001A3A009ABE2A /* YDresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDresult.h; sourceTree = "<group>"; };
 		658FCF881E001A3A009ABE2A /* YiDianNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiDianNewsModel.h; sourceTree = "<group>"; };
 		658FCF891E001A3A009ABE2A /* YiDianNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiDianNewsModel.m; sourceTree = "<group>"; };
+		659607161E13A0CF00EECCD8 /* YDSubscribeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSubscribeCell.h; sourceTree = "<group>"; };
+		659607171E13A0CF00EECCD8 /* YDSubscribeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSubscribeCell.m; sourceTree = "<group>"; };
 		659927B71DEC27A5006A0D9D /* WYNight.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = WYNight.css; sourceTree = "<group>"; };
 		65DDA8711DD462BF002D6874 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		65FC793C1DD05F6C00AA2811 /* BLNotificationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNotificationVC.h; sourceTree = "<group>"; };
@@ -707,8 +713,6 @@
 				655AF6851DC1C38E0090A1C9 /* BLRefreshHeader.m */,
 				6565710B1DD0081600805957 /* BLTabBar.h */,
 				6565710C1DD0081600805957 /* BLTabBar.m */,
-				657C39361DD5CD7F00085E81 /* BLPlayerView.h */,
-				657C39371DD5CD7F00085E81 /* BLPlayerView.m */,
 				657C394F1DD7097400085E81 /* BLPlayerVC_RB.h */,
 				657C39501DD7097400085E81 /* BLPlayerVC_RB.m */,
 				6568425B1DD948D200C25043 /* BLCustomerPlayer.h */,
@@ -902,6 +906,8 @@
 				658FCF831E0019E8009ABE2A /* YDController.xib */,
 				655751541E090D8000862911 /* YDMainViewController.h */,
 				655751551E090D8000862911 /* YDMainViewController.m */,
+				6552F5991E135B5100CC590F /* YDGroupchannelVC.h */,
+				6552F59A1E135B5100CC590F /* YDGroupchannelVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -919,6 +925,8 @@
 				6557514C1E090B3B00862911 /* YiDianChannelModel.m */,
 				65458E391E0D1D51000B157A /* YDRecommendChannel.h */,
 				65458E3A1E0D1D51000B157A /* YDRecommendChannel.m */,
+				6552F5961E13594200CC590F /* YDGroupViewModel.h */,
+				6552F5971E13594200CC590F /* YDGroupViewModel.m */,
 				658FCF871E001A3A009ABE2A /* YDresult.h */,
 				658FCF861E001A3A009ABE2A /* YDresult.m */,
 				658FCF881E001A3A009ABE2A /* YiDianNewsModel.h */,
@@ -935,6 +943,8 @@
 				655B4F171E00CE40003FFEB3 /* YDCell.xib */,
 				657742731E04CC95001ECAC6 /* YDThreeImageCell.xib */,
 				65458E371E0CE470000B157A /* YDVideoCell.xib */,
+				659607161E13A0CF00EECCD8 /* YDSubscribeCell.h */,
+				659607171E13A0CF00EECCD8 /* YDSubscribeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1343,7 +1353,6 @@
 				65640B9C1DCDA04B00531EF6 /* BLCommentVC.m in Sources */,
 				655AF6801DC18FC70090A1C9 /* BLNetworkTool.m in Sources */,
 				657742781E052B1A001ECAC6 /* WYNewsDetailBottomView.m in Sources */,
-				657C39381DD5CD7F00085E81 /* BLPlayerView.m in Sources */,
 				657042711DDE8EDD00221FE4 /* BLTest1VC.m in Sources */,
 				6564D1871DED7512009575E2 /* YZWaterFlowLayout.m in Sources */,
 				655751501E090B3B00862911 /* YiDianChannelModel.m in Sources */,
@@ -1356,14 +1365,17 @@
 				65640BA51DCDAD2600531EF6 /* cmt.m in Sources */,
 				658FCF841E0019E8009ABE2A /* YDController.m in Sources */,
 				658291231E03720100EB698F /* BLAccount.m in Sources */,
+				6552F5981E13594200CC590F /* YDGroupViewModel.m in Sources */,
 				6559F33F1DEFF68900E4462C /* BLSeeBigImageVC.m in Sources */,
 				6557514D1E090B3B00862911 /* channels.m in Sources */,
+				6552F59B1E135B5100CC590F /* YDGroupchannelVC.m in Sources */,
 				655A156B1DDFF76500A6D6FC /* WYDetailNewsVC.m in Sources */,
 				6514EA841DC0872400CE6589 /* AppDelegate.m in Sources */,
 				656571071DD007C900805957 /* BLTabBarController.m in Sources */,
 				6514EA881DC0882A00CE6589 /* BLAllTableVC.m in Sources */,
 				658291321E03968500EB698F /* BLDoubanViewModel.m in Sources */,
 				655A15671DDFEF1100A6D6FC /* WYNewsTableVC.m in Sources */,
+				659607181E13A0CF00EECCD8 /* YDSubscribeCell.m in Sources */,
 				655751561E090D8000862911 /* YDMainViewController.m in Sources */,
 				65640BA81DCDB12C00531EF6 /* BLCommentCell.m in Sources */,
 				6565AC0F1DDC468800B51920 /* BLNotificationDetailVC.m in Sources */,

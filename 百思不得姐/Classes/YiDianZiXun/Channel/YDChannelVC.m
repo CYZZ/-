@@ -10,6 +10,7 @@
 #import "YDTagView.h"
 #import "YiDianChannelModel.h" // 用于发送排序结果以及重新请求频道
 #import "YDRecommendChannel.h"
+#import "YDGroupchannelVC.h"
 #import <MJExtension.h>
 #import <ReactiveCocoa.h>
 #import <SVProgressHUD.h>
@@ -239,7 +240,7 @@
 - (void)setupNav
 {
 	UIBarButtonItem *rightItem1 = [[UIBarButtonItem alloc] initWithTitle:@"完成排序" style:UIBarButtonItemStylePlain target:self action:@selector(sortChannelCompletion)];
-	UIBarButtonItem *rightItem2 = [[UIBarButtonItem alloc] initWithTitle:@"排序" style:UIBarButtonItemStylePlain target:self action:@selector(addMoreChannel)];
+	UIBarButtonItem *rightItem2 = [[UIBarButtonItem alloc] initWithTitle:@"添加频道" style:UIBarButtonItemStylePlain target:self action:@selector(addMoreChannel)];
 	
 	self.navigationItem.rightBarButtonItems =@[rightItem1, rightItem2];
 }
@@ -260,13 +261,13 @@
 		self.channelBackBlock(self.channeslArr);
 	}
 }
-/// 添加频道（测试)
+/// 添加频道
 - (void)addMoreChannel
 {
-//	[self.myTagView.tagArrays addObject:<#(nonnull id)#>]
+	YDGroupchannelVC *groupVC = [[YDGroupchannelVC alloc] init];
+	groupVC.titleArray = self.titleArray;
+	[self.navigationController pushViewController:groupVC animated:YES];
 	
-//	self.myTagView.tagArrays = @[].mutableCopy;
-//	[self.moreTagView addTag:@"新增"];
 }
 
 - (void)dealloc

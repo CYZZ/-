@@ -7,7 +7,6 @@
 //
 
 #import "BLSentMessageVC.h"
-#import "BLPlayerView.h"
 #import <AVFoundation/AVFoundation.h>
 #import <ZFPlayer.h>
 #import <Masonry.h>
@@ -84,44 +83,6 @@
  */
 - (void)setupPlayerView
 {
-//    ZFPlayerView *playerView = [[ZFPlayerView alloc] init];
-//    self.playerView = playerView;
-//    [self.view addSubview:playerView];
-//    [playerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        
-//        make.top.equalTo(self.mas_topLayoutGuideBottom);
-//        make.leading.bottom.trailing.insets(UIEdgeInsetsZero);
-//    }];
-//    
-//    // 可指定控制器层(自定义)
-//    ZFPlayerControlView *controllView = [[ZFPlayerControlView alloc] init];
-//    playerView.controlView = controllView;
-//    // 设置模型要在后面设置控制层之后（warming否则会有约束警告⚠️）
-//    self.playerView.playerModel = self.playerModel;
-    
-    
-    UIView *temView = [[UIView alloc] init];
-    temView.frame = CGRectMake(100, 100, 100, 100);
-    [self.view addSubview:temView];
-//        **********************
-    BLPlayerView *playerView = [BLPlayerView playWithModel:self.playerModel showIn:temView];
-//    [playerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        
-//        make.leading.bottom.trailing.insets(UIEdgeInsetsZero).priorityHigh();
-//        make.top.offset(64).priorityHigh();
-//    }];
-    playerView.playerModel = self.playerModel;
-
-    // 设置代理
-    playerView.delegate = self;
-    // 可选设置视频填充模式内部默认模式（ZFPlayerLayerGravityResizeAspect)
-//    playerView.playerLayerGravity = ZFPlayerLayerGravityResizeAspect;
-    /// 打开下载功能
-    playerView.hasDownload = YES; 
-    // 打开预览图
-    playerView.hasPreviewView =  YES;
-    // 是否自动播放，默认没有
-    [playerView autoPlayTheVideo];
     
 }
 

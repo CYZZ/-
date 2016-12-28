@@ -9,10 +9,12 @@
 #import "channels.h"
 #import "subchannels.h"
 #import <MJExtension.h>
+
 @implementation channels
 
 + (NSDictionary *)mj_objectClassInArray{
-	return @{@"subchannels":[subchannels class]};
+	return @{@"subchannels":[subchannels class],
+			 @"channels":[channels class]};
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName

@@ -13,48 +13,76 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="268" id="4Lb-Yb-73l" customClass="YDCell">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="302" id="4Lb-Yb-73l" customClass="YDCell">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="302"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Lb-Yb-73l" id="vXh-H1-Dzh">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
+                <rect key="frame" x="0.0" y="0.0" width="417" height="302"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhl-aC-MY8">
-                        <rect key="frame" x="13" y="13" width="349" height="40"/>
+                        <rect key="frame" x="13" y="13" width="391" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Br-7W-Gh7">
-                        <rect key="frame" x="13" y="58" width="349" height="196.5"/>
+                        <rect key="frame" x="13" y="35" width="391" height="220"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="3Br-7W-Gh7" secondAttribute="height" multiplier="16:9" id="Quj-75-Fac"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD7-oU-RyO">
-                        <rect key="frame" x="152" y="121" width="71" height="71"/>
+                        <rect key="frame" x="173" y="109.5" width="71" height="71"/>
                         <state key="normal" image="video-play"/>
                         <connections>
                             <action selector="playVideo:" destination="4Lb-Yb-73l" eventType="touchUpInside" id="so7-gz-dv8"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmG-WE-nEg">
-                        <rect key="frame" x="330" y="236.5" width="27" height="16"/>
+                        <rect key="frame" x="370" y="237" width="27" height="16"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faD-Kz-G0k">
+                        <rect key="frame" x="49" y="276.5" width="20.5" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQr-Li-InG">
+                        <rect key="frame" x="373" y="264.5" width="31" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="不喜欢">
+                            <color key="titleColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="dislikeBtnClick:" destination="4Lb-Yb-73l" eventType="touchUpInside" id="91u-Pe-Cct"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="评论数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-a8-bnD">
+                        <rect key="frame" x="13" y="260" width="31" height="28.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="xmG-WE-nEg" secondAttribute="bottom" constant="7" id="7N8-hf-Hw5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JQr-Li-InG" secondAttribute="bottom" constant="5" id="1GS-wT-psJ"/>
+                    <constraint firstItem="xmG-WE-nEg" firstAttribute="trailing" secondItem="3Br-7W-Gh7" secondAttribute="trailing" constant="-7" id="BCT-ND-mnE"/>
+                    <constraint firstItem="faD-Kz-G0k" firstAttribute="leading" secondItem="ofi-a8-bnD" secondAttribute="trailing" constant="5" id="Hib-R3-b8s"/>
+                    <constraint firstItem="ofi-a8-bnD" firstAttribute="top" secondItem="3Br-7W-Gh7" secondAttribute="bottom" constant="5" id="IjI-xa-c3d"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="JQr-Li-InG" secondAttribute="trailing" constant="5" id="LPn-1j-jun"/>
                     <constraint firstAttribute="trailingMargin" secondItem="3Br-7W-Gh7" secondAttribute="trailing" constant="5" id="LoG-EV-sgk"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="xmG-WE-nEg" secondAttribute="trailing" constant="10" id="NXa-5b-ifZ"/>
+                    <constraint firstItem="ofi-a8-bnD" firstAttribute="leading" secondItem="vXh-H1-Dzh" secondAttribute="leadingMargin" constant="5" id="SDq-TO-mj4"/>
                     <constraint firstItem="OD7-oU-RyO" firstAttribute="centerX" secondItem="3Br-7W-Gh7" secondAttribute="centerX" id="Su3-O4-eIQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ofi-a8-bnD" secondAttribute="bottom" constant="5" id="YdQ-6W-FBK"/>
                     <constraint firstItem="Lhl-aC-MY8" firstAttribute="top" secondItem="vXh-H1-Dzh" secondAttribute="topMargin" constant="5" id="bx0-oC-XBm"/>
+                    <constraint firstItem="xmG-WE-nEg" firstAttribute="bottom" secondItem="3Br-7W-Gh7" secondAttribute="bottom" constant="-2" id="dVS-sw-DC2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="faD-Kz-G0k" secondAttribute="bottom" constant="5" id="eZq-GZ-COv"/>
                     <constraint firstItem="Lhl-aC-MY8" firstAttribute="leading" secondItem="vXh-H1-Dzh" secondAttribute="leadingMargin" constant="5" id="f5X-w1-LhA"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="3Br-7W-Gh7" secondAttribute="bottom" constant="5" id="gtD-F1-lfC"/>
                     <constraint firstItem="3Br-7W-Gh7" firstAttribute="top" secondItem="Lhl-aC-MY8" secondAttribute="bottom" constant="5" id="i9B-Cw-ShY"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Lhl-aC-MY8" secondAttribute="trailing" constant="5" id="ls4-LC-aT5"/>
                     <constraint firstItem="OD7-oU-RyO" firstAttribute="centerY" secondItem="3Br-7W-Gh7" secondAttribute="centerY" id="pg7-nI-I5m"/>
@@ -62,11 +90,14 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="commentLabel" destination="ofi-a8-bnD" id="Q8l-N0-Aab"/>
+                <outlet property="dislikeButton" destination="JQr-Li-InG" id="B0d-9P-XzP"/>
                 <outlet property="mainTitleLabel" destination="Lhl-aC-MY8" id="bZF-Yf-08c"/>
                 <outlet property="oneImageView" destination="3Br-7W-Gh7" id="cwY-Qj-513"/>
+                <outlet property="sourceLabel" destination="faD-Kz-G0k" id="0Dy-et-Q8r"/>
                 <outlet property="videoDurationLabel" destination="xmG-WE-nEg" id="IHf-Lw-qhm"/>
             </connections>
-            <point key="canvasLocation" x="-378" y="-91"/>
+            <point key="canvasLocation" x="-385.5" y="-72"/>
         </tableViewCell>
     </objects>
     <resources>

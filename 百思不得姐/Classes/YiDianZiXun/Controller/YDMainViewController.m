@@ -183,15 +183,15 @@
 	
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-	return UIInterfaceOrientationMaskAll; // 支持屏幕旋转的方向
-}
-
-- (BOOL)shouldAutorotate
-{
-	return YES;
-}
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+//{
+//	return UIInterfaceOrientationMaskAll; // 支持屏幕旋转的方向
+//}
+//
+//- (BOOL)shouldAutorotate
+//{
+//	return YES;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

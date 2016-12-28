@@ -14,28 +14,62 @@
 #import "BLRefreshHeader.h"
 #import "BLPlayerVC_RB.h"
 
+#import <ZFPlayer.h>
 #import "BLNotificationDetailVC.h"
 #import <UITableView+FDTemplateLayoutCell.h>
+//#import <>
 
-@interface YDController ()<UITableViewDelegate, UITableViewDataSource>
+@interface YDController ()<UITableViewDelegate, UITableViewDataSource, ZFPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /// 模型数组
 @property (nonatomic, strong) NSMutableArray<YDresult*> *ydArrayM;
 /// 资讯开始加载的位置
 @property (nonatomic, assign) NSInteger cstart;
+/// 播放器view
+@property (nonatomic, strong) ZFPlayerView *playerView;
+/// 控制层
+@property (nonatomic, strong) ZFPlayerControlView *controView;
 
 @end
 
 @implementation YDController
 
+- (ZFPlayerView *)playerView
+{
+	if (!_playerView) {
+		_playerView = [ZFPlayerView sharedPlayerView]; // 创建单例
+		_playerView.delegate = self;
+		// 当cell播放视频有全屏变为小屏的时候，不会到中间位置
+		_playerView.cellPlayerOnCenter = NO;
+		// 当cell划出屏幕的时候停止播放
+//		_playerView.stopPlayWhileCellNotVisable = YES;
+		//静音
+//		_playerView.mute = YES;
+		
+	}
+	return _playerView;
+}
+
+- (ZFPlayerControlView *)controView
+{
+	if (!_controView) {
+		_controView = [[ZFPlayerControlView alloc] init];
+	}
+	return _controView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	[self.tableView registerNib:[UINib nibWithNibName:@"YDCell" bundle:nil] forCellReuseIdentifier:@"YDCell"];
-	[self.tableView registerNib:[UINib nibWithNibName:@"YDThreeImageCell" bundle:nil] forCellReuseIdentifier:@"YDThreeImageCell"];
-	[self.tableView registerNib:[UINib nibWithNibName:@"YDVideoCell" bundle:nil] forCellReuseIdentifier:@"YDVideoCell"];
+	NSArray *types = @[@"YDCell",@"YDThreeImageCell",@"YDVideoCell"];
+	// 遍历数组注册cell
+	[YDCell registerCellWithTypes:types onTableView:self.tableView];
+	
+//	[self.tableView registerNib:[UINib nibWithNibName:@"YDCell" bundle:nil] forCellReuseIdentifier:@"YDCell"];
+//	[self.tableView registerNib:[UINib nibWithNibName:@"YDThreeImageCell" bundle:nil] forCellReuseIdentifier:@"YDThreeImageCell"];
+//	[self.tableView registerNib:[UINib nibWithNibName:@"YDVideoCell" bundle:nil] forCellReuseIdentifier:@"YDVideoCell"];
 	
 	self.tableView.rowHeight = 80;
 	[self setupRefreshView];
@@ -119,11 +153,14 @@
 	}else if ([model.ctype isEqualToString:@"video_live"]){
 		cell = [tableView dequeueReusableCellWithIdentifier:@"YDVideoCell"];
 		__weak typeof(self) weakSelf = self;
+		__weak typeof(cell) weakCell = cell;
 		[cell playVideoWithBlock:^{
-			BLPlayerVC_RB *RBPlayerVC = [[BLPlayerVC_RB alloc] init];
-			RBPlayerVC.videoURL = model.video_url;
-			RBPlayerVC.videoTitle = model.title;
-			[weakSelf.navigationController pushViewController:RBPlayerVC animated:YES];
+//			BLPlayerVC_RB *RBPlayerVC = [[BLPlayerVC_RB alloc] init];
+//			RBPlayerVC.videoURL = model.video_url;
+//			RBPlayerVC.videoTitle = model.title;
+//			[weakSelf.navigationController pushViewController:RBPlayerVC animated:YES];
+			NSLog(@"cell.imageView.tag = %ld",weakCell.playerImageView.tag);
+			[weakSelf playerVideoOn:weakCell.playerImageView tableView:tableView atIndexPath:indexPath title:model.title url:model.video_url];
 		}];
 		
 	}else{
@@ -157,14 +194,36 @@
 	[self.navigationController pushViewController:vc animated:YES];
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-	return UIInterfaceOrientationMaskAll; // 支持屏幕旋转的方向
-}
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+//{
+//	return UIInterfaceOrientationMaskAll; // 支持屏幕旋转的方向
+//}
+//
+//- (BOOL)shouldAutorotate
+//{
+//	return YES;
+//}
 
-- (BOOL)shouldAutorotate
+/// tableView的cell上播放视频
+- (void)playerVideoOn:(UIView *)fatherView
+			tableView:(UITableView *)tableView
+		  atIndexPath:(NSIndexPath *)indexPath
+				title:(NSString *)title
+				  url:(NSString *)url
 {
-	return YES;
+	ZFPlayerModel *playerModel = [[ZFPlayerModel alloc] init];
+	playerModel.title = title;
+	playerModel.videoURL = [NSURL URLWithString:url];
+	playerModel.tableView = tableView;
+	playerModel.indexPath = indexPath;
+	playerModel.resolutionDic = @{@"高清" : url};
+	playerModel.fatherView = fatherView;
+	
+	//设置播放view的model
+	[self.playerView playerControlView:self.controView playerModel:playerModel];
+	self.playerView.hasDownload = YES;
+	// 自动播放
+	[self.playerView autoPlayTheVideo];
 }
 
 @end

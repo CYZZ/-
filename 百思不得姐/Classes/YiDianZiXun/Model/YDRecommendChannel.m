@@ -91,38 +91,6 @@
 
 	
 }
-//+ (void)insertChannels:(channels *)channels At:(NSInteger )index groupID:(NSString *)groupID completion:(void (^)(channels *))completion failture:(void (^)(NSError *))failture
-//{
-//	// 需要发送的频道数据，包装成字典
-//	NSMutableDictionary *creted_channels = [NSMutableDictionary dictionary];
-//	creted_channels[@"channel_id"] = channels.ID;
-//	creted_channels[@"insert_at"] = [NSNumber numberWithInteger:index];
-//	creted_channels[@"name"] = channels.name;
-//	creted_channels[@"group_id"]  = groupID;
-//	
-//	NSMutableDictionary *param = @{}.mutableCopy;
-//	param[@"created_channels"] = @[creted_channels];
-//	param[@"deleted_channels"] = @[];
-//	
-//	NSString *url = @"http://a1.go2yd.com/Website/channel/batch-modify?version=020113&distribution=com.apple.appstore&appid=yidian&cv=4.3.4.4&platform=0&net=wifi";
-//	
-//	BLNetworkTool *manager = [BLNetworkTool sharedToolWithJSON];
-//	NSString *Cookie = [self getCookie];
-//	manager.requestSerializer = [AFJSONRequestSerializer serializer]; // 声明请求的参数是json类型
-//	[manager.requestSerializer setValue:Cookie forHTTPHeaderField:@"Cookie"]; // 需要先设置请求类型在设置Cookie否则会被覆盖
-//	 [manager POST:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//		
-//		YDRecommendChannel *model = [YDRecommendChannel mj_objectWithKeyValues:responseObject];
-//		 if (model.created_channels.count > 0) {
-//			 completion([model.created_channels firstObject]);
-//		 }else{
-//			 failture(nil);
-//		 }
-//		
-//	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//		failture(error);
-//	}];
-//}
 
 /// 获取Cookie
 + (NSString *)getCookie
