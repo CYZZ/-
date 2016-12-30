@@ -74,7 +74,7 @@
         NSLog(@"接收信号失败=%@",error);
     } completed:^{
         [self showInWebView];
-        NSLog(@"进入了subscribeError");
+        NSLog(@"接收信号成功");
     }];
     
     

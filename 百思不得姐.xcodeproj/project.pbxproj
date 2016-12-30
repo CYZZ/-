@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		030AF0A731FD277C5C47118F /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F785E5088467E66CAC9D5B02 /* libPods-百思不得姐.a */; };
 		4491CA078E78331FA951E619 /* libPods-百思不得姐UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78616138F8FE15C90952B37A /* libPods-百思不得姐UITests.a */; };
+		6510163C1E16407A003FAE77 /* YDArticlelist.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510163B1E16407A003FAE77 /* YDArticlelist.m */; };
+		6510163F1E1641CF003FAE77 /* YiDianHaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510163E1E1641CF003FAE77 /* YiDianHaoVC.m */; };
+		651016421E16421E003FAE77 /* YiDianHaoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 651016411E16421E003FAE77 /* YiDianHaoViewModel.m */; };
+		651016451E164B88003FAE77 /* YidianhaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 651016441E164B88003FAE77 /* YidianhaoModel.m */; };
+		651016481E164FC7003FAE77 /* YiDianhaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 651016471E164FC7003FAE77 /* YiDianhaoCell.m */; };
 		6511F5121DF1736800C9E9AF /* BLwebViewChangeUser-agentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6511F5111DF1736800C9E9AF /* BLwebViewChangeUser-agentVC.m */; };
 		6514EA161DC084A000CE6589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6514EA151DC084A000CE6589 /* Assets.xcassets */; };
 		6514EA241DC084A000CE6589 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6514EA231DC084A000CE6589 /* _____Tests.m */; };
@@ -22,6 +27,10 @@
 		651D5C961DDABA29005EC4C1 /* BLSeqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D5C951DDABA29005EC4C1 /* BLSeqliteTest.m */; };
 		651D5C981DDABFC1005EC4C1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 651D5C971DDABFC1005EC4C1 /* libsqlite3.tbd */; };
 		651D5C9A1DDADBB0005EC4C1 /* BLEssenceWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651D5C991DDADBB0005EC4C1 /* BLEssenceWordCell.xib */; };
+		651D96581E14F1E100EA36BC /* YDDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D96571E14F1E100EA36BC /* YDDetailViewModel.m */; };
+		651D965B1E14F1F400EA36BC /* YDDocumentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D965A1E14F1F400EA36BC /* YDDocumentModel.m */; };
+		651D965E1E14FC4F00EA36BC /* YDDetaiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D965D1E14FC4F00EA36BC /* YDDetaiVC.m */; };
+		651D96611E15099B00EA36BC /* YDDetailNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D96601E15099B00EA36BC /* YDDetailNewsModel.m */; };
 		65458E381E0CE470000B157A /* YDVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65458E371E0CE470000B157A /* YDVideoCell.xib */; };
 		65458E3B1E0D1D51000B157A /* YDRecommendChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65458E3A1E0D1D51000B157A /* YDRecommendChannel.m */; };
 		654EE96E1DE9753B00A5A855 /* BLCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 654EE96D1DE9753B00A5A855 /* BLCollectionFlowLayout.m */; };
@@ -153,6 +162,16 @@
 		432DFB746271E21EFC9B65F2 /* Pods-百思不得姐UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5516760DD2E75B263AAF19A9 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 		61FC17846F307CC9E80623A3 /* Pods-百思不得姐Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6510163A1E16407A003FAE77 /* YDArticlelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDArticlelist.h; sourceTree = "<group>"; };
+		6510163B1E16407A003FAE77 /* YDArticlelist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDArticlelist.m; sourceTree = "<group>"; };
+		6510163D1E1641CF003FAE77 /* YiDianHaoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiDianHaoVC.h; sourceTree = "<group>"; };
+		6510163E1E1641CF003FAE77 /* YiDianHaoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiDianHaoVC.m; sourceTree = "<group>"; };
+		651016401E16421E003FAE77 /* YiDianHaoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiDianHaoViewModel.h; sourceTree = "<group>"; };
+		651016411E16421E003FAE77 /* YiDianHaoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiDianHaoViewModel.m; sourceTree = "<group>"; };
+		651016431E164B88003FAE77 /* YidianhaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YidianhaoModel.h; sourceTree = "<group>"; };
+		651016441E164B88003FAE77 /* YidianhaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YidianhaoModel.m; sourceTree = "<group>"; };
+		651016461E164FC7003FAE77 /* YiDianhaoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiDianhaoCell.h; sourceTree = "<group>"; };
+		651016471E164FC7003FAE77 /* YiDianhaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiDianhaoCell.m; sourceTree = "<group>"; };
 		6511F5101DF1736800C9E9AF /* BLwebViewChangeUser-agentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BLwebViewChangeUser-agentVC.h"; sourceTree = "<group>"; };
 		6511F5111DF1736800C9E9AF /* BLwebViewChangeUser-agentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BLwebViewChangeUser-agentVC.m"; sourceTree = "<group>"; };
 		6514EA061DC084A000CE6589 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +197,14 @@
 		651D5C951DDABA29005EC4C1 /* BLSeqliteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSeqliteTest.m; sourceTree = "<group>"; };
 		651D5C971DDABFC1005EC4C1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		651D5C991DDADBB0005EC4C1 /* BLEssenceWordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLEssenceWordCell.xib; sourceTree = "<group>"; };
+		651D96561E14F1E100EA36BC /* YDDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDDetailViewModel.h; sourceTree = "<group>"; };
+		651D96571E14F1E100EA36BC /* YDDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDDetailViewModel.m; sourceTree = "<group>"; };
+		651D96591E14F1F400EA36BC /* YDDocumentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDDocumentModel.h; sourceTree = "<group>"; };
+		651D965A1E14F1F400EA36BC /* YDDocumentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDDocumentModel.m; sourceTree = "<group>"; };
+		651D965C1E14FC4F00EA36BC /* YDDetaiVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDDetaiVC.h; sourceTree = "<group>"; };
+		651D965D1E14FC4F00EA36BC /* YDDetaiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDDetaiVC.m; sourceTree = "<group>"; };
+		651D965F1E15099B00EA36BC /* YDDetailNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDDetailNewsModel.h; sourceTree = "<group>"; };
+		651D96601E15099B00EA36BC /* YDDetailNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDDetailNewsModel.m; sourceTree = "<group>"; };
 		65458E371E0CE470000B157A /* YDVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDVideoCell.xib; sourceTree = "<group>"; };
 		65458E391E0D1D51000B157A /* YDRecommendChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDRecommendChannel.h; sourceTree = "<group>"; };
 		65458E3A1E0D1D51000B157A /* YDRecommendChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDRecommendChannel.m; sourceTree = "<group>"; };
@@ -904,8 +931,12 @@
 				658FCF811E0019E8009ABE2A /* YDController.h */,
 				658FCF821E0019E8009ABE2A /* YDController.m */,
 				658FCF831E0019E8009ABE2A /* YDController.xib */,
+				6510163D1E1641CF003FAE77 /* YiDianHaoVC.h */,
+				6510163E1E1641CF003FAE77 /* YiDianHaoVC.m */,
 				655751541E090D8000862911 /* YDMainViewController.h */,
 				655751551E090D8000862911 /* YDMainViewController.m */,
+				651D965C1E14FC4F00EA36BC /* YDDetaiVC.h */,
+				651D965D1E14FC4F00EA36BC /* YDDetaiVC.m */,
 				6552F5991E135B5100CC590F /* YDGroupchannelVC.h */,
 				6552F59A1E135B5100CC590F /* YDGroupchannelVC.m */,
 			);
@@ -915,8 +946,12 @@
 		658FCF7F1E0019C0009ABE2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6510163A1E16407A003FAE77 /* YDArticlelist.h */,
+				6510163B1E16407A003FAE77 /* YDArticlelist.m */,
 				655751471E090B3B00862911 /* subchannels.h */,
 				655751481E090B3B00862911 /* subchannels.m */,
+				651016431E164B88003FAE77 /* YidianhaoModel.h */,
+				651016441E164B88003FAE77 /* YidianhaoModel.m */,
 				655751451E090B3B00862911 /* channels.h */,
 				655751461E090B3B00862911 /* channels.m */,
 				655751491E090B3B00862911 /* user_channels.h */,
@@ -927,6 +962,14 @@
 				65458E3A1E0D1D51000B157A /* YDRecommendChannel.m */,
 				6552F5961E13594200CC590F /* YDGroupViewModel.h */,
 				6552F5971E13594200CC590F /* YDGroupViewModel.m */,
+				651D96591E14F1F400EA36BC /* YDDocumentModel.h */,
+				651D965A1E14F1F400EA36BC /* YDDocumentModel.m */,
+				651D965F1E15099B00EA36BC /* YDDetailNewsModel.h */,
+				651D96601E15099B00EA36BC /* YDDetailNewsModel.m */,
+				651D96561E14F1E100EA36BC /* YDDetailViewModel.h */,
+				651D96571E14F1E100EA36BC /* YDDetailViewModel.m */,
+				651016401E16421E003FAE77 /* YiDianHaoViewModel.h */,
+				651016411E16421E003FAE77 /* YiDianHaoViewModel.m */,
 				658FCF871E001A3A009ABE2A /* YDresult.h */,
 				658FCF861E001A3A009ABE2A /* YDresult.m */,
 				658FCF881E001A3A009ABE2A /* YiDianNewsModel.h */,
@@ -945,6 +988,8 @@
 				65458E371E0CE470000B157A /* YDVideoCell.xib */,
 				659607161E13A0CF00EECCD8 /* YDSubscribeCell.h */,
 				659607171E13A0CF00EECCD8 /* YDSubscribeCell.m */,
+				651016461E164FC7003FAE77 /* YiDianhaoCell.h */,
+				651016471E164FC7003FAE77 /* YiDianhaoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1325,9 +1370,11 @@
 				654EE96E1DE9753B00A5A855 /* BLCollectionFlowLayout.m in Sources */,
 				65528EF11DFE922400DCD6DC /* BLTestRACViewController.m in Sources */,
 				658291261E03721200EB698F /* BLLoginViewModel.m in Sources */,
+				651D965E1E14FC4F00EA36BC /* YDDetaiVC.m in Sources */,
 				6582911D1E0371CB00EB698F /* BLLoginPage.m in Sources */,
 				655AF6861DC1C38E0090A1C9 /* BLRefreshHeader.m in Sources */,
 				656571191DD011B400805957 /* BLNewVC.m in Sources */,
+				651016421E16421E003FAE77 /* YiDianHaoViewModel.m in Sources */,
 				65674AA71DD1E2DB00ACA344 /* BLSentMessageVC.m in Sources */,
 				65640BA21DCDAC0200531EF6 /* user.m in Sources */,
 				657C39511DD7097400085E81 /* BLPlayerVC_RB.m in Sources */,
@@ -1339,10 +1386,14 @@
 				658291351E0398EA00EB698F /* BLBook.m in Sources */,
 				655E68671DCAFBDE0017A398 /* NSObject+YZProperty.m in Sources */,
 				6565AC0C1DDBF4B200B51920 /* UIButton+Extension.m in Sources */,
+				651D965B1E14F1F400EA36BC /* YDDocumentModel.m in Sources */,
 				6565710A1DD007F500805957 /* BLNavigationController.m in Sources */,
+				6510163C1E16407A003FAE77 /* YDArticlelist.m in Sources */,
+				651016451E164B88003FAE77 /* YidianhaoModel.m in Sources */,
 				658FCF8B1E001A3A009ABE2A /* YiDianNewsModel.m in Sources */,
 				655AF6831DC1C2F80090A1C9 /* BLRefreshFooter.m in Sources */,
 				657BD60D1E0A2E0200F63582 /* YDTagView.m in Sources */,
+				651D96581E14F1E100EA36BC /* YDDetailViewModel.m in Sources */,
 				655FCD6F1DDD4E69001CCC9A /* BLFollowCell.m in Sources */,
 				651D5C921DDAAA03005EC4C1 /* BLEssenceVideoCell.m in Sources */,
 				656571161DD011A300805957 /* BLMeVC.m in Sources */,
@@ -1353,6 +1404,7 @@
 				65640B9C1DCDA04B00531EF6 /* BLCommentVC.m in Sources */,
 				655AF6801DC18FC70090A1C9 /* BLNetworkTool.m in Sources */,
 				657742781E052B1A001ECAC6 /* WYNewsDetailBottomView.m in Sources */,
+				651D96611E15099B00EA36BC /* YDDetailNewsModel.m in Sources */,
 				657042711DDE8EDD00221FE4 /* BLTest1VC.m in Sources */,
 				6564D1871DED7512009575E2 /* YZWaterFlowLayout.m in Sources */,
 				655751501E090B3B00862911 /* YiDianChannelModel.m in Sources */,
@@ -1363,7 +1415,9 @@
 				6557514F1E090B3B00862911 /* user_channels.m in Sources */,
 				6568425D1DD948D200C25043 /* BLCustomerPlayer.m in Sources */,
 				65640BA51DCDAD2600531EF6 /* cmt.m in Sources */,
+				651016481E164FC7003FAE77 /* YiDianhaoCell.m in Sources */,
 				658FCF841E0019E8009ABE2A /* YDController.m in Sources */,
+				6510163F1E1641CF003FAE77 /* YiDianHaoVC.m in Sources */,
 				658291231E03720100EB698F /* BLAccount.m in Sources */,
 				6552F5981E13594200CC590F /* YDGroupViewModel.m in Sources */,
 				6559F33F1DEFF68900E4462C /* BLSeeBigImageVC.m in Sources */,

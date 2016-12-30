@@ -7,6 +7,14 @@
 //
 
 #import "subchannels.h"
+#import <MJExtension.h>
+
+
 @implementation subchannels
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+	return @{@"articlelist":@"articlelist[0]"}; // 取数组的第一个元素
+}
 
 @end

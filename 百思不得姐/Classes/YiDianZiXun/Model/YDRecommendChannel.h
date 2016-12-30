@@ -28,11 +28,13 @@ typedef NS_ENUM(NSUInteger, ChannelChangeType) {
 @property (nonatomic, strong) NSArray<channels *> *channels;
 /// 发送频道的时候返回的频道数组
 @property (nonatomic, strong) NSArray<channels *> *created_channels;
+/// 添加失败的频道
+@property (nonatomic, strong) NSArray<channels *> *failed_channels;
 
 /// 请求一点资讯的更多频道
 + (void)requestYDRecommendChannels:(void (^)(YDRecommendChannel *model))completion failture:(void (^)(NSError *error))failture;
 
 ///  在指定索引修改频道
-+ (void)channgeChannels:(NSArray<channels *>*)preChannels At:(NSInteger)index type:(ChannelChangeType)type groupID:(NSString *)groupID completion:(void (^)(channels *creted_channels))completion failture:(void (^)(NSError *error))failture;
++ (void)channgeChannels:(NSArray<channels *>*)preChannels At:(NSInteger)index type:(ChannelChangeType)type groupID:(NSString *)groupID completion:(void (^)(NSArray<channels*> *creted_channels))completion failture:(void (^)(NSError *error))failture;
 
 @end

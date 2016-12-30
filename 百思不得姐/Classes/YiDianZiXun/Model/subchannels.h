@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class YDArticlelist;
 @interface subchannels : NSObject
 
 @property (nonatomic, copy) NSString * category;
@@ -20,4 +20,5 @@
 @property (nonatomic, copy) NSString * type;
 @property (nonatomic, copy) NSString * updateTime;
 
+@property (nonatomic, strong) YDArticlelist *articlelist;
 @end

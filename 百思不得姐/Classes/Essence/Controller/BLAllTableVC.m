@@ -144,7 +144,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     list *model = self.dataList[indexPath.row];
-    
     BLEssenceVideoCell *cell = [tableView dequeueReusableCellWithIdentifier:[BLEssenceVideoCell cellReuseIDWith:model] forIndexPath:indexPath];
     cell.model = model;
     

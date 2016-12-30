@@ -70,10 +70,42 @@
     if (self = [super init]) {
 //            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.bailitop.com/usa/ranking/20161118/164454.html"]]];
     
-    [self.webView loadHTMLString:@"<html><head><link rel=\"stylesheet\" href=\"file:///Users/cyz/Library/Developer/CoreSimulator/Devices/0CC2F3FB-6F3C-42CA-815F-12A3868305BA/data/Containers/Bundle/Application/8F44E089-170B-4ACB-ACCD-50B47DD4CECC/81%20-%20%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB.app/SXDetails.css\"></head><body style=\"background:#f6f6f6\"><div class=\"title\">火箭擒开拓者避连败 哈登3节三双贝弗利复出11分</div><div class=\"time\">2016-11-18 11:15:21</div><p>　　网易体育11月18日报道：</p><p>　　休斯敦火箭队（7胜5负）在主场迅速反弹。哈登得到三双26分、14次助攻和12个篮板，贝弗利复出贡献11分，利拉德17投7中只有18分，火箭队利用三四节攻势把领先优势拉开到20分以上，他们在主场以126-109大胜波特兰开拓者队（7胜6负）。开拓者队遭遇2连败。</p><div class=\"img-parent\"><img onload=\"this.onclick = function() {  window.location.href = 'sx://github.com/dsxNiubility?src=' +this.src+'&top=' + this.getBoundingClientRect().top + '&whscale=' + this.clientWidth/this.clientHeight ;};\" width=\"300\" height=\"200\" src=\"http://img4.cache.netease.com/photo/0005/2016-11-18/C656VFMS4TM10005.jpg\"></div><p>　　火箭队的哈登得到三双26分、14次助攻、12个篮板和3次抢断，阿里扎得到16分和7个篮板，戈登得到16分、5个篮板和3次助攻，卡佩拉得到15分、7个篮板和2次盖帽，安德森得到13分和5个篮板，贝弗利得到11分、3次助攻和3次盖帽。开拓者队的麦科勒姆得到26分和4次助攻，哈克莱斯得到19分和6个篮板，利拉德17投7中，得到18分、5个篮板和5次助攻，特纳得到12分、4个篮板和3次助攻。</p><p>　　火箭队的贝弗利复出首发。开拓者队开赛后反客为主，他们先得6分领跑。阿里扎和哈登分别投中三分，火箭队连拿10分反超。之后的比赛两队展开对攻战，场上比分交替增加，戈登和哈雷尔各得两分，首节还有3分55秒时火箭队以27-20领先。利拉德罚中两球，戈登连中2个三分球，哈登也罚中三球，他们带领球队以14-7的小高潮结束首节，火箭队以41-29领先12分。</p><p>　　徳克尔跳投命中开启第二节，莱曼和冯莱分别投中三分，他们带领球队打出13-3的反击波，开拓者队在这一节进行了3分5秒时追至42-46。戈登罚中两球，哈登突破得分，这为球队稳住局势。利拉德率队迅速追回4分，安德森保持手感连取5分，半场前2分20秒时火箭队以60-53领先。半场前最后1分15秒内火箭队哑火，哈克莱斯命中三分率队以7-0的反击波结束第二节，两队在半场时以62平握手言和。</p><p>　　火箭队的哈登上半场得到18分、9次助攻和7个篮板，安德森得到11分和4个篮板，戈登得到10分；开拓者队的麦科勒姆得到19分和3次助攻，利拉德得到11分，哈克莱斯得到10分和4个篮板。</p><p>　　火箭队连得5分开始第三节，他们再次领跑。开拓者队暂停后哈克莱斯回敬三分，麦科勒姆打3分成功，他们以68-69落后。阿里扎开火连进2个三分球，卡佩拉也上篮得手，火箭队连得8分再次拉开比分。利拉德两次单打成功，戈登连进两球回应，阿里扎保持手感再中三分，第三节还有3分55秒火箭队以92-78领先。特纳上篮得手，哈登保持攻击性连取4分，双方差距被拉大到18分。克拉布还击三分，哈雷尔一记暴扣，三节结束时火箭队以100-83领先17分。</p><p>　　卡佩拉在第四节开始后独得5分帮助球队扩大优势，麦科勒姆跳投命中，安德森和布鲁尔联手4分，火箭队以111-87领先。利拉德打3分成功，他率队连续得分，可他们防不住火箭队的进攻，贝弗利突破得分，第四节还有5分35秒时火箭队以117-94领先23分。大比分差距让比赛提前进入垃圾时间，开拓者队换下主力缴械，哈登上来拿了一个篮板后又被换下，火箭队最终以126-109大胜。</p><p>　　开拓者队首发阵容：利拉德、麦科勒姆、克拉布、哈克莱斯、普拉姆利</p><p>　　火箭队首发阵容：贝弗利、哈登、阿里扎、安德森、卡佩拉</p><p>　　作者：小柳</p></body></html>" baseURL:nil];
-
+    [self.webView loadHTMLString:@"<html><head><link rel=\"stylesheet\" href=\"file:///Users/cyz/Library/Developer/CoreSimulator/Devices/0CC2F3FB-6F3C-42CA-815F-12A3868305BA/data/Containers/Bundle/Application/8F44E089-170B-4ACB-ACCD-50B47DD4CECC/81%20-%20%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB.app/SXDetails.css\"></head>\"<body><!-- wemedia true --><div id=\"imedia-article\" class=\"imedia-article\"><p style=\"text-align: left\">随着互联网经济的发展，传统的企业也纷纷加入互联网的行业进行转型，但是很多企业在转型的这条路上走的相当曲折，也有很多企业转型失败。其实这些企业表面上是进行转型了，但是实质上并没有真正的进行转型，都死在了转型的道路上。</p><p style=\"text-align: left\"><img id=\"\" src=\"http://i1.go2yd.com/image.php?url=0EpfBtakqr&net=wifi;url=0EpfBtakqr\" alt=\"http://image1.hipu.com/image.php?url=0EpfBtakqr\" width=\"504\" height=\"352\"  style=\"width:290px; height:202px;\" /></p><p style=\"text-align: left\">许多企业在转型的过程中，没有弄清到底怎么样转型，为什么进行转型就开始了所谓的转型。而它的这种转型也没有做到真正的转型，为什么这样说呢？有的企业感觉线下的生意不好做了，就在线上进行做生意，在网上建个网站，做做<a href=\"http://www.yidianzixun.com/m/channel/keyword/网络推广?display=网络推广&amp;word_id=网络^^推广&amp;type=token\">网络推广</a>，这就做到在互联网形式下的与时俱进，认为这就是转型。其实转型不单单是你形式上的转变，利用了互联网就成了互联网行业吗？这种方式只不过是将互联网当做一种途径而已，店铺从实体店搬到网上，把你的广告推广渠道搬到网上而已，实质的东西并没有发生改变。</p><p style=\"text-align: left\"><img id=\"\" src=\"http://image1.hipu.com/image.php?type=thumbnail_580x000&amp;url=0EpfBtvsni\" alt=\"http://image1.hipu.com/image.php?url=0EpfBtvsni\" width=\"590\" height=\"380\"  style=\"width:290px; height:186px;\" /></p><p style=\"text-align: left\">曾经看过一篇文章《传统企业转型互联网的十大死法》其中文中有句话说得特别好。这句话是这样说的：老思想加新模式解决不了新问题。也就是说传统企业想要进行转型，思维方式不去改变，只是利用新的模式是解决不了实质性的问题的。因此，传统企业在进行转型的时候应该先进行思想转型。</p><p style=\"text-align: left\"><img id=\"\" src=\"http://image1.hipu.com/image.php?type=thumbnail_580x000&amp;url=0EpfBtsBTt\" alt=\"http://image1.hipu.com/image.php?url=0EpfBtsBTt\" width=\"571\" height=\"416\"  style=\"width:290px; height:211px;\" /></p><p style=\"text-align: left\">一些传统企业经营不善而进行转型，其问题的根本是经营思路的问题。也就是说在进行转型前先转变经营思想。传统思维的核心是产品，所有的一切都要围绕着产品进行，盈利方式主要是通过产品。而<a href=\"http://www.yidianzixun.com/m/channel/keyword/互联网思维?display=互联网思维&amp;word_id=互联网^^思维&amp;type=token\">互联网思维</a>的核心则是用户，所有的一切都围绕着用户进行的，刚开始考虑的不是产品怎样卖出，而是如何吸引用户的关注。有了用户之后，再根据用户的特点和需求进行产品的制造。盈利的方式也不单单是利用产品本身，有的产品甚至可以免费，通过其他的服务进行挣钱。譬如像<a href=\"http://www.yidianzixun.com/m/channel/keyword/奇虎360?display=奇虎360&amp;word_id=奇虎360&amp;type=token\">奇虎360</a>，刚开始产品本身就是免费的。</p><p style=\"text-align: left\">传统企业的思维模式是如何卖产品，而在互联网的大环境下，需要的不是如何卖产品，而是考虑如何将产品和用户连接起来。有了用户群体之后，然后去维护这些用户群体，建立和用户的信任，在与用户接触的过程中，通过优质的产品、服务以及一些必要的策略，让用户成为我们的忠实粉丝，然后再利用其挣钱。</p><p style=\"text-align: left\">总之，传统企业在进行转型的过程中要保持内外的一致性，也就是说不仅仅简单的形式上的转型，更应该的是让表面形式和内在思维模式都进行转型。</p></div></body>\"</html>" baseURL:nil];
+		
+		
+//		NSString *searchStr = @"LOOK239832LOOK";
+//		NSString *regExpStr = @"[0-9A-Z].";
+//		NSString *replacement = @"ha";
+//		
+//		// 创建NSRegularExpression 对象，匹配 正则表达式
+//		NSRegularExpression *regExp = [[NSRegularExpression alloc] initWithPattern:regExpStr options:NSRegularExpressionCaseInsensitive error:nil];
+//		NSString *resultStr = searchStr;
+//		
+//		// 替换匹配的字符串为 searchStr
+//		resultStr = [regExp stringByReplacingMatchesInString:searchStr options:NSMatchingReportProgress range:NSMakeRange(0, searchStr.length) withTemplate:replacement];
+//		
+//		NSLog(@"searchStr = %@  resultStr = %@",searchStr,resultStr);
+		
+//		NSNumber *testNumber = @123;
+//		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF = 123"];
+//		if ([predicate evaluateWithObject:testNumber]) {
+//			NSLog(@"相同");
+//		}else{
+//			NSLog(@"不相同");
+//		}
+//		
+//		NSArray *testArray = @[@1,@2,@3,@4,@5,@6];
+//		NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"SELF > 2 && SELF < 5"];
+//		NSArray *filterArray = [testArray filteredArrayUsingPredicate:predicate2];
+//		NSLog(@"filterArray = %@",filterArray);
+		
+		NSArray *filerArray = @[@"ab", @"abc"];
+		NSArray *array = @[@"a",@"ab", @"abc", @"abcd"];
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"NOT (SELF IN %@)",filerArray];
+		NSLog(@"删除剩余的数组=%@",[array filteredArrayUsingPredicate:predicate]);
+		
+		
     }
-    NSLog(@"htmlString=%@",htmlString);
     return self;
 }
 

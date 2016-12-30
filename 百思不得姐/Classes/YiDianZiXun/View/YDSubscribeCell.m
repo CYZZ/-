@@ -51,6 +51,8 @@
 {
 	if (!_channelImageView) {
 		UIImageView *imageView = [[UIImageView alloc] init];
+		imageView.contentMode = UIViewContentModeScaleToFill;
+		
 		[self.contentView addSubview:imageView];
 		_channelImageView = imageView;
 	}
@@ -102,7 +104,7 @@
 		make.bottom.offset(-7);
 		make.left.equalTo(self.mainTitleLabel);
 	}];
-	
+
 	[self.accessoryButton mas_makeConstraints:^(MASConstraintMaker *make) {
 		
 		make.centerY.offset(0);
@@ -120,7 +122,6 @@
 	[self.channelImageView sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"post-@"]];
 	
 	self.accessoryButton.selected = model.subscribe;
-	
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

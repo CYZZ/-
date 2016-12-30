@@ -15,7 +15,7 @@
 #import <ReactiveCocoa.h>
 #import <SVProgressHUD.h>
 
-@interface YDChannelVC ()
+@interface YDChannelVC ()<UIScrollViewDelegate>
 /// 更多频道
 @property(nonatomic, weak) YDTagView *moreTagView;
 /// 我的频道
@@ -61,6 +61,7 @@
 - (void)setupTagView
 {
 	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+	scrollView.delegate = self;
 	[self.view addSubview:scrollView];
 	// 创建标签列表
 	YDTagView *tagView = [[YDTagView alloc] init];
@@ -125,7 +126,7 @@
 	scrollView.contentSize = CGSizeMake(0, maxY);
 	
 	
-	__weak typeof(moreTagView) weakMoreTagView = moreTagView;
+//	__weak typeof(moreTagView) weakMoreTagView = moreTagView;
 	tagView.clickTagBlock = ^(NSString *str){
 		//		if (weakSelf.selectChannel) {
 		//			weakSelf.selectChannel(str);
@@ -201,32 +202,28 @@
 {
 	[SVProgressHUD show];
 	__weak typeof(self) weakSelf = self;
-	[YDRecommendChannel channgeChannels:cretedChannels At:index type:type groupID:self.groupID completion:^(channels *creted_channels) {
+	[YDRecommendChannel channgeChannels:cretedChannels At:index type:type groupID:self.groupID completion:^(NSArray<channels*> *creted_channels) {
 		[SVProgressHUD dismiss];
-		if (cretedChannels.count == 0) { // 如果没有新增频道就不用添加频道
+		[self.deletedChannels removeAllObjects]; // 如果请求成功了清除数据
+		if (creted_channels.count == 0) { // 如果没有新增频道就不用添加频道
 			return ;
 		}
-		[weakSelf.channeslArr insertObject:creted_channels atIndex:index+2]; // 由于存在“推荐”和“要闻”
-		[weakSelf.myTagView insetTag:creted_channels.name At:index+2];
-		[weakSelf.moreTagView deleteTag:creted_channels.name];
+		
+		[weakSelf.channeslArr insertObjects:creted_channels atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(index + 2, creted_channels.count)]];
+//		[weakSelf.channeslArr insertObject:creted_channels atIndex:index+2]; // 由于存在“推荐”和“要闻”
+		__block NSInteger beginIndex = index;
+		[creted_channels enumerateObjectsUsingBlock:^(channels * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+			[weakSelf.myTagView insetTag:obj.name At:beginIndex + 2];
+			beginIndex++;
+			[weakSelf.moreTagView deleteTag:obj.name];
+		}];
+//		[weakSelf.myTagView insetTag:creted_channels.name At:index+2];
+//		[weakSelf.moreTagView deleteTag:creted_channels.name];
 	} failture:^(NSError *error) {
 		[SVProgressHUD dismiss];
 		
 	}];
-	
-//	[YDRecommendChannel insertChannels:[cretedChannels firstObject] At:index groupID:self.groupID completion:^(channels *creted_channels) {
-//		[SVProgressHUD dismiss];
-//		// 插入频道成功
-//		if (creted_channels == nil) {
-//			return ;
-//		}
-//		[weakSelf.channeslArr insertObject:creted_channels atIndex:index+2]; // 由于存在“推荐”和“要闻”
-//		[weakSelf.myTagView insetTag:creted_channels.name At:index+2];
-//		[weakSelf.moreTagView deleteTag:creted_channels.name];
-//		
-//	} failture:^(NSError *error) {
-//		[SVProgressHUD dismiss];
-//	}];
+
 }
 
 /// 通过数组创建字典
@@ -266,9 +263,24 @@
 {
 	YDGroupchannelVC *groupVC = [[YDGroupchannelVC alloc] init];
 	groupVC.titleArray = self.titleArray;
+	
+	__weak typeof(self) weakSelf = self;
+	[groupVC subscribeChannel:^(NSArray<channels *> *channelsArr) {
+		if (channelsArr.count == 0) {
+			return ;
+		}
+		[weakSelf changeChannels:channelsArr At:2 type:ChannelChangeTypeAdd];
+		NSLog(@"回调发送添加的频道=%@",channelsArr);
+	}];
 	[self.navigationController pushViewController:groupVC animated:YES];
 	
 }
+
+#pragma mark - <UIScrollViewDelegate>
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//	
+//}
 
 - (void)dealloc
 {

@@ -9,7 +9,7 @@
 #import "YDTagView.h"
 #import "YDItem.h"
 CGFloat const imageViewWH = 20;
-@interface YDTagView ()
+@interface YDTagView ()<UIGestureRecognizerDelegate>
 {
 	/// 由于设置了只读属性就只能在这里成重新设置下划线的值
 	NSMutableArray *_tagArray;
@@ -25,7 +25,6 @@ CGFloat const imageViewWH = 20;
 @property (nonatomic, assign) NSInteger beginIndex;
 /// 拖拽频道结束的位置
 @property (nonatomic, assign) NSInteger endedIndex;
-
 
 @end
 
@@ -213,6 +212,9 @@ CGFloat const imageViewWH = 20;
 		// 添加拖拽手势
 		UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
 		[tagButton addGestureRecognizer:pan];
+		//FIXME: 新新增了代理方法
+		pan.delegate = self;
+
 	}
 	
 	[self addSubview:tagButton];
@@ -286,6 +288,7 @@ CGFloat const imageViewWH = 20;
 			tagButton.transform = CGAffineTransformMakeScale(_scaleTagInSort, _scaleTagInSort);
 		}];
 		[self addSubview:tagButton];
+		
 	}
 	
 	CGPoint center = tagButton.center;
@@ -305,7 +308,7 @@ CGFloat const imageViewWH = 20;
 //			return;
 //			NSLog(@"被忽略的button=%@,tag=%ld",otherButton,otherButton.tag);
 		}else if (otherButton) { // 掺入到当前按钮的位置
-			NSLog(@"没有忽略tag=%ld",otherButton.tag);
+//			NSLog(@"没有忽略tag=%ld",otherButton.tag);
 			// 获取需要插入的tag值
 			NSInteger i = otherButton.tag;
 			// 获取当前tag
@@ -354,6 +357,7 @@ CGFloat const imageViewWH = 20;
 		if (self.exchangeItemsBlock) {
 			self.exchangeItemsBlock(self.beginIndex, self.endedIndex);
 		}
+		
 	}
 	
 	[gesture setTranslation:CGPointZero inView:self];
@@ -367,6 +371,8 @@ CGFloat const imageViewWH = 20;
 //		change(self.beginIndex, self.endedIndex);
 //	}
 }
+
+
 
 /**
  设置标签的frame
@@ -507,6 +513,10 @@ CGFloat const imageViewWH = 20;
 	
 	tagButton.frame = CGRectMake(btnX, btnY, btnW, btnH);
 }
+
+#pragma mark - <UIGestureRecognizerDelegate>
+
+
 
 @end
 

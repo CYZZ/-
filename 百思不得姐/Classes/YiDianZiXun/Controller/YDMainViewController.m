@@ -8,6 +8,7 @@
 
 #import "YDMainViewController.h"
 #import "YDController.h"
+#import "YiDianHaoVC.h"
 #import "YiDianChannelModel.h"
 #import "user_channels.h"
 #import "channels.h"
@@ -168,9 +169,18 @@
 
 - (UIViewController *)magicView:(VTMagicView *)magicView viewControllerAtPage:(NSUInteger)pageIndex
 {
-	YDController *controller = nil;
 	channels *channel = self.channelsArr[pageIndex];
+	if ([channel.name isEqualToString:@"一点号"]) {
+		YiDianHaoVC *controller = nil;
+		controller = [magicView dequeueReusablePageWithIdentifier:channel.channel_id];
+		if (controller == nil) {
+			controller = [[YiDianHaoVC alloc] init];
+			controller.groupID = self.groupID;
+		}
+		return controller;
+	}
 	
+	YDController *controller = nil;
 	controller = [magicView dequeueReusablePageWithIdentifier:channel.channel_id];
 	if (controller == nil) {
 		controller = [[YDController alloc] init];

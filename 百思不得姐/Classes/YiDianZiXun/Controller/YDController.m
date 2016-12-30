@@ -16,6 +16,7 @@
 
 #import <ZFPlayer.h>
 #import "BLNotificationDetailVC.h"
+#import "YDDetaiVC.h"
 #import <UITableView+FDTemplateLayoutCell.h>
 //#import <>
 
@@ -67,15 +68,8 @@
 	// 遍历数组注册cell
 	[YDCell registerCellWithTypes:types onTableView:self.tableView];
 	
-//	[self.tableView registerNib:[UINib nibWithNibName:@"YDCell" bundle:nil] forCellReuseIdentifier:@"YDCell"];
-//	[self.tableView registerNib:[UINib nibWithNibName:@"YDThreeImageCell" bundle:nil] forCellReuseIdentifier:@"YDThreeImageCell"];
-//	[self.tableView registerNib:[UINib nibWithNibName:@"YDVideoCell" bundle:nil] forCellReuseIdentifier:@"YDVideoCell"];
-	
 	self.tableView.rowHeight = 80;
 	[self setupRefreshView];
-//	NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSetWithIndex:0];
-//	[indexSet addIndex:1]; 
-//	[_ydArrayM insertObjects:<#(nonnull NSArray<YDresult *> *)#> atIndexes:<#(nonnull NSIndexSet *)#>]
 }
 
 /// 初始化刷新控件
@@ -155,10 +149,7 @@
 		__weak typeof(self) weakSelf = self;
 		__weak typeof(cell) weakCell = cell;
 		[cell playVideoWithBlock:^{
-//			BLPlayerVC_RB *RBPlayerVC = [[BLPlayerVC_RB alloc] init];
-//			RBPlayerVC.videoURL = model.video_url;
-//			RBPlayerVC.videoTitle = model.title;
-//			[weakSelf.navigationController pushViewController:RBPlayerVC animated:YES];
+			
 			NSLog(@"cell.imageView.tag = %ld",weakCell.playerImageView.tag);
 			[weakSelf playerVideoOn:weakCell.playerImageView tableView:tableView atIndexPath:indexPath title:model.title url:model.video_url];
 		}];
@@ -189,9 +180,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSString *detaiUrl = self.ydArrayM[indexPath.row].url;
-	BLNotificationDetailVC *vc = [[BLNotificationDetailVC alloc] initWKWebViewWith:detaiUrl];
-	[self.navigationController pushViewController:vc animated:YES];
+//	NSString *detaiUrl = self.ydArrayM[indexPath.row].url;
+//	BLNotificationDetailVC *vc = [[BLNotificationDetailVC alloc] initWKWebViewWith:detaiUrl];
+//	[self.navigationController pushViewController:vc animated:YES];
+	YDresult *model = self.ydArrayM[indexPath.row];
+	if ([model.ctype isEqualToString:@"news"]) {
+		YDDetaiVC *vc = [[YDDetaiVC alloc] init];
+		vc.result = model;
+		[self.navigationController pushViewController:vc animated:YES];
+	}else{
+		NSString *detaiUrl = self.ydArrayM[indexPath.row].url;
+		BLNotificationDetailVC *vc = [[BLNotificationDetailVC alloc] initWKWebViewWith:detaiUrl];
+		[self.navigationController pushViewController:vc animated:YES];
+	}
+	
 }
 
 //- (UIInterfaceOrientationMask)supportedInterfaceOrientations
